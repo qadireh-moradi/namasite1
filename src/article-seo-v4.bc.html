@@ -1,0 +1,274 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]">
+  <member type="view" name="multipart" postsql="select * from [db.multipart] where prpID=7246"  preview="" />
+  <member type="view" name="all"  preview=""  />
+</basis>
+<basis core="dbsource" source="media" name="our" lid="1" sourcemid="article" usedforid="[##cms.query.id##]" >
+	<member type="list" name="mission"  />
+</basis>
+<!doctype html>
+<html dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namasite</title>
+<link href="[##cms.cms.cdn##]/css/output.css" rel="stylesheet">
+<link href="[##cms.cms.cdn##]/css/custom.css" rel="stylesheet">
+<link href="[##cms.cms.cdn##]/css/new/seopage.css" rel="stylesheet">
+<link href="[##cms.cms.cdn##]/css/formbccss.css" rel="stylesheet">
+
+</head>
+<body class="!bg-white">
+
+<header class="main-tool-bar shadow-lg z-50 ">
+  <nav  class="container mx-auto px-4 relative defnav">
+      <basis core="call" file="menu-v4.inc" />
+    
+    </nav>
+
+</header>
+<div class="seo-main  mx-auto px-4 md:py-32 bg-center" style="background-image: url(newimages/landing/[##cms.query.id##].png);">
+  
+  <div class="header-text ">
+    <h1 class="pb-5"> 
+      <basis core="print" datamembername="db.all"> 
+          <face filter="TypeID=150"> 
+              @Answer
+          </face>
+      </basis>
+  </h1>
+  <h2 class="pb-5"> 
+    <basis core="print" datamembername="db.all"> 
+        <face filter="prpID=7245"> 
+            @Answer
+        </face>
+    </basis>
+</h2>
+  
+<div>
+  <a id="openModalBtn" href="#" class="section-1-call-to-action calltoaction">به مشاوره نیاز دارین؟</a>
+</div>
+</div>
+
+  </div>
+  
+
+  <section class="bg-white bg-no-repeat">
+    <div class="container px-5 py-10 mx-auto text-center  flex  flex-col md:flex-row items-start flex-wrap md:mt-52 mb-5" style="background-color: #EFEFEF;">
+      <div class="bg-black w-full md:w-1/2   relative flex items-start md:py-4 md:px-4 py-10 px-5 -mt-52">
+        <div class="relative  bg-white text-black  py-9 px-4 w-full  shadow-xl" >
+            <ul>
+              <basis core="print" datamembername="db.multipart"> 
+                  <face filter="RowNumber=1"> 
+                      <li class="tablinks relative py-3 cursor-pointer active text-right" ><a href="#@valueID">@text</a></li>
+                  </face>
+                  <face>
+                      <li class="tablinks relative py-3 cursor-pointer  text-right" ><a href="#@valueID">@text</a></li>
+                  </face>
+              </basis>
+            </ul>
+        </div>
+    </div> 
+      <basis core="print" datamembername="our.mission"> 
+        <face filter="ord=1"> 
+        <div class="w-full md:w-1/2 md:pr-4 -mt-52"><img  class="w-full"  src="[##cms.cms.cdn##]/@largeIMG" alt="@name"></div>
+        </face>
+      </basis>
+      <basis core="print" datamembername="db.multipart"> 
+        <layout>
+           <div  class="w-full">@child</div> 
+        </layout>
+        <face filter="RowNumber = 1"> 
+          <h2 class="text-customGreen-light text-24px py-10 text-right" id="@valueID">@text</h2>
+              <div class="pb-4 text-14px text-justify">
+                @largetext      
+              </div>
+          </face>
+      </basis>
+    </div>
+
+   
+ 
+
+  <basis core="call" file="[##cms.query.id##]-v4.inc" />
+
+        <basis core="print" datamembername="db.multipart"> 
+          <layout>
+            <div class="container px-5 py-10 mx-auto text-center">
+              @child
+          </div>
+          </layout>
+          <face filter="RowNumber <> 1"> 
+            <h2 class="text-customGreen-light text-24px py-10 text-right" id="@valueID">@text</h2>
+                <div class="pb-4 text-14px text-justify">
+                  @largetext      
+                </div>
+            </face>
+        </basis>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <basis core="call" file="footer-v4.bc" />
+
+
+<script src='[##cms.cms.cdn##]/newjs/gsap-latest-beta.min.js?r=v3.11.3'></script>
+<script src='[##cms.cms.cdn##]/newjs/ScrollTrigger.min.js'></script>
+<script src='[##cms.cms.cdn##]/newjs/ScrollSmoother.min.js?v=3.10.0e'></script>
+<script src='[##cms.cms.cdn##]/newjs/jquery-3.5.1.min.js'></script>
+<script src="[##cms.cms.cdn##]/_js/basiscore-2.28.0.min.js"></script>
+<script>
+
+
+    var host = {
+     debug: false,
+     settings: {
+     'connection.web.callcommand': 'https://namasite.ir/',
+     'connection.local.basket': {
+     Url: 'https://namasite.ir/app/js/LocalStorageBasket.js',
+     Function: 'LocalBasket'
+     },
+     
+     'connection.web.trust_login': 'https://basispanel.ir/apicms',
+     'connection.web.basiscore': 'https://basispanel.ir/apicms',
+     'connection.web.accounting': 'https://basispanel.ir/apicms',
+     'connection.web.accounting_eshop': `https://www.basisfly.com/eshop-test/`,
+     'connection.web.media': 'https://basispanel.ir/apicms',
+     'default.dbsource.verb': 'post',
+     'default.call.verb': 'get',
+     'default.viewCommand.groupColumn': 'prpid',
+     'default.dmnid': '4313',
+     'default.binding.regex': '\\{##([^#]*)##\\}'
+    
+     }
+    }
+    
+    
+    
+     function onSource(args) {
+     const captcha = document.querySelector("#requestBox input[name='captcha']").value;
+     const captchaid = document.querySelector("#requestBox input[name='captchaid']").value;
+     const stringJson = JSON.stringify(args.source?.rows[0]);
+     $bc.setSource('edit.object', {
+     value: stringJson,
+     captcha: captcha,
+     captchaid: captchaid
+     })
+     }
+    
+     async function OnProcessedEditObject1(args) {
+     const response = args.response;
+     const json = await response.json();
+    
+     //alert("errorid : " + json.errorid + " , message : " + json.message)
+    
+     if (json.errorid == 6) {
+     $(".requestBox1").append('<div class="lds-ellipsis1"> <div class="backkkkk"><div class="lds-ellipsis"> فرم شما با موفقیت ثبت شد <br> <div></div><div></div><div></div><div></div></div></div></div>')
+    
+     setTimeout(function () { $(".lds-ellipsis1").remove() }, 6000);
+     }
+     if (json.errorid == 4) {
+     $(".requestBox1").append('<div class="lds-ellipsis1"> <div class="backkkkk"><div class="lds-ellipsis lds-ellipsisrr"> لطفا کد امنیتی را وارد کنید <div></div><div></div><div></div><div></div></div></div></div>')
+    
+     setTimeout(function () { $(".lds-ellipsis1").remove() }, 6000);
+     }
+    
+     }
+    
+    
+     $("body").on("click", ".refressh1", function (e) {
+    
+     $(".captcha-sefaresh").load("/captcha.bc");
+     return false;
+     });
+    
+ 
+    
+$(document).ready(function(){
+window.onload = function () {
+setTimeout(function () {
+$(".Contact-2 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+
+$(".Contact-2 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+$(".Contact-3 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+$(".Contact-3 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+$(".Contact-1 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+
+$(".Contact-1 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+
+
+$(".Contact-4 textarea").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+$(".Contact-4 textarea").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+
+
+
+
+}, 1000); 
+};
+
+
+
+});
+    
+    </script>
+
+<script src="[##cms.cms.cdn##]/newjs/mainscript.js">
+
+</script>
+</body>
+</html>

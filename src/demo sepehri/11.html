@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/output.css">
+    <title>ScrollSmoother Example</title>
+
+    <style>
+     body {
+  overscroll-behavior: none;
+}
+
+    </style>
+</head>
+<body>
+   
+<div id="scrollsmoother-container box" >
+<div class="my-44 flex justify-center space-x-12">
+			<div class="p-16 my-12 bg-pink-500 rounded-lg box" data-speed="1" data-lag="0.2" style="position: absolute; transform: rotate(30deg);"><img src="https://www.namasite.ir/newimages/slider1.jpg"></div>
+			<div class="p-16 my-12 bg-pink-500 rounded-lg box" data-speed="1" data-lag="0.4"><img src="https://www.namasite.ir/newimages/slider1.jpg"></div>
+			<div class="p-16 my-12 bg-pink-500 rounded-lg box" data-speed="1" data-lag="0.6"><img src="https://www.namasite.ir/newimages/slider1.jpg"></div>
+			<div class="p-16 my-12 bg-pink-500 rounded-lg box" data-speed="1" data-lag="0.8"><img src="https://www.namasite.ir/newimages/slider1.jpg"></div>
+			<div class="p-16 my-12 bg-pink-500 rounded-lg box" data-speed="1" data-lag="1"><img src="https://www.namasite.ir/newimages/slider1.jpg"></div>
+		</div>
+        <div style="height: 900px;"></div>
+
+</div>
+
+    <script src='https://assets.codepen.io/16327/gsap-latest-beta.min.js'></script>
+    <script src='https://assets.codepen.io/16327/ScrollSmoother.min.js'></script>
+    <script src='https://assets.codepen.io/16327/ScrollTrigger.min.js'></script>
+    <script>
+//       gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+// // create the smooth scroller FIRST!
+// const smoother = ScrollSmoother.create({
+//   content: "#scrollsmoother-container",
+//   smooth: 3,
+//   normalizeScroll: true,
+//   ignoreMobileResize: true,
+// 	effects: true,
+//   //preventDefault: true,
+//   //ease: 'power4.out',
+//   //smoothTouch: 0.1, 
+// });
+// gsap.to('.mm', {
+//   rotation: 10,
+//   duration: 1,
+//   transformOrigin: 'center center',
+//   repeat: 0,
+//   ease: 'linear',
+// })
+// gsap.to('.bb', {
+//   rotation: -360,
+//   duration: 16,
+//   transformOrigin: 'center center',
+//   repeat: -1,
+//   ease: 'linear',
+// })
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".box", {
+  scrollTrigger: {
+    trigger: ".flex",
+    pin: true,
+    markers: true,
+    scrub: 2,
+    start: "center center",
+    end: "+=900 center"
+  },
+  opacity: 0,
+  y: -100,
+  ease: "back.out(4)",
+  stagger: {
+    amount: 3,
+    from: "random"
+  }
+});
+
+    </script>
+</body>
+</html>

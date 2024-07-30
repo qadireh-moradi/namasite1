@@ -1,0 +1,1418 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" catid="71306"> 
+    <member type="list" name="blog" perpage="6" pageno="1" size="370x284" propertyid="7244" 
+    postsql=" select *, SUBSTR(prp_7244, 1,230-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 230)))) || '...' as substr from [db.blog]">
+  </member> </basis>
+  
+  <basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id|2357435##]">
+      <member type="view" name="multipart" postsql="select * from [db.multipart] where prpID=7246"  preview="" />
+      <member type="view" name="all"  />
+    </basis>
+    <basis core="dbsource" source="basiscore" name="dbc" lid="1" mid="1" usedforid="2352984">
+      <member type="view" name="multipart" postsql="select * from [dbc.multipart] where prpID=7246"  preview="" />
+    </basis>
+    <basis core="dbsource" source="basiscore" name="dbfaq" lid="1" mid="1" usedforid="2351602">
+      <member type="view" name="multipart" postsql="select * from [dbfaq.multipart] where prpID=7246"  preview="" />
+    </basis>
+  
+    <!-- advantages -->
+  
+    <basis core="dbsource" source="basiscore" name="db" lid="1" mid="1"  usedforid="[##cms.query.id##]"  >
+      <member type="list" name="advid" blgid="222" preview="" />
+    </basis>
+    <basis core="dbsource" source="basiscore" name="dbm" lid="1" mid="1" usedforid="[##db.advid.id##]">
+      <member type="view" name="multipart" postsql="select * from [dbm.multipart] where prpID=7246"   preview="" />
+    </basis>
+  
+    <basis core="dbsource" source="basiscore" name="dbm" lid="1" mid="1" usedforid="[##db.advid.id##]">
+      <member type="view" name="multiparttitle" postsql="select * from [dbm.multiparttitle] where TypeID=150"   preview="" />
+    </basis>
+  <!-- advantages icons-->
+    <basis core="dbsource" source="media" name="db" lid="1" sourcemid="article" usedforid="[##db.advid.id##]" >
+      <member type="list" name="avdSlider" preview=""   />
+    </basis>
+     
+  
+  <basis core="dbsource" source="media" name="slider" lid="1" sourcemid="article" usedforid="2358724" >
+      <member type="list" name="landing" preview=""   />
+  </basis>
+  <basis core="dbsource" source="media" name="nazarat" lid="1" sourcemid="article" usedforid="2351601" >
+      <member type="list" name="landing" preview=""   />
+  </basis>
+  
+  <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+    <member type="list" name="list" request="taglist" preview=""  ></member>
+  </basis>
+  
+  <!doctype html>
+  <html dir="rtl" lang="fa-IR">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[##cms.seo.title##]</title>
+    <meta name="description" content="[##cms.seo.description##]" /> 
+     <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/swiper-bundle.min.css" />
+     <link href="[##cms.cms.cdn##]/css/custom.css" rel="stylesheet">
+     <link href="[##cms.cms.cdn##]/css/newlanding-mobile.css" rel="stylesheet">
+      <link href="[##cms.cms.cdn##]/css/formbccss.css" rel="stylesheet">
+      <link href="[##cms.cms.cdn##]/css/output.css" rel="stylesheet">
+      <link rel="canonical" href="https://[##cms.request.full-url##]" />
+      <basis core="print" datamembername="tag.list">  
+          <face filter="key <> 'canonical'">      
+            <meta property="@key" content="@value" />
+        </face>
+        </basis>
+        <style>
+          .advantageSwiper .swiper-slide:nth-child(5n+5) span{
+            display: block;
+          }
+        </style>
+  </head>
+  <body class="!bg-white">
+  
+  
+  <div class="seo-main  mx-auto px-4 md:py-32 bg-center bg-no-repeat h-[600px]" style="background-image: url(newimages/landing/[##cms.query.id|2357435##].png);">
+        
+        <div class="header-text ">
+          <h1 class="pb-5"> 
+            <basis core="print" datamembername="db.all"> 
+                <face filter="TypeID=150"> 
+                    @Answer
+                </face>
+            </basis>
+        </h1>
+        <h2 class="pb-5"> 
+          <basis core="print" datamembername="db.all"> 
+              <face filter="prpID=7245"> 
+                  @Answer
+              </face>
+          </basis>
+      </h2>
+        
+      <div>
+              <a id="openModalBtn" href="#" class="section-1-call-to-action calltoaction">به مشاوره نیاز دارید ؟ </a>
+      </div>
+      </div>
+      
+        </div>
+  
+      
+  
+  <div class="bg-white">
+  
+    <div class="container mx-auto section1 ">
+   <div class=" bg-about  w-full !bg-contain bg-no-repeat h-auto p-[15px] text-justify">
+    <basis core="print" datamembername="db.all"> 
+      <face filter="prpid=7244"> 
+        <div class="text-16px py-2  mb-4 text-justify ">
+       @Answer
+        </div>
+      </face>
+  </basis> 
+  </div>
+  
+  
+  
+  
+  
+  </div>
+  
+  
+   
+  </div>
+  <section class="w-full bg-white p-[15px]">
+      <div class="container mx-auto py-4">
+        <div class="container mx-auto py-4">
+          <h3 class="text-28px text-customGreen mb-8 text-center font-bold">
+          [##dbm.multiparttitle.text##]
+          </h3>
+        </div> 
+    <section class="h--timeline js-h--timeline">
+    
+      <div class="h--timeline-events h-auto">
+        <ol>
+          <basis core="print" datamembername="dbm.multipart">
+            <face filter="RowNumber=1">
+              <li class="h--timeline-event h--timeline-event--selected text-component" data-slide="@rownumber">
+                <div class="container mx-auto py-4 flex  flex-col md:flex-row flex-wrap items-center h--timeline-event-content">
+                  <div class="w-full px-7 flex flex-col items-center text-center">
+                    <p class="pb-7 text-24px w-full text-black">
+                      @text
+                      </p>
+                    <div class="pb-7 text-14px w-full text-black">
+                      @largetext
+                      </div>
+                </div>
+          
+                </div>
+              </li>
+            </face>
+            <face>
+              <li class="h--timeline-event text-component" data-slide="@rownumber">
+                <div class="container mx-auto py-4 flex  flex-col md:flex-row flex-wrap items-center h--timeline-event-content">
+                  <div class="w-full px-7 flex flex-col items-center text-center">
+                    <p class="pb-7 text-24px w-full text-black">
+                      @text
+                      </p>
+                      <div class="pb-7 text-14px w-full text-black">
+                        @largetext
+                        </div>
+                </div>
+          
+                </div>
+              </li>
+            </face>
+          </basis>
+      
+        
+      
+        </ol>
+      </div> <!-- .h--timeline-events -->
+    
+  
+      <div class="swiper advantageSwiper flex h-[100px] w-full mt-[40px]">
+       
+        <div class="swiper-wrapper w-[80%]">
+          <basis core="print" datamembername="db.avdSlider">
+            <layout>
+              @child
+             
+            </layout>
+            <face filter="rownumber = 1">
+              <div class="swiper-slide w-[64px] h-[44px] ">
+                <span></span>
+                <div class="adv_slides flex flex-col items-center justify-center absolute top-0 cursor-pointer" onclick="showavgs(this,'@rownumber')">
+                <div class="w-[13px] h-[13px] bg-sliderGray rounded-full mb-4 "></div>
+                <img src="[##cms.cms.cdn##]/@largeIMG" class="" alt="نماسایت" />
+              </div> 
+              </div>
+            </face>
+            <face>
+              <div class="swiper-slide w-[64px] h-[44px] ">
+                <span></span>
+                <div class="adv_slides flex flex-col items-center justify-center absolute top-0 cursor-pointer" onclick="showavgs(this,'@rownumber')">
+                <div class="w-[13px] h-[13px] bg-sliderGray rounded-full mb-4 "></div>
+                <img src="[##cms.cms.cdn##]/@largeIMG" class="" alt="نماسایت" />
+              </div> 
+              </div>
+            </face>
+          </basis>
+         
+         
+          
+        </div>
+        <div class="advantageSwiper-prev advantageSwiper-arrows w-11 h-11 absolute left-0  rounded-full bg-white flex items-center justify-center cursor-pointer z-50">
+          <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(-0.707303 0.70691 -0.59229 -0.805725 8 0)" stroke="#979797"/>
+            <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(-0.707303 -0.70691 -0.59229 0.805725 8 14.334)" stroke="#979797"/>
+            </svg>
+            
+        </div>
+        <div class="advantageSwiper-next advantageSwiper-arrows w-11 h-11 absolute right-0  top- rounded-full bg-white flex items-center justify-center cursor-pointer z-50" >
+          <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(0.707303 -0.70691 0.59229 0.805725 1 15)" stroke="#979797"/>
+            <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(0.707303 0.70691 0.59229 -0.805725 1 0.666016)" stroke="#979797"/>
+            </svg>
+            
+        </div>
+      
+      </div>
+    
+      <div class="h--timeline-container">
+        <div class="h--timeline-dates">
+        <div class="h--timeline-line">
+  
+  
+    
+      
+          <span class="h--timeline-filling-line" aria-hidden="true"></span>
+        </div> 
+        </div> 
+      
+      
+      </div>
+      
+      </section>
+      </div>
+    </section>
+   
+        <basis core="print" datamembername="db.all">
+          <layout>
+            <section class="container mx-auto p-4 articletext">
+              <div class="pb-4 text-16px text-justify">
+                @child
+              </div>
+            </section>
+          </layout>
+          <face filter="typeid not in (150,160,161,162,159) and prpID not in (7244,7245)">
+            <h3 class="text-customGreen-light text-18px py-3 text-right font-bold">@text</h3>
+            <div class="pb-4 text-16px text-justify">
+            
+            @largetext
+            
+            </div>
+          </face>
+        </basis>
+       
+  
+       
+    <basis core="print" datamembername="slider.landing">
+      <layout> 
+  <div class="gallery galleynewa bg-herodefault ">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            @child
+          </div>
+          <div class="slider_info_wrapper">
+            <div class="font-bold color-customGreen-light slider_title z-[999] text-28px w-full text-center ">نمونه پروژه‌های اجرا شده</div>
+      <div class="slide-captions mt-10"></div>
+      <div class="flex items-center justify-center w-[100px] relative my-0 mx-auto relative top-[30px]">
+        
+        <div class=" projectSwiper-prev advantageSwiper-arrows w-11 h-11 ml-2 rounded-full bg-white flex items-center justify-center cursor-pointer z-50 swiper-button-disabled">
+         
+            <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(0.707303 -0.70691 0.59229 0.805725 1 15)" stroke="#979797"></line>
+              <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(0.707303 0.70691 0.59229 -0.805725 1 0.666016)" stroke="#979797"></line>
+              </svg>
+        </div>
+        <div class=" projectSwiper-next advantageSwiper-arrows w-11 h-11 mr-2 rounded-full bg-white flex items-center justify-center cursor-pointer z-50 swiper-button-disabled">
+          <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(-0.707303 0.70691 -0.59229 -0.805725 8 0)" stroke="#979797"></line>
+            <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(-0.707303 -0.70691 -0.59229 0.805725 8 14.334)" stroke="#979797"></line>
+            </svg>
+        </div>
+      </div>
+      <div class="w-full flex justify-center items-center">
+      <a  href="/پروژه-ها" class="section-1-call-to-action calltoaction openModalBtn moreNama1">دریافت مشاوره</a>
+    </div>
+    </div>
+      
+      
+    </div>
+  </div>
+  </layout>
+      <face>
+        <div class="swiper-slide slide-@rownumber" style="background-image: url([##cms.cms.cdn##]/@largeIMG);" data-title="@name" data-subtitle="@description" data-link="">
+         
+        </div>
+      </face>
+     </basis>
+     <div class="bg-white py-5  mt-25" style="height: 800px;">
+      <section  class="container mx-auto px-4 relative min-h-96 ">
+          <div class="title  mb-8">
+              <h4 class="text-customGreen text-28px gs_reveal gs_reveal_fromLeft font-bold text-center">مراحل طراحی سایت </h4>
+              <a class="moreNama gs_reveal ipsType_right !hidden" href="/">  بیشتر بدانید</a>
+            </div>
+            <div>
+              
+    <section class="services">
+      <div class="circle--slider">
+        <div class="rotate--circle ">
+         
+    
+         
+        <div id="circle_wrapper" style="position: relative;width: 400px;height: 300px;">
+        <svg width="170" height="175" viewBox="0 0 239 175" fill="none" xmlns="http://www.w3.org/2000/svg" style="left:15px;top:-40px">
+            <path class="semicircularPath" d="M238.094 0.500454C189.994 0.587885 142.755 13.2901 101.094 37.343C59.4328 61.3959 24.8129 95.9551 0.687195 137.567L63.0476 173.571C80.8533 142.905 106.383 117.436 137.098 99.7033C167.812 81.9704 202.634 72.5954 238.094 72.5081V0.500454Z" fill="#02472F" stroke="white"/>
+            </svg>
+            
+        <svg width="400" id="circle_svg" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="top: 0;left: 35px; width:80%">
+            <g clip-path="url(#clip0_316_9651)">
+            <mask id="path-1-inside-1_316_9651" fill="white" >
+            <path  d="M200 0C235.107 4.18651e-07 269.596 9.24125 300 26.7949C330.404 44.3486 355.651 69.5961 373.205 100L364.545 105C347.869 76.1163 323.884 52.1311 295 35.4552C266.116 18.7792 233.352 10 200 10V0Z"/>
+            </mask>
+            <path class="circle_path" d="M200 0C235.107 4.18651e-07 269.596 9.24125 300 26.7949C330.404 44.3486 355.651 69.5961 373.205 100L364.545 105C347.869 76.1163 323.884 52.1311 295 35.4552C266.116 18.7792 233.352 10 200 10V0Z" fill="#A3A3A3" stroke="white" stroke-width="2" mask="url(#path-1-inside-1_316_9651)"/>
+            <mask id="path-2-inside-2_316_9651" fill="white">
+            <path d="M373.205 100C390.759 130.404 400 164.893 400 200C400 235.107 390.759 269.596 373.205 300L364.545 295C381.221 266.116 390 233.352 390 200C390 166.648 381.221 133.884 364.545 105L373.205 100Z"/>
+            </mask>
+            <path class="circle_path" d="M373.205 100C390.759 130.404 400 164.893 400 200C400 235.107 390.759 269.596 373.205 300L364.545 295C381.221 266.116 390 233.352 390 200C390 166.648 381.221 133.884 364.545 105L373.205 100Z" fill="#8CC63F" stroke="white" stroke-width="2" mask="url(#path-2-inside-2_316_9651)"/>
+            <mask id="path-3-inside-3_316_9651" fill="white">
+            <path d="M373.205 300C355.651 330.404 330.404 355.651 300 373.205C269.596 390.759 235.107 400 200 400V390C233.352 390 266.116 381.221 295 364.545C323.884 347.869 347.869 323.884 364.545 295L373.205 300Z"/>
+            </mask>
+            <path class="circle_path" d="M373.205 300C355.651 330.404 330.404 355.651 300 373.205C269.596 390.759 235.107 400 200 400V390C233.352 390 266.116 381.221 295 364.545C323.884 347.869 347.869 323.884 364.545 295L373.205 300Z" fill="#659D1A" stroke="white" stroke-width="2" mask="url(#path-3-inside-3_316_9651)"/>
+            <mask id="path-4-inside-4_316_9651" fill="white">
+            <path d="M200 400C164.893 400 130.404 390.759 100 373.205C69.5962 355.651 44.3486 330.404 26.7949 300L35.4552 295C52.1312 323.884 76.1164 347.869 105 364.545C133.884 381.221 166.648 390 200 390V400Z"/>
+            </mask>
+            <path class="circle_path" d="M200 400C164.893 400 130.404 390.759 100 373.205C69.5962 355.651 44.3486 330.404 26.7949 300L35.4552 295C52.1312 323.884 76.1164 347.869 105 364.545C133.884 381.221 166.648 390 200 390V400Z" fill="#578A4E" stroke="white" stroke-width="2" mask="url(#path-4-inside-4_316_9651)"/>
+            <mask id="path-5-inside-5_316_9651" fill="white">
+            <path d="M26.7949 300C9.24126 269.596 1.11594e-06 235.107 0 200C-1.11594e-06 164.893 9.24125 130.404 26.7949 100L35.4552 105C18.7792 133.884 10 166.648 10 200C10 233.352 18.7792 266.116 35.4552 295L26.7949 300Z"/>
+            </mask>
+            <path class="circle_path" d="M26.7949 300C9.24126 269.596 1.11594e-06 235.107 0 200C-1.11594e-06 164.893 9.24125 130.404 26.7949 100L35.4552 105C18.7792 133.884 10 166.648 10 200C10 233.352 18.7792 266.116 35.4552 295L26.7949 300Z" fill="#007048" stroke="white" stroke-width="2" mask="url(#path-5-inside-5_316_9651)"/>
+            <mask id="path-6-inside-6_316_9651" fill="white">
+            <path d="M26.7949 100C44.3486 69.5962 69.5962 44.3486 100 26.7949C130.404 9.24125 164.893 -4.18651e-07 200 0V10C166.648 10 133.884 18.7792 105 35.4552C76.1163 52.1312 52.1312 76.1163 35.4552 105L26.7949 100Z"/>
+            </mask>
+            <path class="circle_path" d="M26.7949 100C44.3486 69.5962 69.5962 44.3486 100 26.7949C130.404 9.24125 164.893 -4.18651e-07 200 0V10C166.648 10 133.884 18.7792 105 35.4552C76.1163 52.1312 52.1312 76.1163 35.4552 105L26.7949 100Z" fill="#02472F" stroke="white" stroke-width="2" mask="url(#path-6-inside-6_316_9651)"/>
+            <circle cx="200" cy="200" r="152.369" stroke="#EFEFEF" stroke-width="45.2612"/>
+            </g>
+            <defs>
+        
+            <clipPath id="clip0_316_9651">
+            <rect width="400" height="400"  fill="white"/>
+            </clipPath>
+            <img id="image0_316_9650" alt="مراحل طراحی سایت" style="position: absolute; top: 120px; left: 110px;"  src="[##cms.cms.cdn##]/images/sliderlogo.png" />
+            </defs>
+            </svg>
+        </div>
+    
+          <div class="animate-wrapper">
+            <basis core="print" datamembername="dbc.multipart">
+              <face filter="rownumber = 1">
+                <div class="animate active">
+                  <div class="animate-img">
+                    <div class="animate-img__in" data-image="#">
+                      <div class="animate-more text-center">
+                        <p class="font-bold" style="margin-right: -15px;"><span class="ml-2 " >@RowNumber. </span>@text</p>
+                        <div class="animate-title text-black">
+                          @largetext
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </face>
+              <face filter="rownumber <> 1">
+                <div class="animate">
+                  <div class="animate-img">
+                    <div class="animate-img__in" data-image="#">
+                      <div class="animate-more text-center">
+                        <p class="font-bold" style="margin-right: -15px;"><span class="ml-2" >@RowNumber. </span>@text</p>
+                        <div class="animate-title text-black">
+                          @largetext
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </face>
+              </basis>
+            
+          
+          </div>
+          <!-- <div class="prev"><span>PREV</span></div>
+          <div class="next"><span>NEXT</span></div> -->
+        </div>
+      </div>
+    </section>
+            </div>
+      </section>
+    </div>
+     
+  
+  
+  
+  
+  
+  <section class="container mx-auto quesions">
+    <h3 class="text-customGreen-light text-24px py-[15px] text-center font-bold" id="4002048">سوالات متداول شما</h3>
+   <div class="pb-4 text-14px text-justify m-[15px]">
+   <div class="accordion-container">
+          
+    
+    <basis core="print" datamembername="dbfaq.multipart">
+      <face>
+        <div class="set bg-white">
+          <div class="p flex relative text-black justify-between items-center cursor-pointer">
+            <span class="text-28px pl-4 flex"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.4375 7.16016H15.5575V8.84016H0.4375V7.16016Z" fill="#00311F"/>
+              <path d="M7.15625 0.439453H8.83625V15.5595H7.15625V0.439453Z" fill="#00311F"/>
+              </svg>
+                <span class="text-16px pr-4">@text</span></span> 
+            
+            <!-- <label class="toggle ">
+              <div class="toggle__control"></div>
+            </label> -->
+          </div>
+          <div class="content bg-[#F3F3F3] text-black text-right text-14px py-5 md:pr-52 p-[15px]">
+  @largetext
+  </div>
+        </div>
+      </face>
+    </basis>
+            
+  
+  </div>
+  </div>
+  </section>
+  
+  <section class="SeoSecThree bg-white">
+    <section  class="container mx-auto px-4  relative min-h-96 overflow-hidden">
+      <div class="grid grid-cols gap-4">
+        <div class="rightHome flex items-center justify-start ">
+        <div class="title32 is-animated text-28px text-customGreen   gs_reveal ipsType_right">
+    خلق هویت منحصر به فرد 
+    برای 
+    <br>
+    برندهای معتبر ایران    </div>
+    
+      
+        
+        </div>
+        <div class="leftHome gs_reveal gs_reveal_fromLeft">
+        <div class="swiper mySwiperlogo">
+        <div class="swiper-wrapper">
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo1.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        <div class="swiper-slide">
+          <a href="">
+          <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo1.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+          </a>
+          
+          </div>
+          <div class="swiper-slide">
+            <a href="">
+            <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo1.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+            </a>
+            
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+              <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo1.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+              </a>
+              
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo1.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                </a>
+                
+                </div>
+                <div class="swiper-slide">
+                  <a href="">
+                  <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo1.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                  </a>
+                  
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="">
+                    <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo1.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                    </a>
+                    
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="">
+                      <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo1.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                      </a>
+                      
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="">
+                        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo1.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                        </a>
+                        
+                        </div>
+    
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo2.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo3.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo4.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo5.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo6.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo7.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo8.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo9.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo10.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo11.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo12.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo13.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo14.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo15.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo16.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo17.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo18.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo19.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo20.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo21.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo22.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo23.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo24.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo25.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo26.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo27.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo28.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo29.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo30.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo31.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo32.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo33.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo34.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo35.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo36.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo37.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo38.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo39.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo40.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo41.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo42.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo43.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo44.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo45.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo46.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo47.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo48.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo49.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo50.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo51.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo52.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo53.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo54.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo55.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo56.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo57.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo58.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo59.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo60.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo61.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>
+        
+        <div class="swiper-slide">
+          <a href="">
+          <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+          </a>
+          
+          </div>
+          <div class="swiper-slide">
+            <a href="">
+            <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+            </a>
+            
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+              <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+              </a>
+              
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                </a>
+                
+                </div>    <div class="swiper-slide">
+                  <a href="">
+                  <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                  </a>
+                  
+                  </div>    <div class="swiper-slide">
+                    <a href="">
+                    <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                    </a>
+                    
+                    </div>    <div class="swiper-slide">
+                      <a href="">
+                      <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                      </a>
+                      
+                      </div>    <div class="swiper-slide">
+                        <a href="">
+                        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                        </a>
+                        
+                        </div>    <div class="swiper-slide">
+                          <a href="">
+                          <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                          </a>
+                          
+                          </div>    <div class="swiper-slide">
+                            <a href="">
+                            <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                            </a>
+                            
+                            </div>    <div class="swiper-slide">
+                              <a href="">
+                              <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                              </a>
+                              
+                              </div>    <div class="swiper-slide">
+                                <a href="">
+                                <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                                </a>
+                                
+                                </div>    <div class="swiper-slide">
+                                  <a href="">
+                                  <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                                  </a>
+                                  
+                                  </div>    <div class="swiper-slide">
+                                    <a href="">
+                                    <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                                    </a>
+                                    
+                                    </div>    <div class="swiper-slide">
+                                      <a href="">
+                                      <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                                      </a>
+                                      
+                                      </div>    <div class="swiper-slide">
+                                        <a href="">
+                                        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                                        </a>
+                                        
+                                        </div>    <div class="swiper-slide">
+                                          <a href="">
+                                          <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                                          </a>
+                                          
+                                          </div>    <div class="swiper-slide">
+                                            <a href="">
+                                            <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                                            </a>
+                                            
+                                            </div>    <div class="swiper-slide">
+                                              <a href="">
+                                              <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                                              </a>
+                                              
+                                              </div>    <div class="swiper-slide">
+                                                <a href="">
+                                                <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                                                </a>
+                                                
+                                                </div>    <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>    <div class="swiper-slide">
+          <a href="">
+          <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+          </a>
+          
+          </div>    <div class="swiper-slide">
+        <a href="">
+        <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+        </a>
+        
+        </div>    <div class="swiper-slide">
+          <a href="">
+          <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+          </a>
+          
+          </div>    <div class="swiper-slide">
+            <a href="">
+            <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+            </a>
+            
+            </div>    <div class="swiper-slide">
+              <a href="">
+              <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+              </a>
+              
+              </div>    <div class="swiper-slide">
+                <a href="">
+                <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                </a>
+                
+                </div>    <div class="swiper-slide">
+                  <a href="">
+                  <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                  </a>
+                  
+                  </div>    <div class="swiper-slide">
+                    <a href="">
+                    <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                    </a>
+                    
+                    </div>    <div class="swiper-slide">
+                      <a href="">
+                      <img src="https://cdn.basiscore.net/namasite.ir/_new/images/logo62.svg" title="برندهای نماسایت" alt="برندهای نماسایت" width="" height="">
+                      </a>
+                      
+                      </div>
+        
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+   
+    
+    
+    
+    </section>
+    <div class="  pb-11 bg-white contactus_form">
+      <div class="container mx-auto p-4">
+        <div class="flex flex-col lg:flex-row items-center">
+          <div class="w-full lg:w-1/2 p-2">
+            <img class="float-left" src="[##cms.cms.cdn##]/newimages/landing-contact.png" alt="فرم ارتباط با نماسایت">
+           </div>
+            <div class="w-full lg:w-1/2 p-2">
+                <div class="form-contact requestBox1">
+                  <div> <h3 class="text-24px font-bold mb-5 text-customGreen">فرم ارتباط با نماسایت</h3>
+                    <p class="mb-5 text-14px text-center">با مشاوره رایگان برای طراحی سایت تجاری، فروشگاهی و سئو همراه شما هستیم</p>
+     <form id="contact-form">
+    
+            <basis core='schema' run='AtClient' schemaurl='/schema/domainform'
+             paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='.contatcus_btn' 
+             resultsourceid='demo.data' 
+             triggers="db.refreshform"></basis>
+             <basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis>
+             <basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
+            
+            <div data-bc-question="" class="qclass8">
+          
+            <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code2" type="scalar" request="captcha"></member> </basis> <basis datamembername="captcha2.code2" core="print"> <face> <span class="captcha-sefaresh">
+               <img src="[##cms.cms.cdn##]/@captcha" width="88" height="44" class="captcha-sefaresh" alt="فرم ارتباط با نماسایت" title="captcha" /> 
+               <input type="hidden" name="captchaid" value="@captcha" /> </span>
+                <img src="[##cms.cms.cdn##]/newimages/refresh.png" class="refressh refressh1" alt="فرم ارتباط با نماسایت"  /> 
+                <input type="text" class="codeinputm absolute" name="captcha" placeholder="کد امنیتی را وارد نمایید .." /> </face> </basis> <div class="clr"></div> </div>
+            <div class="flexinner1 Formbb wow fadeIn ">
+              
+              <a id="openModalBtn" href="#" class="section-1-call-to-action calltoaction contatcus_btn">ثبت</a>
+            </div>
+            <div class="clr" style="clear: both;"></div>
+            </div>
+            
+            
+            </form>              
+    
+    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    
+     
+    </div>
+  
+
+  <section class="container mx-auto comments" >
+    <h3 class="text-customGreen-light text-24px py-2 text-center font-bold" > نظرات  ارزشمند مشتریان</h3>
+    <div class="container11 nazarat m-[15px]">
+      <div class="swiper swiperCarousel">
+          <div class="swiper-wrapper">
+            <basis core="print" datamembername="nazarat.landing">
+              <face>
+                <div class="swiper-slide">
+                  <div class="card">
+                    <div class="avatar">
+                      <img class="" src="[##cms.cms.cdn##]/@largeIMG" alt="@name" />
+                    </div>
+                      <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="50px" height="50px">
+                <path
+                  d="M 16.482422 8.9921875 A 1.50015 1.50015 0 0 0 15.943359 9.1074219 C 15.943359 9.1074219 13.068414 10.279429 10.357422 13.464844 C 7.6464301 16.650259 5 21.927419 5 30 A 1.50015 1.50015 0 0 0 5.015625 30.21875 A 8.5 8.5 0 0 0 13.5 39 A 8.5 8.5 0 0 0 13.5 22 A 8.5 8.5 0 0 0 8.7089844 23.480469 C 9.5777265 19.777157 11.122152 17.196657 12.642578 15.410156 C 14.931586 12.720571 17.056641 11.892578 17.056641 11.892578 A 1.50015 1.50015 0 0 0 16.482422 8.9921875 z M 37.482422 8.9921875 A 1.50015 1.50015 0 0 0 36.943359 9.1074219 C 36.943359 9.1074219 34.068414 10.279429 31.357422 13.464844 C 28.64643 16.650259 26 21.927419 26 30 A 1.50015 1.50015 0 0 0 26.015625 30.21875 A 8.5 8.5 0 0 0 34.5 39 A 8.5 8.5 0 0 0 34.5 22 A 8.5 8.5 0 0 0 29.708984 23.480469 C 30.577727 19.777157 32.122152 17.196657 33.642578 15.410156 C 35.931586 12.720571 38.056641 11.892578 38.056641 11.892578 A 1.50015 1.50015 0 0 0 37.482422 8.9921875 z"
+                />
+              </svg>
+                      <div class="header">
+                          <h3 class="title">@name</h3>
+                      </div>
+                      <div class="quote-container">
+                          <p class="quote">
+  @description                        </p>
+                      </div>
+                  </div>
+              </div>
+              </face>
+            </basis>
+              
+             
+          </div>
+          
+            <div class="flex items-center justify-center w-[100px] absolute z-50 w-full bottom-0  mt-5">
+   
+              <div class="nazaratSwiper-prev advantageSwiper-arrows w-11 h-11 ml-2 rounded-full bg-white flex items-center justify-center cursor-pointer z-50" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-81849a9bd4dac525">
+              
+              <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(0.707303 -0.70691 0.59229 0.805725 1 15)" stroke="#979797"></line>
+              <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(0.707303 0.70691 0.59229 -0.805725 1 0.666016)" stroke="#979797"></line>
+              </svg>
+              </div>
+              <div class="nazaratSwiper-next advantageSwiper-arrows w-11 h-11 mr-2 rounded-full bg-white flex items-center justify-center cursor-pointer z-50" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-81849a9bd4dac525">
+              <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(-0.707303 0.70691 -0.59229 -0.805725 8 0)" stroke="#979797"></line>
+              <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(-0.707303 -0.70691 -0.59229 0.805725 8 14.334)" stroke="#979797"></line>
+              </svg>
+              </div>
+              </div>
+  
+   
+          <!-- <div class="swiper-pagination"></div> -->
+      </div>
+  </div>
+  </section>
+  <footer class="bg-white ">
+    <section  class="container  mx-auto relative border-t-2 border-black pt-8 border-b-gray-200 px-7">
+      <div class="w-full ">
+        <div><img src="[##cms.cms.cdn##]/newimages/footer-logo.png" class="mx-auto" /> </div>
+  
+      <div>
+        <div class="flex w-full mx-auto justify-center">
+          <div class="block my-2"><img src="[##cms.cms.cdn##]/newimages/vector.png" alt=""></div>
+          <div class="block text-customGreen footertel" dir="ltr" style="line-height: 36px;"><a href="tel:+982122555555"><span class="text-14px">(+9821)</span><span class="text-18px">22</span><span>55</span><span>55</span><span>55</span></a>
+          
+          </div>
+        </div>
+  
+      </div>
+      </div>
+      <div class="w-full   justify-between  pt-5" style="border-top:1px solid #007048">
+      <div class="text-14px py-5 text-center footer-copy" dir="ltr"><p>Copyright © 2024 • Namasite Company.</p></div>
+      </div>
+    </section>
+  </footer>
+  <div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden " style="z-index: 999;">
+    <div class="shadow-lg p-6 max-w-3xl w-full relative" >
+      <img id="closeModalBtn" class="closeModalBtn cursor-pointer" src="newimages/close.png" alt="">
+      <div class="p-8 rounded shadow-lg w-full bg-white">
+        <div class="text-center mb-8">
+          <div class="text-customGreen-light text-2xl font-bold flex justify-center" dir="ltr"><p class="pr-4" style="line-height: 44px;">(+9821) 22 55 55 55 </p><p><img src="newimages/calltocation.png" alt=""></p></div>
+          <p class="text-gray-600 mt-2 text-right text-black text-16px">فرم درخواست مشاوره</p>
+          <p class="text-gray-500 mt-1  text-right text-black  text-14px">برای دریافت مشاوره تخصصی رایگان اطلاعات زیر را تکمیل کنین تا کارشناسان ما در اولین فرصت با شما تماس بگیرن!</p>
+        </div>
+        
+        <div class="form-contact requestBox1 " >
+          <form id="contact-form">
+  
+          <basis core='schema' run='AtClient' schemaurl='/schema/domainform' paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='[data-btn-add]' resultsourceid='demo.data'></basis><basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis><basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
+          
+          <div data-bc-question="" class="qclass8">
+        
+          <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code2" type="scalar" request="captcha"></member> </basis> <basis datamembername="captcha2.code2" core="print"> <face> <span class="captcha-sefaresh"> <img src="/@captcha" width="88" height="44" class="captcha-sefaresh" alt="captcha" title="captcha" /> <input type="hidden" name="captchaid" value="@captcha" /> </span> <img src="newimages/refresh.png" class="refressh refressh1" /> <input type="text" class="codeinputm absolute" name="captcha" placeholder="کد امنیتی را وارد نمایید .." /> </face> </basis> <div class="clr"></div> </div>
+          <div class="flexinner1 Formbb wow fadeIn ">
+            <input type="image" src="newimages/submitform.png" data-btn-add data-btn-submit alt="ثبت" width="170" height="54"> 
+          </div>
+          <div class="clr" style="clear: both;"></div>
+          </div>
+          
+          
+          </form>
+          
+          </div>
+  
+  
+  
+        
+    </div>
+  </div>
+  </div>
+  <div id="" class="fixed bottom-12 right-12 cursor-pointer calltocationfixed" ><a href="tel:+982122555555"><img src="newimages/calltocation.png"></a></div>
+  <script>
+  const btn = document.querySelector("button.mobile-menu-button");
+  const menu = document.querySelector(".mobile-menu");
+  
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  })
+  </script>
+  <div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden " style="z-index: 999;">
+    <div class="shadow-lg p-6 max-w-3xl w-full relative" >
+      <img id="closeModalBtn" class="closeModalBtn cursor-pointer" src="newimages/close.png" alt="فرم درخواست مشاوره">
+      <div class="p-8 rounded shadow-lg w-full bg-white">
+        <div class="text-center mb-8">
+          <div class="text-customGreen-light text-2xl font-bold flex justify-center" dir="ltr"><p class="pr-4" style="line-height: 44px;">(+9821) 22 55 55 55 </p><p><img src="newimages/calltocation.png" alt=""></p></div>
+          <p class="text-gray-600 mt-2 text-right text-black text-16px">فرم درخواست مشاوره</p>
+          <p class="text-gray-500 mt-1  text-right text-black  text-14px">برای دریافت مشاوره تخصصی رایگان اطلاعات زیر را تکمیل کنین تا کارشناسان ما در اولین فرصت با شما تماس بگیرن!</p>
+        </div>
+        
+        <div class="form-contact requestBox1 " >
+          <form id="contact-form">
+  
+          <basis core='schema' run='AtClient' schemaurl='/schema/domainform' paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='[data-btn-add]' resultsourceid='demo.data' triggers="db.refreshform"></basis><basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis><basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
+          
+          <div data-bc-question="" class="qclass8">
+        
+          <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code2" type="scalar" request="captcha"></member> </basis> <basis datamembername="captcha2.code2" core="print"> <face> <span class="captcha-sefaresh"> <img src="/@captcha" width="88" height="44" class="captcha-sefaresh" alt="captcha" title="captcha" /> <input type="hidden" name="captchaid" value="@captcha" /> </span> <img src="newimages/refresh.png" class="refressh refressh1" /> <input type="text" class="codeinputm absolute" name="captcha" placeholder="کد امنیتی را وارد نمایید .." /> </face> </basis> <div class="clr"></div> </div>
+          <div class="flexinner1 Formbb wow fadeIn ">
+            <input type="image" src="newimages/submitform.png" data-btn-add data-btn-submit alt="ثبت" width="170" height="54"> 
+          </div>
+          <div class="clr" style="clear: both;"></div>
+          </div>
+          
+          
+          </form>
+          
+          </div>
+  
+  
+  
+        
+    </div>
+  </div>
+  </div>
+  <div id="openModalBtnFooter" class="fixed bottom-12 right-12 cursor-pointer calltocationfixed" >
+    <img src="[##cms.cms.cdn##]/newimages/calltocation.png" alt="نماسایت"></div>
+  
+  
+  
+  <script src='[##cms.cms.cdn##]/newjs/gsap-latest-beta.min.js?r=v3.11.3'></script>
+    <script src='[##cms.cms.cdn##]/newjs/ScrollTrigger.min.js'></script>
+    <script src='[##cms.cms.cdn##]/newjs/ScrollSmoother.min.js?v=3.10.0e'></script>
+    <script src="[##cms.cms.cdn##]/newjs/jquery-3.5.1.min.js"></script>
+    <script src="[##cms.cms.cdn##]/newjs/swiper-bundle.min.js"></script>
+    <basis core="call" file="formjs.inc" />
+    <script src="[##cms.cms.cdn##]/newjs/newlanding.js"></script>
+     <script>
+  
+      const swiperCarousel = new Swiper(".swiperCarousel", {
+        slidesPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 10,
+        keyboard: {
+          enabled: true },    
+        loop: true,    
+        navigation: {
+          nextEl: ".nazaratSwiper-next",
+          prevEl: ".nazaratSwiper-prev" } });
+      
+            
+            
+            
+  
+        
+            var advantageSwiper = new Swiper(".advantageSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 0,
+            centeredSlides: true,
+            centeredSlidesBounds: true,
+            loop: true, 
+            navigation: {
+              nextEl: '.advantageSwiper-next',
+              prevEl: '.advantageSwiper-prev',
+            },
+  
+          });
+  
+  
+    
+       function showavgs(el, id){
+            const cSlides = document.querySelector(`[data-slide="${id}"]`)
+            const avgslides = document.querySelectorAll(".h--timeline-event")
+            const slidesIcons= document.querySelectorAll(".swiper-slide")
+            avgslides.forEach(e => {
+              // e.style.transform = "translateX(-100%)"            
+              setTimeout(function ()  {
+                e.classList.remove("h--timeline-event--selected")
+              }, 100);
+             
+            })
+            // slidesIcons.forEach(e => {
+            //   e.classList.remove("advantageSwiperactive")
+            // })
+            // el.closest(".swiper-slide").classList.add("advantageSwiperactive")
+            setTimeout(function ()  {
+              cSlides.classList.add("h--timeline-event--selected")
+              }, 200);
+         
+          }
+    var rotateDegree = 60
+    function selectSlides(index,color){
+     
+        rotateDegree = 60 *(index + 1)
+        
+        const circle_svg = document.getElementById("circle_svg")
+        circle_svg.style.transform=`rotate(-${rotateDegree}deg)`
+        const semicircularPath = document.querySelector(".semicircularPath")
+        semicircularPath.style.fill = color
+        const circleTexts = document.querySelectorAll(".animate")
+        circleTexts.forEach((e,cindex) => {
+          e.classList.remove("active")
+          if(index == cindex){
+            e.classList.add("active")
+          }
+        })
+        // if(rotateDegree == 360){
+        //     rotateDegree = 60
+        // }
+    }
+    let circleSvg =document.getElementById("circle_svg")
+    let paths = circleSvg.querySelectorAll('.circle_path');
+    
+    // paths is an html collection of all paths;
+    // attach event listeners to each path;
+    for (let i=0; i<paths.length; i++) {
+    paths[i].addEventListener('click', event => selectSlides(i, paths[i].getAttribute("fill")));
+    } 
+    var swiperlogo = new Swiper(".mySwiperlogo", {
+            speed: 2500,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            slidesPerView: 5,
+            direction: "vertical",
+            spaceBetween: 15,
+ grid: {
+ rows: 8,
+ },
+  
+ });
+ gsap.from(".section1", { scrollTrigger: '.section1', opacity: 0, y: 200, duration: 1 });
+gsap.from(".header-text", { scrollTrigger: '.header-text', opacity: 0, y: 200, duration: 1 });
+gsap.from(".quesions", { scrollTrigger: '.quesions', opacity: 0, y: 200, duration: 1 });
+gsap.from(".contactus_form", { scrollTrigger: '.contactus_form', opacity: 0, y: 200, duration: 1 });
+gsap.from(".comments", { scrollTrigger: '.comments', opacity: 0, y: 200, duration: 1 });
+gsap.from(".articletext", { scrollTrigger: '.articletext', opacity: 0, y: 200, duration: 1 });
+
+  </script>
+  </body>
+  </html>
+   

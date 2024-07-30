@@ -1,0 +1,148 @@
+ <script src="[##cms.cms.cdn##]/newjs/mainscript.js">
+
+  </script>
+    <script src="[##cms.cms.cdn##]/newjs/Library.js" type="text/javascript"></script>
+    <script src="[##cms.cms.cdn##]/newjs/core.min.js" type="text/javascript"></script>
+    <script src="[##cms.cms.cdn##]/_js/basiscore-2.28.0.min.js"></script>
+    <script>
+
+        var rkey = get_cookie("rkey")
+        var host = {
+         debug: false,
+         settings: {
+         'connection.web.callcommand': 'https://namasite.ir',
+         'connection.local.basket': {
+         Url: 'https://namasite.ir/app/js/LocalStorageBasket.js',
+         Function: 'LocalBasket'
+         },
+         
+         'connection.web.trust_login': 'https://basispanel.ir/apicms',
+         'connection.web.basiscore': 'https://basispanel.ir/apicms',
+         'connection.web.accounting': 'https://basispanel.ir/apicms',
+         'connection.web.accounting_eshop': `https://www.basisfly.com/eshop-test/${rkey}`,
+         'connection.web.media': 'https://basispanel.ir/apicms',
+         'default.dbsource.verb': 'post',
+         'default.call.verb': 'get',
+         'default.viewCommand.groupColumn': 'prpid',
+         'default.dmnid': '4313',
+         'default.binding.regex': '\\{##([^#]*)##\\}'
+        
+         }
+        }
+        
+        
+        
+         function onSource(args) {
+         const captcha = document.querySelector("#requestBox input[name='captcha']").value;
+         const captchaid = document.querySelector("#requestBox input[name='captchaid']").value;
+         const stringJson = JSON.stringify(args.source?.rows[0]);
+         $bc.setSource('edit.object', {
+         value: stringJson,
+         captcha: captcha,
+         captchaid: captchaid
+         })
+         }
+        
+         async function OnProcessedEditObject1(args) {
+         const response = args.response;
+         const json = await response.json();
+        
+         //alert("errorid : " + json.errorid + " , message : " + json.message)
+        
+         if (json.errorid == 6) {
+         $(".requestBox1").append('<div class="lds-ellipsis1"> <div class="backkkkk"><div class="lds-ellipsis"> فرم شما با موفقیت ثبت شد <br> <div></div><div></div><div></div><div></div></div></div></div>')
+        $bc.setSource("db.refreshform",true)
+         setTimeout(function () { $(".lds-ellipsis1").remove() }, 3000);
+         }
+         if (json.errorid == 4) {
+         $(".requestBox1").append('<div class="lds-ellipsis1"> <div class="backkkkk"><div class="lds-ellipsis lds-ellipsisrr"> لطفا کد امنیتی را وارد کنید <div></div><div></div><div></div><div></div></div></div></div>')
+        
+         setTimeout(function () { $(".lds-ellipsis1").remove() }, 3000);
+         }
+        
+         }
+        
+        
+         $("body").on("click", ".refressh1", function (e) {
+        
+         $(".captcha-sefaresh").load("/captcha.bc");
+         return false;
+         });
+        
+     
+        
+$(document).ready(function(){
+window.onload = function () {
+ setTimeout(function () {
+ $(".Contact-2 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+
+ $(".Contact-2 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+ $(".Contact-3 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+ $(".Contact-3 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+ $(".Contact-1 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+
+ $(".Contact-1 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+
+
+ $(".Contact-4 ___textarea").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+ $(".Contact-4 ___textarea").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+
+
+
+
+ }, 1000); 
+ };
+
+
+
+});
+        
+        </script>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+
+  <title>CodePen - GSAP animation</title>
+
+    <link rel="canonical" href="https://codepen.io/93lucasp/pen/xBQGLv">
+  
+  
+  
+  
+<style>
+body {
+  position: relative;
+  min-height: 100vh;
+  background-color: #000;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  position: absolute;
+  background-color: #000;
+  z-index: 2;
+}
+.line--top {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+}
+.line--right {
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 5px;
+}
+.line--bottom {
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 5px;
+}
+.line--left {
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 5px;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.text, .text2 {
+  color: #fff;
+  opacity: 0;
+}
+.text a, .text2 a {
+  color: green;
+}
+
+.text-center {
+  text-align: center;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <div class="line line--top"></div>
+<div class="line line--right"></div>
+<div class="line line--bottom"></div>
+<div class="line line--left"></div>
+<div class="mask"></div>
+<div class="text-center">
+  <h1 class="text">GSAP is awesome!</h1>
+  <h3 class="text2">Read <a href="https://medium.com/notonlycss/starting-with-gsap-c4142fd95dbe">this article</a> to start using GSAP</h3>
+</div>
+  <script src='newjs/TweenMax.min.js'></script>
+      <script id="rendered-js" >
+var tl = new TimelineMax({ repeat: 0, repeatDelay: 0 });
+tl.to(".line--top", 0.6, { width: "100%", ease: Power2.easeIn }).
+to(".line--right", 0.6, { height: "100%", ease: Power0.easeNone }).
+to(".line--bottom", 0.6, { width: "100%", ease: Power0.easeNone }).
+to(".line--left", 0.6, { height: "100%", ease: Power2.easeOut }).
+to(".mask", 1, { left: "100%" }).
+to(".text", 0.8, { opacity: 1 }).
+to(".text2", 0.8, { opacity: 1 });
+//# sourceURL=pen.js
+    </script>
+
+  
+</body>
+
+</html>

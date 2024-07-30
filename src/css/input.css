@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.advantageSwiper-arrows{
+    box-shadow: 0 0 4px #ccc ;
+}
+
+.advantageSwiper  .swiper-slide {
+    width: 100px;
+    height: 160px;
+    background : none !important;
+    position: relative;
+  }
+
+.advantageSwiper  .swiper-slide span{
+    position: absolute;
+
+    width: 60%;
+    height: 1px;
+    background-color:#000000 ;
+    top: 0;
+    left: -30%;
+}
+.advantageSwiper  .swiper-slide:nth-child(5n+5) span{
+   display: none;
+}
+
+.advantageSwiper .swiper-slide:nth-child(5n+5):before{
+    display: none;
+}
+
+.advantageSwiperactive .adv_slides>div{
+    background-color: #007048 !important;
+}

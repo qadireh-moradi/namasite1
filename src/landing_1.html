@@ -1,0 +1,2829 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" catid="71306"> <member type="list" name="blog" perpage="6" pageno="1" size="370x284" propertyid="7244" postsql=" select *, SUBSTR(prp_7244, 1,230-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 230)))) || '...' as substr from [db.blog]"></member> </basis>
+
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id|2357435##]">
+    <member type="view" name="multipart" postsql="select * from [db.multipart] where prpID=7246"  preview="" />
+    <member type="view" name="all"  />
+  </basis>
+  <basis core="dbsource" source="basiscore" name="dbc" lid="1" mid="1" usedforid="2352984">
+    <member type="view" name="multipart" postsql="select * from [dbc.multipart] where prpID=7246"  preview="" />
+    <member type="view" name="all"  />
+  </basis>
+  <basis core="dbsource" source="basiscore" name="dbfaq" lid="1" mid="1" usedforid="2351602">
+    <member type="view" name="multipart" postsql="select * from [dbfaq.multipart] where prpID=7246"  preview="" />
+    <member type="view" name="all"  />
+  </basis>
+  <basis core="dbsource" source="basiscore" name="dbm" lid="1" mid="1" usedforid="2358620">
+    <member type="view" name="multipart" postsql="select * from [dbm.multipart] where prpID=7246"  preview="" />
+    <member type="view" name="all"  />
+  </basis>
+
+  <basis core="dbsource" source="media" name="db" lid="1" sourcemid="article" usedforid="2358620" >
+    <member type="list" name="avdSlider" preview=""   />
+  </basis>
+   
+<basis core="dbsource" source="basiscore" name="about" lid="1" mid="1" usedforid="2356243">
+  <member type="view" name="us"   />
+</basis>
+
+  <basis core='dbsource' name='histori' source='basiscore' lid='1' mid='1' catid='208799'>
+    <member name='list' type='list' size='425X318' typeid='159' propertyid='8188,8190,8191' perpage='100'></member>
+  </basis>
+<basis core="dbsource" source="media" name="slider" lid="1" sourcemid="article" usedforid="2358724" >
+	<member type="list" name="landing" preview=""   />
+</basis>
+<basis core="dbsource" source="media" name="nazarat" lid="1" sourcemid="article" usedforid="2351601" >
+	<member type="list" name="landing" preview=""   />
+</basis>
+
+<!doctype html>
+<html dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namasite</title>
+  
+
+
+
+
+  <link rel='stylesheet' id='kobe-style-style-css'  href='/css/circleStyle.css' media='all' />
+
+
+   <link rel="stylesheet" href="css/new/swiper-bundle.min.css" />
+   <link href="css/custom.css" rel="stylesheet">
+   <link href="css/newlanding.css" rel="stylesheet">
+    <link href="[##cms.cms.cdn##]/css/formbccss.css" rel="stylesheet">
+    <link href="css/output.css" rel="stylesheet">
+  <style>
+    .gs_reveal {
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform, opacity;
+}
+  </style>
+ <style>
+
+
+    /* Swiper */
+    .galleynewa .swiper-container {
+      width: 100%;
+      height: 100vh;
+      
+      position: relative;
+    }
+    
+    /* Swiper slides */
+    .galleynewa  .swiper-slide {
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-position-y : 50px;
+        background-color: inherit ;
+        background-position-x : calc(100% - 200px)
+    }
+    
+    
+    /* Slide captions */
+    .galleynewa  .slider_info_wrapper {
+        position: absolute;
+        top: 240px;
+        left: 15%;
+        color: #3C3C3C;
+        z-index: 20;
+        transform: translateY(-50%);
+        width: 500px;
+        height: 300px;
+        backdrop-filter: blur(10px);
+        padding: 15px;
+    }
+    .galleynewa  .slide-captions .current-title{
+        font-weight: bold;
+    }
+    .galleynewa  .slide-captions .current-title {
+      margin: 0;
+        font-size: 34px;
+        color: #7B7B7B;
+    }
+    .galleynewa  .slide-captions .current-subtitle {
+      margin: 10px 0 0 0;
+        font-size: 16px;
+        color: #7B7B7B;
+    }
+    .slide-captions{
+      height: 140px ;
+    }
+    /* Swiper arrows */
+    .galleynewa  .swiper-pagination-bullet-active {
+        background-color: #007048;
+    }
+    
+    /* Swiper pagination */
+    .galleynewa  .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: 50px;
+    }
+    .galleynewa  .swiper-button-prev,
+    .galleynewa  .swiper-button-next {
+        color: #007048;
+    }
+    .galleynewa .moreNama{
+        position: absolute;
+        left: 7%;
+        bottom: 100px;
+        z-index: 20;
+
+    }
+    .galleynewa .rgba{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 19;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(00, 00, 00, .37);
+
+    }
+    .galleynewa .moreNama1 {
+  position: absolute;
+  left: 15%;
+  bottom: 200px;
+  z-index: 20;
+}
+    </style>
+    <style>
+      
+       .container11 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        height: 500px;
+
+      }
+      .nazarat  .card {
+        background-color: #f9fafe;
+        width: 400px;
+        height: 150px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 10px 0 0 0;
+        transition: transform 400ms;
+        opacity: 0.5;
+        box-shadow: none;
+      }
+      
+      .nazarat .quote-icon {
+        position: absolute;
+        z-index: 0;
+        opacity: 0.05;
+        left: 3%;
+        top: 0;
+      }
+      
+      .nazarat .avatar {
+      width: 90px !important;
+        height: 90px !important;
+        border-radius: 150px;
+        position: absolute;
+        bottom: -160px;
+        left: 52%;
+        transform: translate(-60px, -60px);
+        z-index: 1;
+        border:1px solid  #CDCDCD;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .nazarat .avatar img{
+        width: 50%;
+      }
+      
+      .nazarat .header {
+        
+        text-align: center;
+        z-index: 1;
+      }
+      
+      .nazarat .name {
+        font-size: 22px;
+        margin: 0;
+      }
+      
+      .nazarat .title {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 5px 0 0 0;
+        padding: 0 5px;
+        color: #007048;
+      }
+      
+      .nazarat .quote-container {
+        margin: 0;
+        height: 100%;
+        z-index: 1;
+        padding:15px;
+        overflow: hidden;
+        padding-top: 0;
+      }
+      
+      .nazarat .quote {
+        width: 100%;
+        height: 95%;
+        font-size: 12px;
+        text-align: center;
+        margin: 0;
+      }
+      
+      .nazarat .swiper {
+        width: 100%;
+        height: 100%;
+      }
+      
+      .nazarat .swiper-slide {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .nazarat .swiper-slide-active {
+        z-index: 1;
+      }
+      
+      .nazarat .swiper-slide-active .card {
+        box-shadow: 0 8px 30px -7px #c9dff0;
+        opacity: 1;
+        transform: scale(1.5);
+        background-color: #007048;
+        position: relative;
+        color: #FFFFFF !important;
+
+      }
+      .nazarat .swiper-slide-active .card:before{
+        width: 0;
+        content: '';
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #007048;
+        position: absolute;
+        bottom: -5px;
+        right: 50%;
+
+      }
+      .nazarat .swiper-slide-active .title {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 5px 0 0 0;
+        padding: 0 5px;
+        color: #fff;
+      }
+      
+      .nazarat .swiper {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .nazarat .swiper-button-next:focus,
+      .nazarat .swiper-button-prev:focus {
+        outline: none;
+      }
+      
+      @media (max-height: 400px) {
+        .nazarat .header {
+          margin: 40px 0 0 0;
+        }
+        .nazarat .name {
+          font-size: 12px;
+        }
+        .nazarat .title {
+          font-size: 10px;
+        }
+        .nazarat .quote-container {
+          padding: 5px 20px 20px 20px;
+        }
+        .nazarat .quote-icon {
+          width: 75px;
+          height: 75px;
+        }
+        .nazarat .avatar {
+          width: 100px;
+          height: 100px;
+          transform: translate(-50px, -50px);
+        }
+      }
+
+
+      
+
+.services {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .services > * {
+    flex-grow: 1;
+  }
+  
+  .circle--rotate {
+    border-radius: 50%;
+    border: 5px #007048 solid;
+    width: 43%;
+    height: 43%;
+    margin: 0 auto 0;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    z-index: 0;
+    padding: 0;
+  }
+  @media screen and (max-width: 780px) {
+    .circle--rotate {
+        width: 80%;
+        height: 80%;
+      }
+  }
+  .circle--rotate > li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    z-index: 10;
+    visibility: hidden;
+  }
+  .circle--rotate > li .icon {
+    visibility: visible;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    font-size: 20px;
+    color: #007048 !important;
+    border-radius: 50%;
+    background-color: #000000;
+    height: 10%;
+    width: 10%;
+    line-height: 100%;
+    margin: -5% auto;
+    transition: all 500ms ease;
+    box-shadow: -10px 10px 25px rgba(0, 0, 0, 0.2);
+    background-color: white !important;
+  }
+  .circle--rotate > li i {
+    color: #007048;
+    font-size: 24px;
+    margin: auto;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: table;
+    font-style: normal;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .circle--rotate > li.active i {
+    color: #fff;
+
+  }
+  .circle--rotate > li i::before {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .circle--rotate > li img {
+    margin: auto;
+  }
+  
+  .circle--slider {
+    position: relative;
+  }
+  .circle--slider .rotate--circle {
+    margin: 0 auto;
+  }
+  .circle--slider .circle--rotate > li div {
+    position: relative;
+    overflow: visible;
+    background-color: #1F2845;
+  }
+  .circle--slider .circle--rotate > li div span {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    transition: all 2s;
+    opacity: 0;
+  }
+  .circle--slider .circle--rotate > li.active div {
+    font-size: 20px;
+    background-color: #007048 !important;;
+    transition: all 1s;
+    color: #fff !important;
+  }
+  .textactive{display: none;}
+  .circle--slider .circle--rotate > li.active .textactive {
+    display: block;
+    position: absolute;
+    top: -60px;
+    z-index: 99;
+    color: black;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    visibility: initial;
+  }
+  
+  .circle--slider .circle--rotate > li.active div span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    z-index: -1;
+    opacity: 1;
+  }
+  .circle--slider .circle--rotate > li.active div span:before {
+    position: absolute;
+    height: 1px;
+    top: -50%;
+    right: 140%;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    width: 30%;
+    height: 30%;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    opacity: .7;
+    border: 6px solid #F48E2A;
+    z-index: -1;
+  }
+  .circle--slider .circle--rotate > li.active div span:after {
+    position: absolute;
+    height: 1px;
+    top: 100%;
+    left: 130%;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    opacity: .7;
+    border: 8px solid #FE9290;
+    z-index: 5;
+  }
+  .circle--slider .count2 li:nth-child(2) {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .circle--slider .count3 li:nth-child(2) {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  .circle--slider .count3 li:nth-child(3) {
+    -webkit-transform: rotate(240deg);
+            transform: rotate(240deg);
+  }
+  .circle--slider .count4 li:nth-child(2) {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .circle--slider .count4 li:nth-child(3) {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .circle--slider .count4 li:nth-child(4) {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  .circle--slider .count5 li:nth-child(2) {
+    -webkit-transform: rotate(72deg);
+            transform: rotate(72deg);
+  }
+  .circle--slider .count5 li:nth-child(3) {
+    -webkit-transform: rotate(144deg);
+            transform: rotate(144deg);
+  }
+  .circle--slider .count5 li:nth-child(4) {
+    -webkit-transform: rotate(216deg);
+            transform: rotate(216deg);
+  }
+  .circle--slider .count5 li:nth-child(5) {
+    -webkit-transform: rotate(-72deg);
+            transform: rotate(-72deg);
+  }
+  .circle--slider .count6 li:nth-child(2) {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  .circle--slider .count6 li:nth-child(3) {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  .circle--slider .count6 li:nth-child(4) {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .circle--slider .count6 li:nth-child(5) {
+    -webkit-transform: rotate(240deg);
+            transform: rotate(240deg);
+  }
+  .circle--slider .count6 li:nth-child(6) {
+    -webkit-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+  }
+  .circle--slider .count7 li:nth-child(2) {
+    -webkit-transform: rotate(51.5deg);
+            transform: rotate(51.5deg);
+  }
+  .circle--slider .count7 li:nth-child(3) {
+    -webkit-transform: rotate(103deg);
+            transform: rotate(103deg);
+  }
+  .circle--slider .count7 li:nth-child(4) {
+    -webkit-transform: rotate(154.5deg);
+            transform: rotate(154.5deg);
+  }
+  .circle--slider .count7 li:nth-child(5) {
+    -webkit-transform: rotate(206deg);
+            transform: rotate(206deg);
+  }
+  .circle--slider .count7 li:nth-child(6) {
+    -webkit-transform: rotate(-103deg);
+            transform: rotate(-103deg);
+  }
+  .circle--slider .count7 li:nth-child(7) {
+    -webkit-transform: rotate(-51.5deg);
+            transform: rotate(-51.5deg);
+  }
+  .circle--slider .count8 li:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .circle--slider .count8 li:nth-child(3) {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .circle--slider .count8 li:nth-child(4) {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  .circle--slider .count8 li:nth-child(5) {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .circle--slider .count8 li:nth-child(6) {
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+  }
+  .circle--slider .count8 li:nth-child(7) {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .circle--slider .count8 li:nth-child(8) {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .circle--slider .count9 li:nth-child(2) {
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  .circle--slider .count9 li:nth-child(3) {
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+  .circle--slider .count9 li:nth-child(4) {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  .circle--slider .count9 li:nth-child(5) {
+    -webkit-transform: rotate(160deg);
+            transform: rotate(160deg);
+  }
+  .circle--slider .count9 li:nth-child(6) {
+    -webkit-transform: rotate(-160deg);
+            transform: rotate(-160deg);
+  }
+  .circle--slider .count9 li:nth-child(7) {
+    -webkit-transform: rotate(-120deg);
+            transform: rotate(-120deg);
+  }
+  .circle--slider .count9 li:nth-child(8) {
+    -webkit-transform: rotate(-80deg);
+            transform: rotate(-80deg);
+  }
+  .circle--slider .count9 li:nth-child(9) {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+  .circle--slider .count10 li:nth-child(2) {
+    -webkit-transform: rotate(36deg);
+            transform: rotate(36deg);
+  }
+  .circle--slider .count10 li:nth-child(3) {
+    -webkit-transform: rotate(72deg);
+            transform: rotate(72deg);
+  }
+  .circle--slider .count10 li:nth-child(4) {
+    -webkit-transform: rotate(108deg);
+            transform: rotate(108deg);
+  }
+  .circle--slider .count10 li:nth-child(5) {
+    -webkit-transform: rotate(144deg);
+            transform: rotate(144deg);
+  }
+  .circle--slider .count10 li:nth-child(6) {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  .circle--slider .count10 li:nth-child(7) {
+    -webkit-transform: rotate(-144deg);
+            transform: rotate(-144deg);
+  }
+  .circle--slider .count10 li:nth-child(8) {
+    -webkit-transform: rotate(-108deg);
+            transform: rotate(-108deg);
+  }
+  .circle--slider .count10 li:nth-child(9) {
+    -webkit-transform: rotate(-72deg);
+            transform: rotate(-72deg);
+  }
+  .circle--slider .count10 li:nth-child(10) {
+    -webkit-transform: rotate(-36deg);
+            transform: rotate(-36deg);
+  }
+  .circle--slider .animate-wrapper {
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+  }
+  .circle--slider .animate-title {
+    color: #fff;
+  }
+  .circle--slider .animate-img {
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .circle--slider .animate-img .animate-img__in {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    z-index: 3;
+    -webkit-transform: rotate3d(0, 0, 0, 0deg) scale(0.85);
+            transform: rotate3d(0, 0, 0, 0deg) scale(0.85);
+    transition: .55s ease-in-out;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-size: cover;
+    box-shadow: -20px 20px 50px rgba(0, 0, 0, 0.3);
+  }
+  .circle--slider .animate-more {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s .4s;
+    min-width: 131px;
+    overflow: hidden;
+    text-align: center;
+    z-index: 30;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 15px;
+    height: 90px;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .circle--slider .animate.active .animate-more {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .circle--slider .animate.active .animate-img .animate-img__in {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .circle--slider .prev,
+  .circle--slider .next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    height: 62px;
+    width: 87px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .circle--slider .prev span,
+  .circle--slider .next span {
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-weight: 700;
+  }
+  .circle--slider .prev {
+    left: 250px;
+  }
+  .circle--slider .next {
+    right: 250px;
+  }
+  
+
+  .accordion-container{
+  position: relative;
+  height: auto;
+  margin: 10px auto;
+}
+
+.set{
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 55px;
+  height: auto;
+}
+.set > .p{
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid #747373;
+  -webkit-transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  transition:all 0.2s linear;
+  min-height: 55px;
+  height: auto;
+}
+.set > .p i{
+  float: right;
+  margin-top: 2px;
+}
+
+ .p.active .toggle__control {
+  background: #098642;
+}
+.p.active .toggle__control:after {
+  left: 20px;
+}
+ .toggle__control {
+  background: #ecf0f1;
+  width: 38px;
+  height: 18px;
+  border-radius: 16px;
+  border: 2px solid #34495e;
+  transition: 0.2s cubic-bezier(0.96, 0.98, 0.81, 0.23);
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+ .toggle__control:after {
+  width: 13px;
+  display: block;
+  height: 13px;
+  background: #ecf0f1;
+  border-radius: 50%;
+  box-shadow: 0 1px 6px -2px rgba(0, 0, 0, 0.4), 0 1px 6px -2px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.2s cubic-bezier(0.96, 0.98, 0.81, 0.23);
+  content: "";
+}
+.content{
+  border-bottom: 1px solid #ddd;
+  display:none;
+}
+.slider_title{
+  position: absolute;
+  top: 0;
+  color: #007048;
+  z-index: 20;
+  transform: translateY(-50%);
+  right: 15px;
+}
+.set .active{
+  background-color: #F3F3F3;
+  border-bottom: none;
+}
+.set svg{
+  transition: all 0.5s ease-in-out;
+}
+.set .active svg{
+  transform: rotate(45deg);
+}
+.nazarat .swiper-slide{
+  height: 300px !important;
+}
+.bg-herodefault{
+  height: 700px;
+}
+.gallery,.pin-spacer{
+    height: 100vh !important;
+}
+
+      </style>
+</head>
+<body class="!bg-white">
+
+    <header class="main-tool-bar shadow-lg z-50 ">
+      <nav  class="container mx-auto px-4 relative defnav">
+          <basis core="call" file="menu-v4.inc" />
+        
+        </nav>
+    
+    </header>
+<div class="seo-main  mx-auto px-4 md:py-32 bg-center bg-no-repeat" style="background-image: url(newimages/landing/[##cms.query.id|2357435##].png);">
+      
+      <div class="header-text ">
+        <h1 class="pb-5"> 
+          <basis core="print" datamembername="db.all"> 
+              <face filter="TypeID=150"> 
+                  @Answer
+              </face>
+          </basis>
+      </h1>
+      <h2 class="pb-5"> 
+        <basis core="print" datamembername="db.all"> 
+            <face filter="prpID=7245"> 
+                @Answer
+            </face>
+        </basis>
+    </h2>
+      
+    <div>
+            <a id="openModalBtn" href="#" class="section-1-call-to-action calltoaction">به مشاوره نیاز دارید ؟ </a>
+    </div>
+    </div>
+    
+      </div>
+
+    
+
+<div class="bg-white">
+
+  <div class="container mx-auto py-4">
+ <div class="mt-4 bg-about md:p-10 lg:w-3/5 mx-auto !bg-contain bg-no-repeat">
+  <basis core="print" datamembername="db.all"> 
+    <face filter="prpid=7244"> 
+      <div class="text-16px py-2  mb-4 text-center w-[700px]">
+     @Answer
+      </div>
+    </face>
+</basis> 
+</div>
+
+
+
+
+
+</div>
+
+
+ 
+</div>
+<section class="w-full bg-white">
+    <div class="container mx-auto py-4">
+      <div class="container mx-auto py-4">
+        <h3 class="text-28px text-customGreen mb-8 text-center font-bold">
+          مزیت های همکاری با نماسایت  
+        </h3>
+      </div> 
+  <section class="h--timeline js-h--timeline">
+  
+    <div class="h--timeline-events">
+      <ol>
+        <basis core="print" datamembername="dbm.multipart">
+          <face filter="RowNumber=1">
+            <li class="h--timeline-event h--timeline-event--selected text-component" data-slide="@rownumber">
+              <div class="container mx-auto py-4 flex  flex-col md:flex-row flex-wrap items-center h--timeline-event-content">
+                <div class="w-full px-7 flex flex-col items-center text-center">
+                  <p class="pb-7 text-24px w-full text-black">
+                    @text
+                    </p>
+                  <div class="pb-7 text-14px w-full text-black">
+                    @largetext
+                    </div>
+              </div>
+        
+              </div>
+            </li>
+          </face>
+          <face>
+            <li class="h--timeline-event text-component" data-slide="@rownumber">
+              <div class="container mx-auto py-4 flex  flex-col md:flex-row flex-wrap items-center h--timeline-event-content">
+                <div class="w-full px-7 flex flex-col items-center text-center">
+                  <p class="pb-7 text-24px w-full text-black">
+                    @text
+                    </p>
+                    <div class="pb-7 text-14px w-full text-black">
+                      @largetext
+                      </div>
+              </div>
+        
+              </div>
+            </li>
+          </face>
+        </basis>
+    
+      
+    
+      </ol>
+    </div> <!-- .h--timeline-events -->
+  
+
+    <div class="swiper advantageSwiper flex h-[100px] w-[1140px] mt-[40px]">
+     
+      <div class="swiper-wrapper w-[80%]">
+        <basis core="print" datamembername="db.avdSlider">
+          <layout>
+            @child
+            <div class="swiper-slide w-[64px] h-[44px]">
+             
+             
+            </div>
+            <div class="swiper-slide w-[64px] h-[44px]">
+             
+             
+            </div>
+          </layout>
+          <face filter="rownumber = 1">
+            <div class="swiper-slide w-[64px] h-[44px] advantageSwiperactive">
+              <span></span>
+              <div class="adv_slides flex flex-col items-center justify-center absolute top-0 cursor-pointer" onclick="showavgs(this,'@rownumber')">
+              <div class="w-[13px] h-[13px] bg-sliderGray rounded-full mb-4 "></div>
+              <img src="/@largeIMG" class="" />
+            </div> 
+            </div>
+          </face>
+          <face>
+            <div class="swiper-slide w-[64px] h-[44px] ">
+              <span></span>
+              <div class="adv_slides flex flex-col items-center justify-center absolute top-0 cursor-pointer" onclick="showavgs(this,'@rownumber')">
+              <div class="w-[13px] h-[13px] bg-sliderGray rounded-full mb-4 "></div>
+              <img src="/@largeIMG" class="" />
+            </div> 
+            </div>
+          </face>
+        </basis>
+       
+       
+        
+      </div>
+      <div class="advantageSwiper-prev advantageSwiper-arrows w-11 h-11 absolute left-0 top-3 rounded-full bg-white flex items-center justify-center cursor-pointer z-50">
+        <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(-0.707303 0.70691 -0.59229 -0.805725 8 0)" stroke="#979797"/>
+          <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(-0.707303 -0.70691 -0.59229 0.805725 8 14.334)" stroke="#979797"/>
+          </svg>
+          
+      </div>
+      <div class="advantageSwiper-next advantageSwiper-arrows w-11 h-11 absolute right-0  top-3 rounded-full bg-white flex items-center justify-center cursor-pointer z-50">
+        <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(0.707303 -0.70691 0.59229 0.805725 1 15)" stroke="#979797"/>
+          <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(0.707303 0.70691 0.59229 -0.805725 1 0.666016)" stroke="#979797"/>
+          </svg>
+          
+      </div>
+    
+    </div>
+  
+    <div class="h--timeline-container">
+      <div class="h--timeline-dates">
+      <div class="h--timeline-line">
+
+
+    
+
+
+        <!-- <ol>
+        <basis core="print" datamembername="dbm.multipart">
+          <face filter="RowNumber=1">
+            <li style="margin: 0 70px;"><a href="#@RowNumber" data-date="@RowNumber/01/2014" class="h--timeline-date h--timeline-date--selected"><img src="newimages/landing-icon1.svg" alt=""  ></a></li>
+          </face>
+          <face>
+            <li style="margin: 0 70px;"><a href="#@RowNumber" data-date="@RowNumber/01/2014" class="h--timeline-date"><img src="newimages/landing-icon1.svg" alt=""></a></li>
+          </face>
+        </basis>
+        </ol> -->
+    
+        <span class="h--timeline-filling-line" aria-hidden="true"></span>
+      </div> 
+      </div> 
+    
+      <!-- <nav class="h--timeline-navigation-container">
+        <ul>
+        <li><a href="#0" class="text-replace h--timeline-navigation h--timeline-navigation--prev h--timeline-navigation--inactive">Prev</a></li>
+        <li><a href="#0" class="text-replace h--timeline-navigation h--timeline-navigation--next">Next</a></li>
+        </ul>
+      </nav> -->
+    </div>
+    
+    </section>
+    </div>
+  </section>
+ 
+      <basis core="print" datamembername="db.all">
+        <layout>
+          <section class="container mx-auto p-4">
+            <div class="pb-4 text-14px text-justify">
+              @child
+            </div>
+          </section>
+        </layout>
+        <face filter="typeid not in (150,160,161,162,159) and prpID not in (7244,7245)">
+          <h3 class="text-customGreen-light text-14px py-3 text-right font-bold">@text</h3>
+          <div class="pb-4 text-14px text-justify">
+          
+          @largetext
+          
+          </div>
+        </face>
+      </basis>
+     
+
+     
+  <!-- <div class="bg-white">
+    <div class="counterActive bg-white">
+      <div class="pt-12 pb-12  bg-white ">
+        <div class=" bg-white ">
+          <div class="relative ">
+            <div class="relative max-w-screen-2xl px-4 mx-auto sm:px-6 lg:px-8">
+              <div class="max-w-4xl mx-auto">
+                <dl class="bg-white sm:grid sm:grid-cols-3">
+                  <div
+                    class="flex  p-6 text-center  text-28px gs_reveal ipsType_right">
+                    <dt class="order-1 mt-2 ml-4 text-28px font-medium leading-6 text-black " id="item-1">
+                      مشتریان 
+                    </dt>
+                    <dd class="order-2 text-34px font-extrabold leading-none text-black animCounter"
+                      >
+                       200
+                    </dd>
+                  </div>
+                  <div
+                    class="flex  p-6 text-center  text-28px">
+                    <dt class="order-1 mt-2 nter  text-28px">
+                      <dt class="order-1 mt-2  ml-4  font-medium leading-6 text-black ">
+                      پشتیبانی
+                    </dt>
+                    <dd class="order-2 text-34px font-extrabold leading-none text-black animCounter"
+                      >
+                      24
+                    </dd>
+                  </div>
+                  <div
+                    class="flex  p-6 text-center  text-28px">
+                    <dt class="order-1 mt-2 nter  text-28px">
+                      <dt class="order-1 mt-2  ml-4  font-medium leading-6 text-black gs_reveal gs_reveal_fromLeft">
+                      پروژه موفق
+                    </dt>
+                    <dd class="order-2 text-34px  font-extrabold leading-none text-black animCounter"
+                     >
+                      700
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div> -->
+    
+  <basis core="print" datamembername="slider.landing">
+    <layout> 
+<div class="gallery galleynewa bg-herodefault h-[800px]">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          @child
+        </div>
+        <div class="slider_info_wrapper">
+          <div class="font-bold color-customGreen-light slider_title z-[999] text-28px ">نمونه پروژه‌های اجرا شده</div>
+    <div class="slide-captions mt-10"></div>
+    <div class="flex items-center justify-center w-[100px] relative mt-5">
+      
+      <div class=" projectSwiper-prev advantageSwiper-arrows w-11 h-11 ml-2 rounded-full bg-white flex items-center justify-center cursor-pointer z-50 swiper-button-disabled">
+       
+          <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(0.707303 -0.70691 0.59229 0.805725 1 15)" stroke="#979797"></line>
+            <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(0.707303 0.70691 0.59229 -0.805725 1 0.666016)" stroke="#979797"></line>
+            </svg>
+      </div>
+      <div class=" projectSwiper-next advantageSwiper-arrows w-11 h-11 mr-2 rounded-full bg-white flex items-center justify-center cursor-pointer z-50 swiper-button-disabled">
+        <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(-0.707303 0.70691 -0.59229 -0.805725 8 0)" stroke="#979797"></line>
+          <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(-0.707303 -0.70691 -0.59229 0.805725 8 14.334)" stroke="#979797"></line>
+          </svg>
+      </div>
+    </div>
+  </div>
+    
+    
+  </div>
+</div>
+</layout>
+    <face>
+      <div class="swiper-slide slide-@rownumber" style="background-image: url([##cms.cms.cdn##]/@largeIMG);" data-title="@name" data-subtitle="@description" data-link="">
+        <a  href="/پروژه-ها" class="section-1-call-to-action calltoaction openModalBtn moreNama1">پروژه‌های بیشتر</a>
+      </div>
+    </face>
+   </basis>
+
+   <section>
+    
+
+<div class="gallery">
+  
+    <div class="circleswiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide ">
+            
+          </div>
+          <div class="swiper-slide ">
+            
+          </div>
+          <div class="swiper-slide ">
+            
+          </div>
+        
+        </div>
+      </div>
+      
+    <section data-circle-box class="section circle-section fp-section fp-table start-animated animated vp-active stopped">
+        <div id="circleContainer1">
+            <div class="container">
+                <div class="circlebx">
+                    <div class="row flex" style="display: flex;">
+                        <div class="w-1/2">
+    
+                            
+                                <div class="circle-title" style="display: none;">
+                                                                        <div class="pm-title">
+                                            <h4>Performance Marketing</h4>
+                                        </div>
+                                                                                                        <div style="display: none;" class="dd-title">
+                                            <h4>Web Design &#038; Development</h4>
+                                        </div>
+                                                                                                        <div style="display: none;" class="vp-title">
+                                            <h4>Video Production</h4>
+                                        </div>
+                                                                    <!--<h4>--><!--</h4>-->
+                                </div>
+    
+                            
+                        </div>
+                        <div class="w-1/2 w-[50%]">
+                            <div class="circlebox">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 168 168" style="enable-background:new 0 0 168 168;" xml:space="preserve">
+                           <style type="text/css">
+                               .vp {
+                                   fill: none;
+                                   stroke: #f7941f;
+                                   stroke-width: 7;
+                                   stroke-miterlimit: 7;
+                                   cursor: pointer;
+                               }
+    
+                               .dd {
+                                   fill: none;
+                                   stroke: #46b371;
+                                   stroke-width: 7;
+                                   stroke-miterlimit: 7;
+                                   cursor: pointer;
+                               }
+    
+                               .pm {
+                                   fill: none;
+                                   stroke: #52aadd;
+                                   stroke-width: 7;
+                                   stroke-miterlimit: 7;
+                                   cursor: pointer;
+                               }
+    
+                               .st3 {
+                                   fill: #FFFFFF;
+                               }
+    
+                               .st4 {
+                                   fill: #CBCBCA;
+                               }
+                           </style>
+                                    <path class="linecolor-shadow dd anim" data-name="dd"
+                                          d="M28.1,115.1C22.9,105.9,20,95.3,20,84c0-35,28.1-63.5,63-64"/>
+                                    <path class="linecolor-shadow pm" data-name="pm"
+                                          d="M85,20c34.9,0.5,63,29,63,64c0,11.3-2.9,21.9-8.1,31.1"/>
+                                    <path class="linecolor-shadow vp anim" data-name="vp"
+                                          d="M138.9,116.9C127.7,135.5,107.3,148,84,148s-43.7-12.5-54.9-31.1"/>
+                                    <path class="linecolor dd" data-name="dd"
+                                          d="M28.1,115.1C22.9,105.9,20,95.3,20,84c0-35,28.1-63.5,63-64"/>
+                                    <path class="linecolor pm" data-name="pm"
+                                          d="M85,20c34.9,0.5,63,29,63,64c0,11.3-2.9,21.9-8.1,31.1"/>
+                                    <path class="linecolor vp" data-name="vp"
+                                          d="M138.9,116.9C127.7,135.5,107.3,148,84,148s-43.7-12.5-54.9-31.1"/>
+    
+                                    <circle class="st3" data-name="circle" cx="84" cy="84" r="64"/>
+                                    <circle class="st4" cx="84" cy="84" r="61.9"/>
+                                    <circle class="st3" cx="84" cy="84" r="52"/>
+                            </svg>
+                                <div class="logo">
+    
+                                    
+                                        <img src="https://www.kobedigital.com/wp-content/uploads/2020/12/logo.svg"
+                                             alt="Kobe Digital Logo with a stylized K.">
+    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="circle_tab">
+    
+                                <div class="circle_tab_content" data-id="vp">
+    
+                                    
+                                        <h4>Video Production</h4>
+    
+                                    
+                                        <ul>
+    
+                                            
+                                                <li>
+    
+                                                    Brand Videos                                            </li>
+    
+                                            
+                                                <li>
+    
+                                                    Commercials                                            </li>
+    
+                                            
+                                                <li>
+    
+                                                    Testimonial Videos                                            </li>
+    
+                                            
+                                                <li>
+    
+                                                    Explainer &#038; How-To Videos                                            </li>
+    
+                                            
+                                                <li>
+    
+                                                    Product Videos                                            </li>
+    
+                                            
+                                        </ul>
+    
+                                    
+                                        <a class="more-link" href="/video-production-company/" data-wpel-link="internal" rel="follow">Explore Kobe Studios                                        <svg class="k-ico">
+                                                <use xlink:href="#ico-arrow-r"></use>
+                                            </svg>
+                                        </a>
+    
+                                    
+    
+                                </div>
+    
+    
+                                <div class="circle_tab_content" data-id="dd">
+    
+                                    
+                                        <h4>Web Design &#038; Development</h4>
+    
+                                    
+                                        <ul>
+    
+                                            
+                                                <li>
+    
+                                                    Brand Identity &#038; Strategy                                            </li>
+    
+                                            
+                                                <li>
+    
+                                                    Brand Websites                                            </li>
+    
+                                            
+                                                <li>
+    
+                                                    E-Commerce Websites                                            </li>
+    
+                                            
+                                                <li>
+    
+                                                    Web Applications                                            </li>
+    
+                                            
+                                                <li>
+    
+                                                    Mobile Applications                                            </li>
+    
+                                            
+                                        </ul>
+    
+                                    
+                                        <a class="more-link" href="/web-design-company/" data-wpel-link="internal" rel="follow">Explore Kobe Design                                        <svg class="k-ico">
+                                                <use xlink:href="#ico-arrow-r"></use>
+                                            </svg>
+                                        </a>
+    
+                                    
+                                </div>
+    
+                                <div class="circle_tab_content" data-id="pm">
+    
+                                    
+                                        <h4>Performance Marketing</h4>
+    
+                                    
+                                        <ul>
+    
+                                            
+                                                <li>
+    
+                                                    Social Media Advertising                                            </li>
+    
+                                            
+                                                <li>
+    
+                                                    Search Engine Marketing                                            </li>
+    
+                                            
+                                                <li>
+    
+                                                    Display &#038; Video Advertising                                            </li>
+    
+                                            
+                                                <li>
+    
+                                                    Programmatic Advertising                                            </li>
+    
+                                            
+                                                <li>
+    
+                                                    Email Marketing                                            </li>
+    
+                                            
+                                        </ul>
+    
+                                    
+                                        <a class="more-link" href="/performance-marketing-agency/" data-wpel-link="internal" rel="follow">Explore Kobe Media                                        <svg class="k-ico">
+                                                <use xlink:href="#ico-arrow-r"></use>
+                                            </svg>
+                                        </a>
+    
+                                    
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+   </section>
+   <div class="firstpart pt-11 pb-11 bg-white">
+    <div class="container mx-auto p-4">
+      <div class="flex flex-col lg:flex-row items-center">
+          <div class="w-full lg:w-1/2 p-2">
+              <div class="form-contact requestBox1">
+                <div> <h2 class="text-24px font-bold mb-5 text-customGreen">فرم ارتباط با نماسایت</h2>
+                  <p class="mb-5 text-14px">با مشاوره رایگان برای طراحی سایت تجاری، فروشگاهی و سئو همراه شما هستیم</p>
+   <form id="contact-form">
+  
+          <basis core='schema' run='AtClient' schemaurl='/schema/domainform' paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='[data-btn-add]' resultsourceid='demo.data'></basis><basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis><basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
+          
+          <div data-bc-question="" class="qclass8">
+        
+          <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code2" type="scalar" request="captcha"></member> </basis> <basis datamembername="captcha2.code2" core="print"> <face> <span class="captcha-sefaresh"> <img src="/@captcha" width="88" height="44" class="captcha-sefaresh" alt="captcha" title="captcha" /> <input type="hidden" name="captchaid" value="@captcha" /> </span> <img src="newimages/refresh.png" class="refressh refressh1" /> <input type="text" class="codeinputm absolute" name="captcha" placeholder="کد امنیتی را وارد نمایید .." /> </face> </basis> <div class="clr"></div> </div>
+          <div class="flexinner1 Formbb wow fadeIn ">
+            
+            <a id="openModalBtn" href="#" class="section-1-call-to-action calltoaction">ثبت</a>
+          </div>
+          <div class="clr" style="clear: both;"></div>
+          </div>
+          
+          
+          </form>              
+  
+  </div>
+              </div>
+          </div>
+          <div class="w-full lg:w-1/2 p-2">
+           <img src="newimages/landing-contact.png">
+          </div>
+      </div>
+  </div>
+  
+   
+  </div>
+
+
+
+<div class="bg-white py-5 overflow-hidden ">
+  <section  class="container mx-auto px-4 relative min-h-96 ">
+      <div class="title  mb-8">
+          <h4 class="text-customGreen text-28px gs_reveal gs_reveal_fromLeft">مراحل طراحی سایت </h4>
+          <a class="moreNama gs_reveal ipsType_right !hidden" href="/">  بیشتر بدانید</a>
+        </div>
+        <div>
+          
+<section class="services">
+  <div class="circle--slider">
+    <div class="rotate--circle">
+      <ul class="circle--rotate" id="circle--rotate">
+        <basis core="print" datamembername="dbc.multipart">
+          <face>
+            <li class="block">
+              <p class="textactive text-customGreen-light">@text</p>
+              <div class="icon"><i class="fa fa-rocket">@Rownumber</i><span> </span></div>
+            </li>
+          </face>
+          </basis>
+        
+     
+     
+      </ul>
+      <div class="animate-wrapper">
+        <basis core="print" datamembername="dbc.multipart">
+          <face>
+            <div class="animate">
+              <div class="animate-img">
+                <div class="animate-img__in" data-image="#">
+                  <div class="animate-more">
+                    <div class="animate-title !text-customGreen-light">
+                      @largetext
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </face>
+          </basis>
+        
+      
+      </div>
+      <!-- <div class="prev"><span>PREV</span></div>
+      <div class="next"><span>NEXT</span></div> -->
+    </div>
+  </div>
+</section>
+        </div>
+  </section>
+</div>
+
+<section class="container mx-auto">
+  <h2 class="text-customGreen-light text-24px py-10 text-right font-bold" id="4002048">سوالات متداول شما</h2>
+ <div class="pb-4 text-14px text-justify">
+ <div class="accordion-container">
+        
+  
+  <basis core="print" datamembername="dbfaq.multipart">
+    <face>
+      <div class="set bg-white">
+        <div class="p flex relative text-black justify-between items-center cursor-pointer">
+          <span class="text-28px pl-4 flex"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.4375 7.16016H15.5575V8.84016H0.4375V7.16016Z" fill="#00311F"/>
+            <path d="M7.15625 0.439453H8.83625V15.5595H7.15625V0.439453Z" fill="#00311F"/>
+            </svg>
+              <span class="text-16px pr-4">@text</span></span> 
+          
+          <!-- <label class="toggle ">
+            <div class="toggle__control"></div>
+          </label> -->
+        </div>
+        <div class="content bg-[#F3F3F3] text-black text-right text-14px py-5 md:pr-52">
+@largetext
+</div>
+      </div>
+    </face>
+  </basis>
+          
+
+</div>
+</div>
+</section>
+
+<section class="container mx-auto">
+  <h2 class="text-customGreen-light text-24px py-10 text-center font-bold" > نظرات  ارزشمند مشتریان</h2>
+  <div class="container11 nazarat">
+    <div class="swiper swiperCarousel">
+        <div class="swiper-wrapper">
+          <basis core="print" datamembername="nazarat.landing">
+            <face>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="avatar">
+                    <img class="" src="[##cms.cms.cdn##]/@largeIMG" />
+                  </div>
+                    <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="50px" height="50px">
+              <path
+                d="M 16.482422 8.9921875 A 1.50015 1.50015 0 0 0 15.943359 9.1074219 C 15.943359 9.1074219 13.068414 10.279429 10.357422 13.464844 C 7.6464301 16.650259 5 21.927419 5 30 A 1.50015 1.50015 0 0 0 5.015625 30.21875 A 8.5 8.5 0 0 0 13.5 39 A 8.5 8.5 0 0 0 13.5 22 A 8.5 8.5 0 0 0 8.7089844 23.480469 C 9.5777265 19.777157 11.122152 17.196657 12.642578 15.410156 C 14.931586 12.720571 17.056641 11.892578 17.056641 11.892578 A 1.50015 1.50015 0 0 0 16.482422 8.9921875 z M 37.482422 8.9921875 A 1.50015 1.50015 0 0 0 36.943359 9.1074219 C 36.943359 9.1074219 34.068414 10.279429 31.357422 13.464844 C 28.64643 16.650259 26 21.927419 26 30 A 1.50015 1.50015 0 0 0 26.015625 30.21875 A 8.5 8.5 0 0 0 34.5 39 A 8.5 8.5 0 0 0 34.5 22 A 8.5 8.5 0 0 0 29.708984 23.480469 C 30.577727 19.777157 32.122152 17.196657 33.642578 15.410156 C 35.931586 12.720571 38.056641 11.892578 38.056641 11.892578 A 1.50015 1.50015 0 0 0 37.482422 8.9921875 z"
+              />
+            </svg>
+                    <div class="header">
+                        <h2 class="title">@name</h2>
+                    </div>
+                    <div class="quote-container">
+                        <p class="quote">
+@description                        </p>
+                    </div>
+                </div>
+            </div>
+            </face>
+          </basis>
+            
+           
+        </div>
+        
+          <div class="flex items-center justify-center w-[100px] absolute z-50 w-full bottom-0  mt-5">
+ 
+            <div class="nazaratSwiper-prev advantageSwiper-arrows w-11 h-11 ml-2 rounded-full bg-white flex items-center justify-center cursor-pointer z-50" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-81849a9bd4dac525">
+            
+            <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(0.707303 -0.70691 0.59229 0.805725 1 15)" stroke="#979797"></line>
+            <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(0.707303 0.70691 0.59229 -0.805725 1 0.666016)" stroke="#979797"></line>
+            </svg>
+            </div>
+            <div class="nazaratSwiper-next advantageSwiper-arrows w-11 h-11 mr-2 rounded-full bg-white flex items-center justify-center cursor-pointer z-50" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-81849a9bd4dac525">
+            <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(-0.707303 0.70691 -0.59229 -0.805725 8 0)" stroke="#979797"></line>
+            <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(-0.707303 -0.70691 -0.59229 0.805725 8 14.334)" stroke="#979797"></line>
+            </svg>
+            </div>
+            </div>
+
+ 
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+</div>
+</section>
+<footer class="bg-white mt-[100px]">
+  <section  class="container  mx-auto relative border-t-2 border-black pt-8 border-b-gray-200 ">
+    <div class="w-full flex  justify-between">
+    <div>
+      <div class="flex w-52">
+        <div class="inline-block ml-2"><img src="[##cms.cms.cdn##]/newimages/Vector.png" alt=""></div>
+        <div class="inline-block text-customGreen footertel" dir="ltr" style="line-height: 36px;"><a href="tel:+982122555555"><span class="text-14px">(+9821)</span><span class="text-18px">22</span><span>55</span><span>55</span><span>55</span></a>
+        
+        </div>
+      </div>
+      <div class="flex w-52 justify-between pt-5">
+        <a href="">
+          <img src="[##cms.cms.cdn##]/newimages/facebook-icon.svg" alt="" >
+        </a>
+        <a href="">
+          <img src="[##cms.cms.cdn##]/newimages/instagram-icon.svg" alt="" >
+        </a>
+        <a href="">
+          <img src="[##cms.cms.cdn##]/newimages/x-icon.svg" alt="" >
+        </a>
+        <a href="">
+          <img src="[##cms.cms.cdn##]/newimages/linkdin-icon.svg" alt="" >
+        </a>
+        <a href="">
+          <img src="[##cms.cms.cdn##]/newimages/telegram-icon.svg" alt="" >
+        </a>
+        <a href="">
+          <img src="[##cms.cms.cdn##]/newimages/whatsapp-icon.svg" alt="" >
+        </a>
+        <a href="">
+          <img src="[##cms.cms.cdn##]/newimages/pintrest-icon.svg" alt="" >
+        </a>
+      </div>
+    </div>
+      <div><a href="/"><img src="[##cms.cms.cdn##]/newimages/footer-logo.png" /></a></div>
+    </div>
+    <div class="w-full flex  justify-between" style="border-top:1px solid #007048">
+      <menu class=" block ">
+        <ul class="flex space-x-4 py-5">
+            <li class="menu-fisrt"><a href="#" class="text-customGreen-light">پروژه ها</a></li>
+            <li class="menu-item"><a href="#" class="text-customGreen-light">بلاگ</a></li>
+            <li class="menu-item"><a href="#" class="text-customGreen-light">درباره ما</a></li>
+            <li class="menu-item"><a href="#" class="text-customGreen-light">تماس با ما</a></li>
+        </ul>
+    </menu>
+    <div class="text-14px py-5 footer-copy" dir="ltr"><p>Copyright © 2024 • Namasite Company.</p></div>
+    </div>
+  </section>
+</footer>
+<div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden " style="z-index: 999;">
+  <div class="shadow-lg p-6 max-w-3xl w-full relative" >
+    <img id="closeModalBtn" class="closeModalBtn cursor-pointer" src="newimages/close.png" alt="">
+    <div class="p-8 rounded shadow-lg w-full bg-white">
+      <div class="text-center mb-8">
+        <div class="text-customGreen-light text-2xl font-bold flex justify-center" dir="ltr"><p class="pr-4" style="line-height: 44px;">(+9821) 22 55 55 55 </p><p><img src="newimages/calltocation.png" alt=""></p></div>
+        <p class="text-gray-600 mt-2 text-right text-black text-16px">فرم درخواست مشاوره</p>
+        <p class="text-gray-500 mt-1  text-right text-black  text-14px">برای دریافت مشاوره تخصصی رایگان اطلاعات زیر را تکمیل کنین تا کارشناسان ما در اولین فرصت با شما تماس بگیرن!</p>
+      </div>
+      
+      <div class="form-contact requestBox1 " >
+        <form id="contact-form">
+
+        <basis core='schema' run='AtClient' schemaurl='/schema/domainform' paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='[data-btn-add]' resultsourceid='demo.data'></basis><basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis><basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
+        
+        <div data-bc-question="" class="qclass8">
+      
+        <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code2" type="scalar" request="captcha"></member> </basis> <basis datamembername="captcha2.code2" core="print"> <face> <span class="captcha-sefaresh"> <img src="/@captcha" width="88" height="44" class="captcha-sefaresh" alt="captcha" title="captcha" /> <input type="hidden" name="captchaid" value="@captcha" /> </span> <img src="newimages/refresh.png" class="refressh refressh1" /> <input type="text" class="codeinputm absolute" name="captcha" placeholder="کد امنیتی را وارد نمایید .." /> </face> </basis> <div class="clr"></div> </div>
+        <div class="flexinner1 Formbb wow fadeIn ">
+          <input type="image" src="newimages/submitform.png" data-btn-add data-btn-submit alt="ثبت" width="170" height="54"> 
+        </div>
+        <div class="clr" style="clear: both;"></div>
+        </div>
+        
+        
+        </form>
+        
+        </div>
+
+
+
+      
+  </div>
+</div>
+</div>
+<div id="openModalBtnFooter" class="fixed bottom-12 right-12 cursor-pointer calltocationfixed" ><img src="newimages/calltocation.png"></div>
+
+
+
+<script src="newjs/jquery-3.5.1.min.js"></script>
+  <script src='newjs/ScrollTrigger.min.js'></script>
+  <script src='newjs/ScrollSmoother.min.js?v=3.10.0e'></script>
+  
+  <script src="newjs/swiper-bundle.min.js"></script>
+  <script src="js/gsap.min.js"></script>
+  
+  <script>
+    $(".h--timeline-date img").on( "click", function() {
+      alert("a")
+      $(this).parent("a").click()
+   
+});
+  </script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
+
+  gsap.utils.toArray(".counterActive").forEach(section => {
+  gsap.fromTo(section, { y: 100, opacity: 0 }, {
+    y: 0,
+    opacity: 1,
+    ease: "none",
+    scrollTrigger: {
+      trigger: section,
+      start: "100px bottom",
+      end: "+=100",
+      scrub: true } });
+
+
+});
+    gsap.from(".animCounter", {
+  textContent: "0",
+  duration: 1,
+  ease: "power1.inOut",
+  modifiers: {
+    textContent: value => formatNumber(value, 0) + "+" },
+
+  scrollTrigger: {
+    trigger: ".counterActive",
+    start: "100px 80%",
+    end: "+=100",
+    toggleActions: "play none none reverse",
+    markers: false } });
+
+
+
+
+
+function formatNumber(value, decimals) {
+  let s = (+value).toLocaleString('en-US').split(".");
+  return decimals ? s[0] + "." + ((s[1] || "") + "00000000").substr(0, decimals) : s[0];
+}
+
+  </script>
+
+    
+
+
+  <script>
+    var swiper11 = new Swiper(".mySwiper", {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 0,
+        
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  <script>
+  
+
+
+var mySwiper1 = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    speed: 1200,
+    grabCursor: true,
+    mousewheel: false,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.projectSwiper-next',
+      prevEl: '.projectSwiper-prev',
+    },
+  
+    on: {
+      slideChangeTransitionStart: function () {
+          // Slide captions
+          var swiper = this;
+          setTimeout(function () {
+            var currentTitle = $(swiper.slides[swiper.activeIndex]).attr("data-title");
+            var currentSubtitle = $(swiper.slides[swiper.activeIndex]).attr("data-subtitle");
+          }, 500);
+          gsap.to($(".current-title"), 0.4, {autoAlpha: 0, y: -40, ease: Power1.easeIn});
+          gsap.to($(".current-subtitle"), 0.4, {autoAlpha: 0, y: -40, delay: 0.15, ease: Power1.easeIn});
+      },
+      slideChangeTransitionEnd: function () {
+      		// Slide captions
+          var swiper = this;
+          var currentTitle = $(swiper.slides[swiper.activeIndex]).attr("data-title");
+          var currentSubtitle = $(swiper.slides[swiper.activeIndex]).attr("data-subtitle");
+          $(".slide-captions").html(function() {
+            return "<h2 class='current-title'>" + currentTitle + "</h2>" + "<h3 class='current-subtitle'>" + currentSubtitle + "</h3>";
+          });
+          gsap.from($(".current-title"), 0.4, {autoAlpha: 0, y: 40, ease: Power1.easeOut});
+          gsap.from($(".current-subtitle"), 0.4, {autoAlpha: 0, y: 40, delay: 0.15, ease: Power1.easeOut});
+      }
+    }
+});
+
+// Slide captions
+var currentTitle = $(mySwiper1.slides[mySwiper1.activeIndex]).attr("data-title");
+var currentSubtitle = $(mySwiper1.slides[mySwiper1.activeIndex]).attr("data-subtitle");
+$(".slide-captions").html(function() {
+  return "<h2 class='current-title'>" + currentTitle + "</h2>" + "<h3 class='current-subtitle'>" + currentSubtitle + "</h3>";
+});
+
+
+
+
+
+ var articleswiper = new Swiper(".articleswiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      freeMode: true,
+      navigation: {
+        prevEl: '.slidePrev-btn',
+        nextEl: '.slideNext-btn'
+      },
+    });
+ 
+  </script>
+
+  <script>
+    function animateFrom(elem, direction) {
+  direction = direction || 1;
+  var x = 0,
+      y = direction * 100;
+  if(elem.classList.contains("gs_reveal_fromLeft")) {
+    x = -100;
+    y = 0;
+  } else if (elem.classList.contains("gs_reveal_fromRight")) {
+    x = 100;
+    y = 0;
+  }
+  elem.style.transform = "translate(" + x + "px, " + y + "px)";
+  elem.style.opacity = "0";
+  gsap.fromTo(elem, {x: x, y: y, autoAlpha: 0}, {
+    duration: 1.25, 
+    x: 0,
+    y: 0, 
+    autoAlpha: 1, 
+    ease: "expo", 
+    overwrite: "auto"
+  });
+}
+
+function hide(elem) {
+  gsap.set(elem, {autoAlpha: 0});
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.utils.toArray(".gs_reveal").forEach(function(elem) {
+    hide(elem); // assure that the element is hidden when scrolled into view
+    
+    ScrollTrigger.create({
+      trigger: elem,
+      markers: false,
+      onEnter: function() { animateFrom(elem) }, 
+      onEnterBack: function() { animateFrom(elem, -1) },
+      onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
+    });
+  });
+});
+
+  </script>
+<basis core="call" file="formjs.inc" />
+  <script src="newjs/mainscript.js">
+
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elements = document.getElementsByClassName("openModalBtn");
+    const modal = document.getElementById('modal');
+for (var i = 0; i < elements.length; i++) {
+    elements[i]?.addEventListener('click', function(e) {
+        e.preventDefault()
+        modal.classList.remove('hidden', 'fade-out');
+        modal.classList.add('fade-in');
+    });
+}  
+    })
+
+
+    $(document).ready(function () {
+	$(".set > .p").on("click", function () {
+	  if ($(this).hasClass("active")) {
+		$(this).removeClass("active");
+		$(this).
+		siblings(".content").
+		slideUp(200);
+		$(".set > .p i").
+		removeClass("fa-minus").
+		addClass("fa-plus");
+	  } else {
+		$(".set > .p i").
+		removeClass("fa-minus").
+		addClass("fa-plus");
+		$(this).
+		find("i").
+		removeClass("fa-plus").
+		addClass("fa-minus");
+		$(".set > .p").removeClass("active");
+		$(this).addClass("active");
+		$(".content").slideUp(200);
+		$(this).
+		siblings(".content").
+		slideDown(200);
+	  }
+	});
+  });
+
+(function() {
+	// Swipe Content Plugin - by CodyHouse.co
+	// https://codyhouse.co/ds/components/info/swipe-content
+	var SwipeContent = function(element) {
+		this.element = element;
+		this.delta = [false, false];
+		this.dragging = false;
+		this.intervalId = false;
+		initSwipeContent(this);
+	};
+
+	function initSwipeContent(content) {
+		content.element.addEventListener('mousedown', handleEvent.bind(content));
+		content.element.addEventListener('touchstart', handleEvent.bind(content));
+	};
+
+	function initDragging(content) {
+		//add event listeners
+		content.element.addEventListener('mousemove', handleEvent.bind(content));
+		content.element.addEventListener('touchmove', handleEvent.bind(content));
+		content.element.addEventListener('mouseup', handleEvent.bind(content));
+		content.element.addEventListener('mouseleave', handleEvent.bind(content));
+		content.element.addEventListener('touchend', handleEvent.bind(content));
+	};
+
+	function cancelDragging(content) {
+		//remove event listeners
+		if(content.intervalId) {
+			(!window.requestAnimationFrame) ? clearInterval(content.intervalId) : window.cancelAnimationFrame(content.intervalId);
+			content.intervalId = false;
+		}
+		content.element.removeEventListener('mousemove', handleEvent.bind(content));
+		content.element.removeEventListener('touchmove', handleEvent.bind(content));
+		content.element.removeEventListener('mouseup', handleEvent.bind(content));
+		content.element.removeEventListener('mouseleave', handleEvent.bind(content));
+		content.element.removeEventListener('touchend', handleEvent.bind(content));
+	};
+
+	function handleEvent(event) {
+		switch(event.type) {
+			case 'mousedown':
+			case 'touchstart':
+				startDrag(this, event);
+				break;
+			case 'mousemove':
+			case 'touchmove':
+				drag(this, event);
+				break;
+			case 'mouseup':
+			case 'mouseleave':
+			case 'touchend':
+				endDrag(this, event);
+				break;
+		}
+	};
+
+	function startDrag(content, event) {
+		content.dragging = true;
+		// listen to drag movements
+		initDragging(content);
+		content.delta = [parseInt(unify(event).clientX), parseInt(unify(event).clientY)];
+		// emit drag start event
+		emitSwipeEvents(content, 'dragStart', content.delta);
+	};
+
+	function endDrag(content, event) {
+		cancelDragging(content);
+		// credits: https://css-tricks.com/simple-swipe-with-vanilla-javascript/
+		var dx = parseInt(unify(event).clientX), 
+	    dy = parseInt(unify(event).clientY);
+	  
+	  // check if there was a left/right swipe
+		if(content.delta && (content.delta[0] || content.delta[0] === 0)) {
+	    var s = Math.sign(dx - content.delta[0]);
+			
+			if(Math.abs(dx - content.delta[0]) > 30) {
+				(s < 0) ? emitSwipeEvents(content, 'swipeLeft', [dx, dy]) : emitSwipeEvents(content, 'swipeRight', [dx, dy]);	
+			}
+	    
+	    content.delta[0] = false;
+	  }
+		// check if there was a top/bottom swipe
+	  if(content.delta && (content.delta[1] || content.delta[1] === 0)) {
+	  	var y = Math.sign(dy - content.delta[1]);
+
+	  	if(Math.abs(dy - content.delta[1]) > 30) {
+	    	(y < 0) ? emitSwipeEvents(content, 'swipeUp', [dx, dy]) : emitSwipeEvents(content, 'swipeDown', [dx, dy]);
+	    }
+
+	    content.delta[1] = false;
+	  }
+		// emit drag end event
+	  emitSwipeEvents(content, 'dragEnd', [dx, dy]);
+	  content.dragging = false;
+	};
+
+	function drag(content, event) {
+		if(!content.dragging) return;
+		// emit dragging event with coordinates
+		(!window.requestAnimationFrame) 
+			? content.intervalId = setTimeout(function(){emitDrag.bind(content, event);}, 250) 
+			: content.intervalId = window.requestAnimationFrame(emitDrag.bind(content, event));
+	};
+
+	function emitDrag(event) {
+		emitSwipeEvents(this, 'dragging', [parseInt(unify(event).clientX), parseInt(unify(event).clientY)]);
+	};
+
+	function unify(event) { 
+		// unify mouse and touch events
+		return event.changedTouches ? event.changedTouches[0] : event; 
+	};
+
+	function emitSwipeEvents(content, eventName, detail) {
+		// emit event with coordinates
+		var event = new CustomEvent(eventName, {detail: {x: detail[0], y: detail[1]}});
+		content.element.dispatchEvent(event);
+	};
+
+	window.SwipeContent = SwipeContent;
+	
+	//initialize the SwipeContent objects
+	var swipe = document.getElementsByClassName('js-swipe-content');
+	if( swipe.length > 0 ) {
+		for( var i = 0; i < swipe.length; i++) {
+			(function(i){new SwipeContent(swipe[i]);})(i);
+		}
+	}
+}());
+
+// Utility function
+function Util () {};
+
+/*
+	class manipulation functions
+*/
+Util.hasClass = function(el, className) {
+	if (el.classList) return el.classList.contains(className);
+	else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+};
+
+Util.addClass = function(el, className) {
+	var classList = className.split(' ');
+ 	if (el.classList) el.classList.add(classList[0]);
+ 	else if (!Util.hasClass(el, classList[0])) el.className += " " + classList[0];
+ 	if (classList.length > 1) Util.addClass(el, classList.slice(1).join(' '));
+};
+
+Util.removeClass = function(el, className) {
+	var classList = className.split(' ');
+	if (el.classList) el.classList.remove(classList[0]);
+	else if(Util.hasClass(el, classList[0])) {
+		var reg = new RegExp('(\\s|^)' + classList[0] + '(\\s|$)');
+		el.className=el.className.replace(reg, ' ');
+	}
+	if (classList.length > 1) Util.removeClass(el, classList.slice(1).join(' '));
+};
+
+Util.toggleClass = function(el, className, bool) {
+	if(bool) Util.addClass(el, className);
+	else Util.removeClass(el, className);
+};
+
+Util.setAttributes = function(el, attrs) {
+  for(var key in attrs) {
+    el.setAttribute(key, attrs[key]);
+  }
+};
+
+/*
+  DOM manipulation
+*/
+Util.getChildrenByClassName = function(el, className) {
+  var children = el.children,
+    childrenByClass = [];
+  for (var i = 0; i < el.children.length; i++) {
+    if (Util.hasClass(el.children[i], className)) childrenByClass.push(el.children[i]);
+  }
+  return childrenByClass;
+};
+
+/*
+	Animate height of an element
+*/
+Util.setHeight = function(start, to, element, duration, cb) {
+	var change = to - start,
+	    currentTime = null;
+
+  var animateHeight = function(timestamp){
+    if (!currentTime) currentTime = timestamp;
+    var progress = timestamp - currentTime;
+    var val = parseInt((progress/duration)*change + start);
+    element.setAttribute("style", "height:"+val+"px;");
+    if(progress < duration) {
+        window.requestAnimationFrame(animateHeight);
+    } else {
+    	cb();
+    }
+  };
+
+  //set the height of the element before starting animation -> fix bug on Safari
+  element.setAttribute("style", "height:"+start+"px;");
+  window.requestAnimationFrame(animateHeight);
+};
+
+/*
+	Smooth Scroll
+*/
+
+Util.scrollTo = function(final, duration, cb) {
+  var start = window.scrollY || document.documentElement.scrollTop,
+      currentTime = null;
+
+  var animateScroll = function(timestamp){
+  	if (!currentTime) currentTime = timestamp;
+    var progress = timestamp - currentTime;
+    if(progress > duration) progress = duration;
+    var val = Math.easeInOutQuad(progress, start, final-start, duration);
+    window.scrollTo(0, val);
+    if(progress < duration) {
+        window.requestAnimationFrame(animateScroll);
+    } else {
+      cb && cb();
+    }
+  };
+
+  window.requestAnimationFrame(animateScroll);
+};
+
+/*
+  Focus utility classes
+*/
+
+//Move focus to an element
+Util.moveFocus = function (element) {
+  if( !element ) element = document.getElementsByTagName("body")[0];
+  element.focus();
+  if (document.activeElement !== element) {
+    element.setAttribute('tabindex','-1');
+    element.focus();
+  }
+};
+
+/*
+  Misc
+*/
+
+Util.getIndexInArray = function(array, el) {
+  return Array.prototype.indexOf.call(array, el);
+};
+
+Util.cssSupports = function(property, value) {
+  if('CSS' in window) {
+    return CSS.supports(property, value);
+  } else {
+    var jsProperty = property.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase();});
+    return jsProperty in document.body.style;
+  }
+};
+
+/*
+	Polyfills
+*/
+//Closest() method
+if (!Element.prototype.matches) {
+	Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+}
+
+if (!Element.prototype.closest) {
+	Element.prototype.closest = function(s) {
+		var el = this;
+		if (!document.documentElement.contains(el)) return null;
+		do {
+			if (el.matches(s)) return el;
+			el = el.parentElement || el.parentNode;
+		} while (el !== null && el.nodeType === 1);
+		return null;
+	};
+}
+
+//Custom Event() constructor
+if ( typeof window.CustomEvent !== "function" ) {
+
+  function CustomEvent ( event, params ) {
+    params = params || { bubbles: false, cancelable: false, detail: undefined };
+    var evt = document.createEvent( 'CustomEvent' );
+    evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+    return evt;
+  }
+
+  CustomEvent.prototype = window.Event.prototype;
+
+  window.CustomEvent = CustomEvent;
+}
+
+/*
+	Animation curves
+*/
+Math.easeInOutQuad = function (t, b, c, d) {
+	t /= d/2;
+	if (t < 1) return c/2*t*t + b;
+	t--;
+	return -c/2 * (t*(t-2) - 1) + b;
+};
+
+
+/* Main js */
+/* -----------------*/
+(function() {
+  // Horizontal Timeline - by CodyHouse.co
+  var HorizontalTimeline = function(element) {
+		this.element = element;
+		this.datesContainer = this.element.getElementsByClassName('h--timeline-dates')[0];
+		this.line = this.datesContainer.getElementsByClassName('h--timeline-line')[0]; // grey line in the top timeline section
+		this.fillingLine = this.datesContainer.getElementsByClassName('h--timeline-filling-line')[0]; // green filling line in the top timeline section
+		this.date = this.line.getElementsByClassName('h--timeline-date');
+		this.selectedDate = this.line.getElementsByClassName('h--timeline-date--selected')[0];
+		this.dateValues = parseDate(this);
+		this.minLapse = calcMinLapse(this);
+		this.navigation = this.element.getElementsByClassName('h--timeline-navigation');
+		this.contentWrapper = this.element.getElementsByClassName('h--timeline-events')[0];
+		this.content = this.contentWrapper.getElementsByClassName('h--timeline-event');
+
+		this.eventsMinDistance = 80; // min distance between two consecutive events (in px)
+		this.eventsMaxDistance = 160; // max distance between two consecutive events (in px)
+		this.translate = 0; // this will be used to store the translate value of this.line
+		this.lineLength = 0; //total length of this.line
+
+		// store index of selected and previous selected dates
+		this.oldDateIndex = Util.getIndexInArray(this.date, this.selectedDate);
+		this.newDateIndex = this.oldDateIndex;
+
+		initTimeline(this);
+		initEvents(this);
+  };
+
+  function initTimeline(timeline) {
+  	// set dates left position
+  	var left = 0;
+		for (var i = 0; i < timeline.dateValues.length; i++) {
+			var j = (i == 0) ? 0 : i - 1;
+	    var distance = daydiff(timeline.dateValues[j], timeline.dateValues[i]),
+	    	distanceNorm = (Math.round(distance/timeline.minLapse) + 2)*timeline.eventsMinDistance,
+			containerWidth = timeline.datesContainer.offsetWidth,
+			distanceCorrecture = 0;
+
+	    if(distanceNorm < timeline.eventsMinDistance) {
+	    	distanceNorm = timeline.eventsMaxDistance;
+	    } else if(distanceNorm > timeline.eventsMaxDistance) {
+	    	distanceNorm = timeline.eventsMinDistance;
+	    }
+	    left = left + distanceNorm;
+	    timeline.date[i].setAttribute('style', 'left:' + left+'px');
+		}
+
+		// set line/filling line dimensions
+		timeline.line.style.width = (left + timeline.eventsMinDistance)+distanceCorrecture+'px';
+		timeline.lineLength = left + timeline.eventsMinDistance+distanceCorrecture;
+	  
+		// add 100px more to line/filling line if container bigger then timeline lineLength
+		if(containerWidth > timeline.lineLength) {
+		  timeline.line.style.width = (left + timeline.eventsMinDistance)+distanceCorrecture+'px';
+		  timeline.lineLength = timeline.lineLength + distanceCorrecture;
+		}
+	  
+		// reveal timeline
+		Util.addClass(timeline.element, 'h--timeline--loaded');
+		selectNewDate(timeline, timeline.selectedDate);
+		resetTimelinePosition(timeline, 'next');
+  };
+
+  function initEvents(timeline) {
+  	var self = timeline;
+		// deaktivate the buttons
+		deaktivateNavigationButtons(self);
+	  
+		// click on arrow navigation
+		self.navigation[0].addEventListener('click', function(event){
+			event.preventDefault();
+			translateTimeline(self, 'prev');
+			deaktivateNavigationButtons(self);
+		});
+		self.navigation[1].addEventListener('click', function(event){
+			event.preventDefault();
+			translateTimeline(self, 'next');
+			deaktivateNavigationButtons(self);
+		});
+
+		//swipe on timeline
+		new SwipeContent(self.datesContainer);
+		self.datesContainer.addEventListener('swipeLeft', function(event){
+			translateTimeline(self, 'next');
+		});
+		self.datesContainer.addEventListener('swipeRight', function(event){
+			translateTimeline(self, 'prev');
+		}); 
+
+		//select a new event
+		for(var i = 0; i < self.date.length; i++) {
+			(function(i){
+				self.date[i].addEventListener('click', function(event){
+					event.preventDefault();
+					selectNewDate(self, event.target);
+				});
+
+				self.content[i].addEventListener('animationend', function(event){
+					if( i == self.newDateIndex && self.newDateIndex != self.oldDateIndex) resetAnimation(self);
+				});
+			})(i);
+		}
+  };
+
+  function updateFilling(timeline) { // update fillingLine scale value
+		var dateStyle = window.getComputedStyle(timeline.selectedDate, null),
+			left = dateStyle.getPropertyValue("left"),
+			width = dateStyle.getPropertyValue("width");
+
+		left = Number(left.replace('px', '')) + Number(width.replace('px', ''))/2;
+		timeline.fillingLine.style.transform = 'scaleX('+(left/timeline.lineLength)+')';
+	};
+
+  function translateTimeline(timeline, direction) { // translate timeline (and date elements)
+  	var containerWidth = timeline.datesContainer.offsetWidth;
+  	if(direction) {
+  		timeline.translate = (direction == 'next') ? timeline.translate - containerWidth + timeline.eventsMinDistance : timeline.translate + containerWidth - timeline.eventsMinDistance;
+  	}
+    if( 0 - timeline.translate > timeline.lineLength - containerWidth ) timeline.translate = containerWidth - timeline.lineLength;
+    if( timeline.translate > 0 ) timeline.translate = 0;
+
+    timeline.line.style.transform = 'translateX('+timeline.translate+'px)';
+    // update the navigation items status (toggle inactive class)
+		(timeline.translate == 0 ) ? Util.addClass(timeline.navigation[0], 'h--timeline-navigation--inactive') : Util.removeClass(timeline.navigation[0], 'h--timeline-navigation--inactive');
+		(timeline.translate == containerWidth - timeline.lineLength ) ? Util.addClass(timeline.navigation[1], 'h--timeline-navigation--inactive') : Util.removeClass(timeline.navigation[1], 'h--timeline-navigation--inactive');
+  };
+	
+	function deaktivateNavigationButtons(timeline) {
+    var containerWidth = timeline.datesContainer.offsetWidth;
+    // deaktivate next button if container bigger then timeline lineLength
+    if(containerWidth >= timeline.lineLength) {
+			Util.addClass(timeline.navigation[0], 'h--timeline-navigation--inactive');
+			Util.addClass(timeline.navigation[1], 'h--timeline-navigation--inactive');
+		}
+	};
+
+	function selectNewDate(timeline, target) { // ned date has been selected -> update timeline
+		timeline.newDateIndex = Util.getIndexInArray(timeline.date, target);
+		timeline.oldDateIndex = Util.getIndexInArray(timeline.date, timeline.selectedDate);
+		Util.removeClass(timeline.selectedDate, 'h--timeline-date--selected');
+		Util.addClass(timeline.date[timeline.newDateIndex], 'h--timeline-date--selected');
+		timeline.selectedDate = timeline.date[timeline.newDateIndex];
+		updateOlderEvents(timeline);
+		updateVisibleContent(timeline);
+		updateFilling(timeline);
+	};
+
+	function updateOlderEvents(timeline) { // update older events style
+		for(var i = 0; i < timeline.date.length; i++) {
+			(i < timeline.newDateIndex) ? Util.addClass(timeline.date[i], 'h--timeline-date--older-event') : Util.removeClass(timeline.date[i], 'h--timeline-date--older-event');
+		}
+	};
+
+	function updateVisibleContent(timeline) { // show content of new selected date
+		if (timeline.newDateIndex > timeline.oldDateIndex) {
+			var classEntering = 'h--timeline-event--selected h--timeline-event--enter-right',
+				classLeaving = 'h--timeline-event--leave-left';
+		} else if(timeline.newDateIndex < timeline.oldDateIndex) {
+			var classEntering = 'h--timeline-event--selected h--timeline-event--enter-left',
+				classLeaving = 'h--timeline-event--leave-right';
+		} else {
+			var classEntering = 'h--timeline-event--selected',
+				classLeaving = '';
+		}
+
+		Util.addClass(timeline.content[timeline.newDateIndex], classEntering);
+		if (timeline.newDateIndex != timeline.oldDateIndex) {
+			Util.removeClass(timeline.content[timeline.oldDateIndex], 'h--timeline-event--selected');
+			Util.addClass(timeline.content[timeline.oldDateIndex], classLeaving);
+			//timeline.contentWrapper.style.height = timeline.content[timeline.newDateIndex].offsetHeight + 'px';
+		}
+	};
+
+	function resetAnimation(timeline) { // reset content classes when entering animation is over
+		//timeline.contentWrapper.style.height = null;
+		Util.removeClass(timeline.content[timeline.newDateIndex], 'h--timeline-event--enter-right h--timeline-event--enter-left');
+		Util.removeClass(timeline.content[timeline.oldDateIndex], 'h--timeline-event--leave-right h--timeline-event--leave-left');
+	};
+
+	function keyNavigateTimeline(timeline, direction) { // navigate the timeline using the keyboard
+		var newIndex = (direction == 'next') ? timeline.newDateIndex + 1 : timeline.newDateIndex - 1;
+		if(newIndex < 0 || newIndex >= timeline.date.length) return;
+		selectNewDate(timeline, timeline.date[newIndex]);
+		resetTimelinePosition(timeline, direction);
+	};
+
+	function resetTimelinePosition(timeline, direction) { //translate timeline according to new selected event position
+		var eventStyle = window.getComputedStyle(timeline.selectedDate, null),
+			eventLeft = Number(eventStyle.getPropertyValue('left').replace('px', '')),
+			timelineWidth = timeline.datesContainer.offsetWidth;
+
+    if( (direction == 'next' && eventLeft >= timelineWidth - timeline.translate) || (direction == 'prev' && eventLeft <= - timeline.translate) ) {
+    	timeline.translate = timelineWidth/2 - eventLeft;
+    	translateTimeline(timeline, false);
+    }
+  };
+
+  function parseDate(timeline) { // get timestamp value for each date
+		var dateArrays = [];
+		for(var i = 0; i < timeline.date.length; i++) {
+			var singleDate = timeline.date[i].getAttribute('data-date'),
+				dateComp = singleDate.split('T');
+
+			if( dateComp.length > 1 ) { //both DD/MM/YEAR and time are provided
+				var dayComp = dateComp[0].split('/'),
+					timeComp = dateComp[1].split(':');
+			} else if( dateComp[0].indexOf(':') >=0 ) { //only time is provide
+				var dayComp = ["2000", "0", "0"],
+					timeComp = dateComp[0].split(':');
+			} else { //only DD/MM/YEAR
+				var dayComp = dateComp[0].split('/'),
+					timeComp = ["0", "0"];
+			}
+			var	newDate = new Date(dayComp[2], dayComp[1]-1, dayComp[0], timeComp[0], timeComp[1]);
+			dateArrays.push(newDate);
+		}
+	  return dateArrays;
+  };
+
+  function calcMinLapse(timeline) { // determine the minimum distance among events
+		var dateDistances = [];
+		for(var i = 1; i < timeline.dateValues.length; i++) {
+	    var distance = daydiff(timeline.dateValues[i-1], timeline.dateValues[i]);
+	    if(distance > 0) dateDistances.push(distance);
+		}
+
+		return (dateDistances.length > 0 ) ? Math.min.apply(null, dateDistances) : 86400000;
+	};
+
+	function daydiff(first, second) { // time distance between events
+		return Math.round((second-first));
+	};
+
+  window.HorizontalTimeline = HorizontalTimeline;
+
+  var horizontalTimeline = document.getElementsByClassName('js-h--timeline'),
+  	horizontalTimelineTimelineArray = [];
+  if(horizontalTimeline.length > 0) {
+		for(var i = 0; i < horizontalTimeline.length; i++) {
+			horizontalTimelineTimelineArray.push(new HorizontalTimeline(horizontalTimeline[i]));
+		}
+		// navigate the timeline when inside the viewport using the keyboard
+		document.addEventListener('keydown', function(event){
+			if( (event.keyCode && event.keyCode == 39) || ( event.key && event.key.toLowerCase() == 'arrowright') ) {
+				updateHorizontalTimeline('next'); // move to next event
+			} else if((event.keyCode && event.keyCode == 37) || ( event.key && event.key.toLowerCase() == 'arrowleft')) {
+				updateHorizontalTimeline('prev'); // move to prev event
+			}
+		});
+  };
+
+  function updateHorizontalTimeline(direction) {
+		for(var i = 0; i < horizontalTimelineTimelineArray.length; i++) {
+			if(elementInViewport(horizontalTimeline[i])) keyNavigateTimeline(horizontalTimelineTimelineArray[i], direction);
+		}
+  };
+
+  /*
+		How to tell if a DOM element is visible in the current viewport?
+		http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+	*/
+	function elementInViewport(el) {
+		var top = el.offsetTop;
+		var left = el.offsetLeft;
+		var width = el.offsetWidth;
+		var height = el.offsetHeight;
+
+		while(el.offsetParent) {
+		    el = el.offsetParent;
+		    top += el.offsetTop;
+		    left += el.offsetLeft;
+		}
+
+		return (
+		    top < (window.pageYOffset + window.innerHeight) &&
+		    left < (window.pageXOffset + window.innerWidth) &&
+		    (top + height) > window.pageYOffset &&
+		    (left + width) > window.pageXOffset
+		);
+	}
+}());
+
+
+
+
+  
+  </script>
+   <script>
+
+    const swiper = new Swiper(".swiperCarousel", {
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 10,
+      keyboard: {
+        enabled: true },
+    
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination" },
+    
+      navigation: {
+        nextEl: ".nazaratSwiper-next",
+        prevEl: ".nazaratSwiper-prev" } });
+    
+    
+        </script>
+         <script>
+
+
+
+
+
+          (function(e) {
+                e.fn.circle = function(t) {
+                    var n = e.extend({
+                        speed: "5000"
+                    }, t);
+                    return this.each(function() {
+                        function t() {
+                            var e = i.find("li.block.active").index();
+                            c.removeClass("active"), c.eq(e).addClass("active")
+                        }
+          
+                        function o() {
+                            var n;
+                            i.addClass("disable-hover"), i.stop(!0, !0).animate({
+                                rotatedeg: p.deg += p.step
+                            }, {
+                                duration: 400,
+                                step: function(t) {
+                                    t >= 360 ? t -= 360 : t <= -360 && (t += 360), e(this).css("transform", "rotate(" + t + "deg)"), e(this).css("-webkit-transform", "rotate(" + t + "deg)")
+                                },
+                                complete: function() {
+                                    p.active = i.find("li.active").removeClass("active"), "right" == p.direction && p.step == d && (p.active.prev() && p.active.prev().length ? (n = p.active.prev().index(), p.active.prev().addClass("active")) : (p.active.siblings(":last-child").addClass("active"), n = 9)), "left" == p.direction && p.step == u && (p.active.next() && p.active.next().length ? (n = p.active.next().index(), p.active.next().addClass("active")) : (p.active.siblings(":first-child").addClass("active"), n = 0)), i.is(":animated"), i.removeClass("disable-hover"), t()
+                                }
+                            }, "ease")
+                        }
+          
+                        function r() {
+                            i.addClass("disable-hover"), i.stop(!0, !0).animate({
+                                rotatedeg: p.deg += p.step
+                            }, {
+                                duration: 400,
+                                step: function(t) {
+                                    t >= 360 ? t -= 360 : t <= -360 && (t += 360), e(this).css("transform", "rotate(" + t + "deg)"), e(this).css("-webkit-transform", "rotate(" + t + "deg)")
+                                },
+                                complete: function() {
+                                    p.active = i.find("li.active"), i.is(":animated"), i.removeClass("disable-hover")
+                                }
+                            }, "ease")
+                        }
+                        var i = e(this),
+                            s = i.find("li").length,
+                            a = i.find(" > li .icon"),
+                            l = "count" + s,
+                            u = 0,
+                            c = i.next().find(".animate"),
+                            p = {
+                                duration: n.speed,
+                                deg: 0,
+                                step: u,
+                                active: i.find("li.active"),
+                                direction: "left"
+                            };
+                        switch (s) {
+                            case 10:
+                                u = -36;
+                                break;
+                            case 9:
+                                u = -40;
+                                break;
+                            case 8:
+                                u = -45;
+                                break;
+                            case 7:
+                                u = -51.5;
+                                break;
+                            case 6:
+                                u = -60;
+                                break;
+                            case 5:
+                                u = -72;
+                                break;
+                            case 4:
+                                u = -90;
+                                break;
+                            case 3:
+                                u = -120;
+                                break;
+                            case 2:
+                                u = -180;
+                                break;
+                            case 1:
+                                u = -360
+                        }
+                        i.addClass(l);
+                        var d = u - 2 * u;
+                        i.find("> li").first().addClass("active"), i.find("> li").first().find("a").attr("href"), c.eq(0).addClass("active"), e(a).on("click", function() {
+                            var n = e(this).parent().index() - i.find("li.active").index();
+                            i.children("li").removeClass("active"), e(this).parent().addClass("active"), p.step = -n * d, n * d >= 288 && (p.step = -n * d + 360), n * d <= -288 && (p.step = -n * d - 360), r(), p.step = u, p.direction = "left", t()
+                        });
+                        var f = i.parent().find("div.next"),
+                            h = i.parent().find("div.prev");
+                        f.on("click", function() {
+                            i.is(":animated") || (p.direction = "left", p.step = u, o())
+                        }), h.on("click", function() {
+                            i.is(":animated") || (p.direction = "right", p.step = d, o())
+                        })
+                    })
+                }
+            }(jQuery));
+          
+          
+          $(function () {
+            //Background image
+            $('div').each(function () {
+                var url = $(this).attr('data-image');
+                if (url) {
+                    $(this).css('background-image', 'url(' + url + ')');
+                }
+            });
+          
+            $('section').each(function () {
+                var url = $(this).attr('data-image');
+                if (url) {
+                    $(this).css('background-image', 'url(' + url + ')');
+                }
+            });
+            
+            // Service Auto height circle 
+            function autoHeightCircle() {
+                var circle = $('.circle--rotate'),
+                    circleInner = $('.animate-wrapper'), 
+                    circleH = circle.width(),
+                    circleInnerH = circleInner.width();
+                circle.height(circleH);
+                circleInner.height(circleInnerH);
+            }
+          
+            $("#circle--rotate").circle();
+            autoHeightCircle();
+            $(window).resize(function () {
+                autoHeightCircle();
+            });
+          });
+
+      
+          var advantageSwiper = new Swiper(".advantageSwiper", {
+          slidesPerView: 5,
+          spaceBetween: 0,
+          slidesPerGroup:5,
+          navigation: {
+            nextEl: '.advantageSwiper-next',
+            prevEl: '.advantageSwiper-prev',
+          },
+
+        });
+
+
+        function showavgs(el, id){
+          const cSlides = document.querySelector(`[data-slide="${id}"]`)
+          const avgslides = document.querySelectorAll(".h--timeline-event")
+          avgslides.forEach(e => {
+            e.style.transform = "translateX(-100%)"
+            
+            setTimeout(function ()  {
+              e.classList.remove("h--timeline-event--selected")
+            }, 100);
+           
+          })
+          setTimeout(function ()  {
+            cSlides.classList.add("h--timeline-event--selected")
+            }, 200);
+       
+        }
+            </script>
+            
+
+
+<script>
+    const circleswiper = new Swiper('.circleswiper', {})
+  const numPanels = circleswiper.slides.length;
+
+  
+  
+  // Gsap Code
+  let currentIndex = 0;
+  let animating;
+  
+  
+  
+  
+  circleswiper.on('slideChangeTransitionEnd', function() {
+    animating = false
+  })
+  
+  
+  
+  // create an observer and disable it to start
+  let intentObserver = ScrollTrigger.observe({
+    type: "wheel,touch",
+    onUp: () => !animating && gotoPanel(currentIndex + 1, true),
+    onDown: () => !animating && gotoPanel(currentIndex - 1, false),
+    wheelSpeed: -1, // to match mobile behavior, invert the wheel speed
+    tolerance: 30,
+    preventDefault: true,
+    onPress: self => {
+      // on touch devices like iOS, if we want to prevent scrolling, we must call preventDefault() on the touchstart (Observer doesn't do that because that would also prevent side-scrolling which is undesirable in most cases)
+      ScrollTrigger.isTouch && self.event.preventDefault()
+    }
+  })
+  intentObserver.disable();
+  
+  let preventScroll = ScrollTrigger.observe({
+        preventDefault: true,
+        type: "wheel,scroll",
+        allowClicks: true,
+        onEnable: self => {
+        console.log("enable") 
+          return self.savedScroll = self.scrollY()
+        }, // save the scroll position
+        onChangeY: self => {
+          console.log("disable")
+          self.scrollY(self.savedScroll)    // refuse to scroll
+        }
+      });
+  preventScroll.disable();
+  
+  // handle the panel swipe animations
+  function gotoPanel(index, isScrollingDown) {
+    animating = true;
+    console.log("gotoPanel")
+    // return to normal scroll if we're at the end or back up to the start
+    if (
+      (index === numPanels && isScrollingDown) ||
+      (index === -1 && !isScrollingDown)
+    ) {
+      console.log("return to normal scroll")
+      intentObserver.disable();
+      preventScroll.disable();
+      
+      animating = false;
+      // now make it go 1px beyond in the correct direction so that it doesn't trigger onEnter/onEnterBack.
+      preventScroll.scrollY(preventScroll.scrollY() + (index === numPanels ? 1 : -1));
+      return;
+    }
+    console.log("call swiper slideTo()")
+    circleswiper.slideTo(index)
+    nextChart(index)
+    currentIndex = index;
+  }
+  
+  function nextChart(index){
+      const cslider = document.querySelector(".circle-section")
+      console.log("indexxxxx")
+      cslider.classList.remove("vp-active","dd-active","pm-active")
+      if(index == 0){
+          
+          cslider.classList.add("vp-active")
+      }
+      else if(index == 1){
+          
+          cslider.classList.add("dd-active")
+      }
+      else if(index == 2){
+          
+          cslider.classList.add("pm-active")
+      }
+  }
+  
+  
+  // pin swipe section and initiate observer
+  ScrollTrigger.create({
+    trigger: ".gallery",
+    pin: true,
+    anticipatePin: true,
+    start: "+=100%",
+    end: "+=50%",
+    onEnter: (self) => {
+      if (preventScroll.isEnabled === false) {
+        self.scroll(self.start);
+        preventScroll.enable();
+        intentObserver.enable();
+       
+        gotoPanel(currentIndex + 1, true);
+      }
+    },
+    onEnterBack: (self) => {
+      if (preventScroll.isEnabled === false) {
+        self.scroll(self.start);
+        preventScroll.enable();
+        intentObserver.enable();
+       
+        gotoPanel(currentIndex - 1, false);
+      }
+    }
+  });
+  
+  
+  ScrollTrigger.config({ 
+    ignoreMobileResize: true
+  });
+    </script>
+</body>
+</html>
+ 

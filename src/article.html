@@ -1,0 +1,103 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]">
+    <member type="view" name="view" />
+    <member type="list" name="related-articl" link="article.bc" blgid="222" size="160x188"  typeid="159" propertyid="7244,87822,7245" />
+    <member name="data1_291" type="view" request="rdfa" />
+</basis>
+
+<basis core="dbsource" source="media" name="db" lid="1" sourcemid="article" usedforid="[##cms.query.id##]">
+    <member type="list" name="gallery" size="520x750" format="4" />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]">
+    <member type="list" name="listfa" size="370X200" typeid="159" propertyid="8616" />
+</basis>
+<basis core="dbsource" source="basiscore" name="seo" lid="1" request="seo">
+    <member name="list" type="list" request="product" id="[##cms.query.id##]" />
+    </basis>
+
+
+<!doctype html>
+<html dir="rtl" lang="fa-IR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <basis core="print" datamembername="seo.list">
+    <face>
+      <title>[##cms.seo.title|seo.list.title##]</title>
+      <meta name="description" content="[##cms.seo.description|seo.list.description##]"/>
+    </face>
+  </basis>
+  
+  <link href="css/output.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  
+<basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+  <member type="list" name="list" request="taglist" preview=""  ></member>
+</basis>
+
+  <basis core="print" datamembername="tag.list">  
+    <face filter="key <> 'canonical'">      
+      <meta property="@key" content="@value" />
+  </face>
+  </basis>
+</head>
+<body class="bg-white">
+  <basis core="call" file="header-v4.bc" />
+<div class="firstpart pt-11 pb-11 bg-white ">
+ 
+  <div class="container mx-auto py-4 article_header">
+    <div class="text-center">
+        <basis core="print" datamembername="db.listfa">
+            <face  >
+        <div class="flexMobile text-center">
+            <img src="[##cms.cms.cdn##]/@type_159" width="" height="" title="@type_159" alt="@type_159" class="rounded-2xl overflow-hidden mx-auto">
+        </div>
+        </face>
+        </basis>
+        <basis core="print" datamembername="db.view">
+            <face filter="typeid=150">
+          <h1 class="text-24px mt-10">
+                    @answer
+    
+          </h1>
+          </face>
+        </basis>
+          
+    </div>
+
+      <basis core="print" datamembername="db.view">
+        <face filter="prpID=7244">
+      <div class="creativeSite">
+        @answer           
+      </div>
+      </face>
+      </basis>
+      
+      <basis core="print" datamembername="db.view">
+         <face filter="prpID not in (7244) and typeid not in (150,160,162,161,159) ">
+         <div class="TitleBigItem text-14px"> <div class="titleSeo font-bold"> <p> @text </p> </div> </div> <div class="clr"></div> <div class="card-info-desc  text-14px"> @largetext </div> </face>
+        </basis>
+   
+</div>
+
+ 
+</div>
+
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]" >
+  <member request="json-ld" type="scalar" name="json"  />
+</basis>
+
+<script  type="application/ld+json" >
+ [##db.json.Column1##]
+  </script>
+
+<basis core="call" file="footer-v4.bc" />
+
+<script src="[##cms.cms.cdn##]/newjs/jquery-3.5.1.min.js"></script>
+<script src='[##cms.cms.cdn##]/newjs/gsap-latest-beta.min.js?r=v3.11.3'></script>
+  <script src='[##cms.cms.cdn##]/newjs/ScrollTrigger.min.js'></script>
+  <script src='[##cms.cms.cdn##]/newjs/ScrollSmoother.min.js?v=3.10.0e'></script> 
+  <script src="[##cms.cms.cdn##]/newjs/mainscript.js">
+
+  </script>
+</body>
+</html>

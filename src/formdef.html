@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-contact requestBox1" >
+
+        <h2 class="titr-contact">فرم ارتباط با ما</h2>
+        
+        
+        
+        <basis core='schema' run='AtClient' schemaurl='/schema/domainform' paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='[data-btn-add]' resultsourceid='demo.data'></basis><basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis><basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
+        
+        <div data-bc-question="" class="qclass8">
+        <div data-bc-title-container=""><span data-sys-text="">کد امنیتی </span></div>
+        
+        <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 "
+        style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0"
+        data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
+        
+        <span class="captcha-sefaresh">
+        <img src="/ca4401000001190160" width="88" height="44" class="captcha-sefaresh" alt="captcha" title="captcha" />
+        <input type="hidden" name="captchaid" value="ca4401000001190160" />
+        </span>
+        <img src="/images/ref.png" class="refressh refressh1" />
+        <input type="text" class="codeinputm" name="captcha"
+        placeholder="کد امنیتی را وارد نمایید .." />
+        
+        
+        
+        
+        
+        <div class="clr"></div>
+        </div>
+        <div class="flexinner1 Formbb wow fadeIn ">
+        <button data-btn-add>ارسال </button>
+        
+        </div>
+        <div class="clr"></div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        </div>
+
+
+
+        <script src="https://cdn.basiscore.net/mahnirooco.com/js/Library.js" type="text/javascript"></script>
+        <script src="https://cdn.basiscore.net/mahnirooco.com/js/core.min.js" type="text/javascript"></script>
+        <script src="https://cdn.basiscore.net/mahnirooco.com/js/basiscore-2.23.1.min.js"></script>
+        <script src="https://cdn.basiscore.net/mahnirooco.com/js/alasql.min.js" type="text/javascript"></script>
+        <script src="https://cdn.basiscore.net/mahnirooco.com/js/configuration.js" type="text/javascript"></script>
+        <script>
+
+            var rkey = get_cookie("rkey")
+            var host = {
+             debug: false,
+             settings: {
+             'connection.web.callcommand': 'https://mahnirooco.com',
+             'connection.local.basket': {
+             Url: 'https://mahnirooco.com/app/js/LocalStorageBasket.js',
+             Function: 'LocalBasket'
+             },
+             
+             'connection.web.trust_login': 'https://basispanel.ir/apicms',
+             'connection.web.basiscore': 'https://basispanel.ir/apicms',
+             'connection.web.accounting': 'https://basispanel.ir/apicms',
+             'connection.web.accounting_eshop': `https://www.basisfly.com/eshop-test/${rkey}`,
+             'connection.web.media': 'https://basispanel.ir/apicms',
+             'default.dbsource.verb': 'post',
+             'default.call.verb': 'get',
+             'default.viewCommand.groupColumn': 'prpid',
+             'default.dmnid': '8299',
+             'default.binding.regex': '\\{##([^#]*)##\\}'
+            
+             }
+            }
+            
+            
+            
+             function onSource(args) {
+             const captcha = document.querySelector("#requestBox input[name='captcha']").value;
+             const captchaid = document.querySelector("#requestBox input[name='captchaid']").value;
+             const stringJson = JSON.stringify(args.source?.rows[0]);
+             $bc.setSource('edit.object', {
+             value: stringJson,
+             captcha: captcha,
+             captchaid: captchaid
+             })
+             }
+            
+             async function OnProcessedEditObject1(args) {
+             const response = args.response;
+             const json = await response.json();
+            
+             //alert("errorid : " + json.errorid + " , message : " + json.message)
+            
+             if (json.errorid == 6) {
+             $(".requestBox1").append('<div class="lds-ellipsis1"> <div class="backkkkk"><div class="lds-ellipsis"> فرم شما با موفقیت ثبت شد <br> <div></div><div></div><div></div><div></div></div></div></div>')
+            
+             setTimeout(function () { $(".lds-ellipsis1").remove() }, 6000);
+             }
+             if (json.errorid == 4) {
+             $(".requestBox1").append('<div class="lds-ellipsis1"> <div class="backkkkk"><div class="lds-ellipsis lds-ellipsisrr"> لطفا کد امنیتی را وارد کنید <div></div><div></div><div></div><div></div></div></div></div>')
+            
+             setTimeout(function () { $(".lds-ellipsis1").remove() }, 6000);
+             }
+            
+             }
+            
+            
+             $("body").on("click", ".refressh1", function (e) {
+            
+             $(".captcha-sefaresh").load("/captcha.bc");
+             return false;
+             });
+            
+         
+            
+            
+            </script>
+</body>
+</html>
