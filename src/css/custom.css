@@ -2162,9 +2162,7 @@
 .bx-screenshot:before {
   content: "\eb53";
 }
-.bx-search:before {
-  content: "\eb54";
-}
+
 .bx-search-alt:before {
   content: "\eb55";
 }
@@ -2609,9 +2607,7 @@
 .bx-wrench:before {
   content: "\ebe8";
 }
-.bx-x:before {
-  content: "\ebe9";
-}
+
 .bx-x-circle:before {
   content: "\ebea";
 }
@@ -5005,7 +5001,11 @@ body {
   position: relative;
   height: 40px;
   width: 40px;
-  margin-left: auto;
+  /* margin-left: auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
 }
 .navbar .search-box i {
   position: absolute;
@@ -5072,7 +5072,7 @@ body {
 @media (max-width: 800px) {
   .defnav .navbar {
       max-width: 100%;
-      padding: 20px 0.5rem;
+      padding: 15px;
   }
 
   .defnav .navbar .logo a {
@@ -5096,21 +5096,25 @@ body {
   .defnav .navbar .nav-links {
       position: fixed;
       top: 0;
-      left: -100%;
+      left: 0;
       display: block;
       max-width: 100%;
       width: 100%;
-      background: #171717;
+      background: #EFEFEF;
       line-height: 40px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
       transition: all 0.5s ease;
       z-index: 1000;
+  }
+  .defnav .navbar .nav-links.hidden{
+    left: -100%;
   }
   .navbar .nav-links .sidebar-logo {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 20px;
+      direction: ltr;
   }
   .sidebar-logo .logo-name {
       font-size: 25px;
@@ -5134,13 +5138,14 @@ body {
   .defnav .navbar .links {
       display: block;
       margin-top: 20px;
+      height: 100vh;
   }
   .defnav .navbar .links {
       margin-top: 0;
       background-color: #171717;
   }
   .defnav1 .navbar .links {
-      background-color: #fff;
+      background-color: #EFEFEF;
   }
   .defnav .navbar .links li .arrow {
       line-height: 40px;
@@ -5220,10 +5225,10 @@ body {
   color: rgb(0, 112, 72);
 }
 .main-tool-bar {
-  height: 80px;
+  /* height: 80px; */
   text-align: center;
   color: #fff;
-  position: fixed;
+  position: sticky;
   width: 100%;
   left: 0;
   top: 0;
@@ -5264,12 +5269,13 @@ body {
   height: calc(100vh);
 }
 .header-text {
-  padding-top: 20vh;
+  /* padding-top: 20vh; */
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
   color: #fff;
-  min-height: 45vh;
+  /* min-height: 45vh; */
+  margin-bottom: 30px;
 }
 .sites {
   grid-row-gap: 16px;
@@ -5585,22 +5591,19 @@ body {
   color: white;
 }
 .section-1-call-to-action {
-  display: inline-block;
-  background: url(../newimages/section-1-call-to-action.png) no-repeat;
-  width: 170px;
+  border-radius: 25px;
+  width: fit-content;
   height: 56px;
-  line-height: 56px;
-  text-align: center;
-  font-size: 14px;
-  color: white;
-  margin: 0;
-  font-weight: 300;
-}
-.section-1-call-to-action:hover {
-  background: url(../newimages/section-1-calltoaction-hover.png) no-repeat;
-  color: #007048;
+  border: 1px solid #fff;
+  font-size: 28px;
   font-weight: bold;
+  box-shadow: 0 0 20px #515151;
+  display: inline-block;
+  padding: 5px 15px;
+  line-height: 50px;
+
 }
+
 
 .fade-in {
   animation: fadeIn 0.5s forwards;
@@ -5707,5 +5710,5 @@ body {
 
 .article_header{
   width: 100%;
-  background: url("/images/article_header.png") no-repeat center center ;
+  background: url("/images/article_header.png") no-repeat top center ;
 }
