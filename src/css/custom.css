@@ -5120,7 +5120,10 @@ body {
       justify-content: space-between;
       padding: 20px;
       direction: ltr;
+<<<<<<< HEAD
       padding-bottom: 0;
+=======
+>>>>>>> 5aa2dd26d6a53fd15b48f472db3f7252c823d2f1
   }
   .sidebar-logo .logo-name {
       font-size: 25px;
@@ -5275,12 +5278,13 @@ body {
   height: calc(100vh);
 }
 .header-text {
-  padding-top: 20vh;
+  /* padding-top: 20vh; */
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
   color: #fff;
-  min-height: 45vh;
+  /* min-height: 45vh; */
+  margin-bottom: 30px;
 }
 .sites {
   grid-row-gap: 16px;
@@ -5596,22 +5600,19 @@ body {
   color: white;
 }
 .section-1-call-to-action {
-  display: inline-block;
-  background: url(../newimages/section-1-call-to-action.png) no-repeat;
-  width: 170px;
+  border-radius: 25px;
+  width: fit-content;
   height: 56px;
-  line-height: 56px;
-  text-align: center;
-  font-size: 14px;
-  color: white;
-  margin: 0;
-  font-weight: 300;
-}
-.section-1-call-to-action:hover {
-  background: url(../newimages/section-1-calltoaction-hover.png) no-repeat;
-  color: #007048;
+  border: 1px solid #fff;
+  font-size: 28px;
   font-weight: bold;
+  box-shadow: 0 0 20px #515151;
+  display: inline-block;
+  padding: 5px 15px;
+  line-height: 50px;
+
 }
+
 
 .fade-in {
   animation: fadeIn 0.5s forwards;
@@ -5718,6 +5719,7 @@ body {
 
 .article_header{
   width: 100%;
+<<<<<<< HEAD
   background: url("https://namasite.ir/images/article_header.png") no-repeat top center ;
 }
 .section-1-call-to-action1{
@@ -5754,3 +5756,7 @@ body {
   opacity: 0.7;
 }
 
+=======
+  background: url("/images/article_header.png") no-repeat top center ;
+}
+>>>>>>> 5aa2dd26d6a53fd15b48f472db3f7252c823d2f1
