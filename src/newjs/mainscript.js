@@ -1,32 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const modal = document.getElementById('modal');
-    const openModalBtn = document.getElementById('openModalBtn');
-    const openModalBtnFooter = document.getElementById('openModalBtnFooter');
-    const closeModalBtn = document.getElementById('closeModalBtn');
+  var modal = document.getElementById('modal');
+  var openModalBtn = document.getElementById('openModalBtn');
+  var openModalBtnFooter = document.getElementById('openModalBtnFooter');
+  var closeModalBtn = document.getElementById('closeModalBtn');
 
-    openModalBtn?.addEventListener('click', function() {
-        modal.classList.remove('hidden', 'fade-out');
-        modal.classList.add('fade-in');
-    });
-    openModalBtnFooter?.addEventListener('click', function() {
+  openModalBtn?.addEventListener('click', function() {
       modal.classList.remove('hidden', 'fade-out');
       modal.classList.add('fade-in');
   });
+  openModalBtnFooter?.addEventListener('click', function() {
+    modal.classList.remove('hidden', 'fade-out');
+    modal.classList.add('fade-in');
+});
 
-    closeModalBtn.addEventListener('click', function() {
-        modal.classList.remove('fade-in');
-        modal.classList.add('fade-out');
-        modal.addEventListener('animationend', function() {
-            if (modal.classList.contains('fade-out')) {
-                modal.classList.add('hidden');
-            }
-        }, { once: true });
-    });
+  closeModalBtn.addEventListener('click', function() {
+      modal.classList.remove('fade-in');
+      modal.classList.add('fade-out');
+      modal.addEventListener('animationend', function() {
+          if (modal.classList.contains('fade-out')) {
+              modal.classList.add('hidden');
+          }
+      }, { once: true });
+  });
 });
 
 gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
 
-const showAnim = gsap.from('.main-tool-bar', { 
+var showAnim = gsap.from('.main-tool-bar', { 
 yPercent: -100,
 paused: true,
 duration: 0.2
@@ -41,10 +41,10 @@ self.direction === -1 ? showAnim.play() : showAnim.reverse()
 });
 gsap.to(".asdasd",{
 scrollTrigger:{
-    trigger:".asdasd",
-    start:"top center",
-    end:"top 100px",
-    scrub:true,
+  trigger:".asdasd",
+  start:"top center",
+  end:"top 100px",
+  scrub:true,
 },
 x:-100,
 rotation:360,
@@ -54,110 +54,139 @@ ease:"none"
 
 
 function animateFrom(elem, direction) {
-    direction = direction || 1;
-    var x = 0,
-        y = direction * 100;
-    if(elem.classList.contains("gs_reveal_fromLeft")) {
-      x = -100;
-      y = 0;
-    } else if (elem.classList.contains("gs_reveal_fromRight")) {
-      x = 100;
-      y = 0;
-    }
-    elem.style.transform = "translate(" + x + "px, " + y + "px)";
-    elem.style.opacity = "0";
-    gsap.fromTo(elem, {x: x, y: y, autoAlpha: 0}, {
-      duration: 1.25, 
-      x: 0,
-      y: 0, 
-      autoAlpha: 1, 
-      ease: "expo", 
-      overwrite: "auto"
-    });
+  direction = direction || 1;
+  var x = 0,
+      y = direction * 100;
+  if(elem.classList.contains("gs_reveal_fromLeft")) {
+    x = -100;
+    y = 0;
+  } else if (elem.classList.contains("gs_reveal_fromRight")) {
+    x = 100;
+    y = 0;
   }
+  elem.style.transform = "translate(" + x + "px, " + y + "px)";
+  elem.style.opacity = "0";
+  gsap.fromTo(elem, {x: x, y: y, autoAlpha: 0}, {
+    duration: 1.25, 
+    x: 0,
+    y: 0, 
+    autoAlpha: 1, 
+    ease: "expo", 
+    overwrite: "auto"
+  });
+}
+
+function hide(elem) {
+  gsap.set(elem, {autoAlpha: 0});
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  gsap.registerPlugin(ScrollTrigger);
   
-  function hide(elem) {
-    gsap.set(elem, {autoAlpha: 0});
-  }
-  
-  document.addEventListener("DOMContentLoaded", function() {
-    gsap.registerPlugin(ScrollTrigger);
+  gsap.utils.toArray(".gs_reveal").forEach(function(elem) {
+    hide(elem); // assure that the element is hidden when scrolled into view
     
-    gsap.utils.toArray(".gs_reveal").forEach(function(elem) {
-      hide(elem); // assure that the element is hidden when scrolled into view
-      
-      ScrollTrigger.create({
-        trigger: elem,
-        markers: false,
-        onEnter: function() { animateFrom(elem) }, 
-        onEnterBack: function() { animateFrom(elem, -1) },
-        onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
-      });
+    ScrollTrigger.create({
+      trigger: elem,
+      markers: false,
+      onEnter: function() { animateFrom(elem) }, 
+      onEnterBack: function() { animateFrom(elem, -1) },
+      onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
     });
   });
-  
-
-
-
-    // search-box open close js code
-let navbar = document.querySelector(".navbar");
-let searchBox = document.querySelector(".search-box .bx-search");
-// let searchBoxCancel = document.querySelector(".search-box .bx-x");
-
-searchBox.addEventListener("click", ()=>{
-  navbar.classList.toggle("showInput");
-  if(navbar.classList.contains("showInput")){
-    searchBox.classList.replace("bx-search" ,"bx-x");
-  }else {
-    searchBox.classList.replace("bx-x" ,"bx-search");
-  }
 });
 
-// sidebar open close js code
-let navLinks = document.querySelector(".nav-links");
-let menuOpenBtn = document.querySelector(".navbar .bx-menu");
-let menuCloseBtn = document.querySelector(".nav-links .bx-x");
-menuOpenBtn.onclick = function() {
-navLinks.style.left = "0";
+
+
+
+  // search-box open close js code
+var navbar = document.querySelector(".navbar");
+var searchBox = document.querySelector(".search-box .bx-search");
+// let searchBoxCancel = document.querySelector(".search-box .bx-x");
+var closeIcon = document.querySelector(".close_search")
+searchBox?.addEventListener("click", function (e){
+navbar.classList.toggle("showInput");
+if(navbar.classList.contains("showInput")){
+  console.log(e)
+  this.style.display="none"
+  closeIcon.style.display="block"
+
+  
+  searchBox.classList.replace("bx-search" ,"bx-x");
+}else {
+  searchBox.classList.replace("bx-x" ,"bx-search");
 }
-menuCloseBtn.onclick = function() {
-navLinks.style.left = "-100%";
+});
+
+closeIcon?.addEventListener("click", function (e){
+  navbar.classList.toggle("showInput");
+  if(navbar.classList.contains("showInput")){
+    
+    this.style.display="none"
+    searchBox.style.display="block"
+  
+    
+    // searchBox.classList.replace("bx-search" ,"bx-x");
+  }else {
+    // searchBox.classList.replace("bx-x" ,"bx-search");
+  }
+  });
+
+
+
+
+// sidebar open close js code
+var navLinks = document.querySelector(".nav-links");
+var menuOpenBtn = document.querySelector(".navbar .bx-menu");
+var menuCloseBtn = document.querySelector(".nav-links .bx-x");
+if(menuOpenBtn){
+  menuOpenBtn.onclick = function() {
+    navLinks.style.left = "0";
+    }
+}
+if(menuCloseBtn){
+  menuCloseBtn.onclick = function() {
+    navLinks.style.left = "-100%";
+    }
+    
 }
 
 
 // sidebar submenu open close js code
-let htmlcssArrow = document.querySelector(".htmlcss-arrow");
-htmlcssArrow.onclick = function() {
- navLinks.classList.toggle("show1");
+var htmlcssArrow = document.querySelector(".htmlcss-arrow");
+if(htmlcssArrow){
+  htmlcssArrow.onclick = function() {
+    navLinks.classList.toggle("show1");
+    }
 }
-let moreArrow = document.querySelector(".more-arrow");
+
+var moreArrow = document.querySelector(".more-arrow");
+if(moreArrow){
 moreArrow.onclick = function() {
- navLinks.classList.toggle("show2");
-}
-let jsArrow = document.querySelector(".js-arrow");
-jsArrow.onclick = function() {
- navLinks.classList.toggle("show3");
+  navLinks.classList.toggle("show2");
+ }
 }
 
-
-
-
-
-
-
-
-
-
-
-   
-$("body").on("click", ".refressh1", function (e) {
+var jsArrow = document.querySelector(".js-arrow");
+if(jsArrow){
+  jsArrow.onclick = function() {
+    navLinks.classList.toggle("show3");
+    }
     
-  $(".captcha-sefaresh").load("/captcha.bc");
-  return false;
-  });
- 
+}
+
+
+
 
  
+$("body").on("click", ".refressh1", function (e) {
+  
+$(".captcha-sefaresh").load("/captcha.bc");
+return false;
+});
+
+
+
 $(document).ready(function(){
 window.onload = function () {
 setTimeout(function () {
@@ -231,5 +260,9 @@ $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display
 
 
 });
- 
+
+
+
+
+
 

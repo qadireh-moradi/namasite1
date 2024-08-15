@@ -1,0 +1,21 @@
+<basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+    <member type="list" name="list" request="taglist" preview=""  ></member>
+  </basis>
+  
+ <link href="[##cms.cms.cdn##]/css/output.css" rel="stylesheet">
+ <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/swiper-bundle.min.css" />
+ <link href="[##cms.cms.cdn##]/css/custom.css" rel="stylesheet">
+ <link href="[##cms.cms.cdn##]/css/domidex.css" rel="stylesheet" type="text/css" />
+ <link href="[##cms.cms.cdn##]/css/smooth-scrollbar.css" rel="stylesheet" type="text/css" />
+ <link href="[##cms.cms.cdn##]/css/formbccss.css" rel="stylesheet">
+ <basis core="group" name="redirect" if="'[##cms.query.redirect##]' = 'true'">
+    <link rel="canonical" href="https://namasite.ir/[##cms.request.url##]" />   
+ </basis>
+ <basis core="group" name="redirect" if="'[##cms.query.redirect##]' <> 'true'">
+    <link rel="canonical" href="https://[##cms.request.full-url##]" />   
+ </basis>
+ <basis core="print" datamembername="tag.list">  
+    <face filter="key <> 'canonical'">      
+      <meta property="@key" content="@value" />
+  </face>
+  </basis>

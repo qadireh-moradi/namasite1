@@ -1,0 +1,240 @@
+<!doctype html>
+<html dir="rtl" lang="fa-IR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ما در نماسایت پروژه‌های متعددی را با موفقیت به انجام رسانده‌ایم و NamaSite به عنوان ویترینی از توانمندی‌های ما، همواره آماده‌ی معرفی خدمات متنوع و باکیفیت مجموعه است." />
+    
+  <title>  تماس با ما  </title>
+  <basis core="call" file="styles.inc" />
+
+
+    <basis core="dbsource" source="basiscore" name="db" lid="1" mid="5" usedforid="9167" >
+        <member request="json-ld" type="scalar" name="json"  />
+      </basis>
+      
+      <script  type="application/ld+json" >
+       [##db.json.Column1##]
+        </script>
+</head>
+<body class="bg-white">
+  <basis core="call" file="header-v4.bc" />
+<div class=" pt-[120px] pb-11 bg-white">
+  <div class="container mx-auto p-4">
+    <div class="flex flex-col lg:flex-row">
+        <div class="w-full lg:w-1/2 p-2">
+          <div><h1 class="text-24px font-semibold mb-4 text-customGreen">نماسایت، پاسخگوی شماست</h1>
+            <ul class="list-none">
+                <li class="mb-8">
+                    <strong class="pl-5">آدرس:</strong> پاسداران - گل نبی - ساختمان ماکا - واحد 1
+                </li>
+                <li class="mb-8">
+                  <strong class="pl-5">ایمیل:</strong> <a href="mailto:info@namasite.ir" >info@namasite.ir</a>
+                </li>
+                <li class="mb-8">
+                  <strong class="pl-5">تلفن تماس:</strong> <a dir="ltr" href="tel:+982122555555">(+9821) 22 55 55 55</a>
+                </li>
+                <li class="mb-8">
+                  <strong class="pl-5">شبکه های اجتماعی:</strong> 
+                    <a href="" aria-label="فیسبوک نماسایت" rel="noopener">
+                      <img class="inline-block pl-1" src="[##cms.cms.cdn##]/newimages/facebook-icon.svg" alt="شبکه اجتماعی نماسایت">
+                    </a>
+                    <a href="" aria-label="اینستاگرام نماسایت" rel="noopener">
+                      <img class="inline-block px-1" src="[##cms.cms.cdn##]/newimages/instagram-icon.svg" alt="شبکه اجتماعی نماسایت">
+                    </a>
+                    <a href="" aria-label="ایکس نماسایت" rel="noopener">
+                      <img class="inline-block px-1" src="[##cms.cms.cdn##]/newimages/x-icon.svg" alt="شبکه اجتماعی نماسایت">
+                    </a>
+                    <a href="" aria-label="لینکداین نماسایت" rel="noopener">
+                      <img class="inline-block px-1" src="[##cms.cms.cdn##]/newimages/linkdin-icon.svg" alt="شبکه اجتماعی نماسایت">
+                    </a>
+                    <a href="" aria-label="تلگرام نماسایت" rel="noopener">
+                      <img class="inline-block px-1" src="[##cms.cms.cdn##]/newimages/telegram-icon.svg" alt="شبکه اجتماعی نماسایت">
+                    </a>
+                    <a href="" aria-label="واتساپ نماسایت" rel="noopener">
+                      <img class="inline-block px-1" src="[##cms.cms.cdn##]/newimages/whatsapp-icon.svg" alt="شبکه اجتماعی نماسایت">
+                    </a>
+                    <a href="" aria-label="پینترست نماسایت" rel="noopener">
+                      <img class="inline-block px-1" src="[##cms.cms.cdn##]/newimages/pintrest-icon.svg" alt="شبکه اجتماعی نماسایت">
+                    </a>
+              </li>
+ 
+              <li class="mb-8">
+                <strong class="pl-5">ساعت کاری:</strong>  9:00 الی 17:30 از شنبه تا چهارشنبه 9:00 الی 13:00 پنج‌شنبه
+          </li>
+            </ul>
+         
+           </div>
+        </div>
+        <div class="w-full lg:w-1/2 p-2">
+            <div class="form-contact requestBox1">
+              <div> <h2 class="text-24px font-bold mb-5 text-customGreen">فرم ارتباط با نماسایت</h2>
+                <p class="mb-5 text-14px">با مشاوره رایگان برای طراحی سایت تجاری، فروشگاهی و سئو همراه شما هستیم</p>
+                <form id="contact-form">
+                    <div class="loader" id="loader1" ><img src="/images/loading_v4.png" /></div>
+                    <basis core='schema' run='AtClient' schemaurl='/schema/domainform'
+                     paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='.contatcus_btn' 
+                     resultsourceid='demo.data1' 
+                     triggers="db.refreshform" onRendered="stoploading1"></basis>
+                     <basis core='callback' run='AtClient' method='onSource1' triggers='demo.data1'></basis>
+                     <basis core='api' if='{##edit.object1##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' 
+                     body='object_edit={##edit.object1.value##}&captcha={##edit.object1.captcha##}&captchaid={##edit.object1.captchaid##}' 
+                     content-type='application/x-www-form-urlencoded' triggers='edit.object1' onprocessed='OnProcessedEditObject2'></basis>
+                    
+                    <div data-bc-question="" class="qclass8">
+                  
+                    <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code2" type="scalar" request="captcha"></member> </basis> <basis datamembername="captcha2.code2" core="print"> <face> <span class="captcha-sefaresh">
+                       <img src="[##cms.cms.cdn##]/@captcha" width="88" height="44" class="captcha-sefaresh" alt="فرم ارتباط با نماسایت" title="captcha" /> 
+                       <input type="hidden" name="captchaid1" value="@captcha" /> </span>
+                        <img src="[##cms.cms.cdn##]/newimages/refresh.png" class="refressh refressh1" alt="فرم ارتباط با نماسایت"  /> 
+                        <input type="text" class="codeinputm absolute" name="captcha1" placeholder="کد امنیتی را وارد نمایید .." /> </face> </basis> <div class="clr"></div> </div>
+                    <div class="flexinner1 Formbb wow fadeIn ">
+                      
+                      <a  href="#" class="section-1-call-to-action calltoaction contatcus_btn">ثبت</a>
+                    </div>
+                    <div class="clr" style="clear: both;"></div>
+                    </div>
+                    
+                    
+                    </form>              
+
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+</div>
+
+<basis core="call" file="footer-v4.bc" />
+
+<script src="[##cms.cms.cdn##]/newjs/jquery-3.5.1.min.js"></script>
+<script src='[##cms.cms.cdn##]/newjs/gsap-latest-beta.min.js?r=v3.11.3'></script>
+  <script src='[##cms.cms.cdn##]/newjs/ScrollTrigger.min.js'></script>
+  <script src='[##cms.cms.cdn##]/newjs/ScrollSmoother.min.js?v=3.10.0e'></script> 
+
+<basis core="call" file="formjs.inc" />
+  <script>
+    function onSource1(args) {
+         const captcha = document.querySelector("input[name='captcha1']").value;
+         const captchaid = document.querySelector("input[name='captchaid1']").value;
+         const stringJson = JSON.stringify(args.source?.rows[0]);
+         
+         $bc.setSource('edit.object1', {
+         value: stringJson,
+         captcha: captcha,
+         captchaid: captchaid
+         })
+         }
+async function OnProcessedEditObject2(args) {
+         const response = args.response;
+         const json = await response.json();
+        
+         //alert("errorid : " + json.errorid + " , message : " + json.message)
+        
+         if (json.errorid == 6) {
+         $(".requestBox1").append('<div class="lds-ellipsis1"> <div class="backkkkk"><div class="lds-ellipsis"> فرم شما با موفقیت ثبت شد <br> <div></div><div></div><div></div><div></div></div></div></div>')
+        $bc.setSource("db.refreshform",true)
+         setTimeout(function () { 
+            $(".lds-ellipsis1").remove()
+            var thisModal = document.getElementById('modal');
+            thisModal.classList.remove('fade-in');
+            thisModal.classList.add('fade-out');
+            thisModal.classList.add('hidden');
+         }, 3000);
+
+         }
+         if (json.errorid == 4) {
+         $(".requestBox1").append('<div class="lds-ellipsis1"> <div class="backkkkk"><div class="lds-ellipsis lds-ellipsisrr"> لطفا کد امنیتی را وارد کنید <div></div><div></div><div></div><div></div></div></div></div>')
+        
+         setTimeout(function () { $(".lds-ellipsis1").remove() }, 3000);
+         }
+        
+         }
+
+
+
+            
+$(document).ready(function(){
+window.onload = function () {
+ setTimeout(function () {
+ $("#landing_form .Contact-2 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+
+ $(".Contact-2 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+ $(".Contact-3 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+ $(".Contact-3 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+ $(".Contact-1 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+
+ $(".Contact-1 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+
+
+ $(".Contact-4 textarea").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+ $(".Contact-4 textarea").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+
+
+
+
+ }, 1000); 
+ };
+
+
+
+});
+function stoploading1(){
+            const loader = document.getElementById("loader1")
+            loader.style.display="none"
+      
+        }
+  </script>
+
+</body>
+</html>

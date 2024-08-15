@@ -14,7 +14,6 @@
 
 .advantageSwiper  .swiper-slide span{
     position: absolute;
-
     width: 60%;
     height: 1px;
     background-color:#000000 ;
@@ -31,4 +30,72 @@
 
 .advantageSwiperactive .adv_slides>div{
     background-color: #007048 !important;
+}
+.articleproject{
+    position: relative;
+    /* width: 380px;
+    height: 380px; */
+    transition: all 0.5s ease-in-out;
+    transform-origin: center center;
+}
+.articleproject:hover{
+    transform: scale(1.1,1.1);
+    z-index: 9999;
+}
+
+.articleproject:before{
+    width: 380px;
+    height: 100%;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+.articleproject:hover:before{
+    background-color: rgba(0,0,0,0);
+}
+.advantageSwiperactive img{
+    filter: grayscale(0) !important;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .loader {
+  
+   width: 30px;
+   margin: 0 auto;
+    animation: spin 2s linear infinite;
+  }
+
+
+  .advantageSwipermobile.advantageSwiper  .swiper-slide-prev span{
+    position: absolute;
+    width: 50% !important;
+    height: 1px;
+    background-color:#000000 ;
+    top: 0;
+    left: -30% !important;
+}
+.advantageSwipermobile.advantageSwiper  .swiper-slide-next span{
+    position: absolute;
+    width: 50% !important;
+    height: 1px;
+    background-color:#000000 ;
+    top: 0;
+    left: -30% !important;
+}
+.advantageSwipermobile.advantageSwiper .swiper-slide:nth-child(5n+5) span{
+    display: block;
+  }
+  .advantageSwipermobile.advantageSwiper  .swiper-slide span{
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    background-color:#000000 ;
+    top: 0;
+    left: -30%;
 }

@@ -1,0 +1,38 @@
+<script src='[##cms.cms.cdn##]/newjs/gsap-latest-beta.min.js?r=v3.11.3'></script>
+  <script src='[##cms.cms.cdn##]/newjs/ScrollTrigger.min.js'></script>
+  <script src='[##cms.cms.cdn##]/newjs/ScrollSmoother.min.js?v=3.10.0e'></script>
+ <script src="[##cms.cms.cdn##]/_js/basiscore-2.23.1.min.js"></script>
+  <script src="[##cms.cms.cdn##]/newjs/jquery-3.5.1.min.js"></script>
+  <script src="[##cms.cms.cdn##]/newjs/swiper-bundle.min.js"></script>
+  <script src="[##cms.cms.cdn##]/newjs/mainscript.js"></script>
+  <script>
+     var host = {
+        debug: false,
+        settings: {
+        'connection.web.callcommand': 'https://namasite.ir',
+        'connection.web.trust_login': 'https://basispanel.ir/apicms',
+        'connection.web.basiscore': 'https://basispanel.ir/apicms',
+        'default.dbsource.verb': 'post',
+        'default.call.verb': 'get',
+        'default.viewCommand.groupColumn': 'prpid',
+        'default.dmnid': '4313',
+        'default.binding.regex': '\\{##([^#]*)##\\}'
+        
+        }
+        }
+
+const btn = document.querySelector(".mobile-menu-button");
+const dropDowns = document.querySelectorAll(".bxs-chevron-down")
+const menu = document.querySelector(".nav-links");
+
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+})
+dropDowns.forEach(e => {
+    e.addEventListener("click", function(el){
+        const submenu = $(this).next("ul")
+        console.log("submenu" , submenu)
+        $(submenu).toggleClass("!block");
+    })
+})
+  </script>
