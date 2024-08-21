@@ -1,21 +1,18 @@
-<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" catid="71306"> <member type="list" name="blog" perpage="12" pageno="1" size="370x284" propertyid="7244" postsql=" select *, SUBSTR(prp_7244, 1,230-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 230)))) || '...' as substr from [db.blog]"></member> </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" catid="71306"> <member type="list" name="blog" perpage="12" pageno="1" size="370x284"  order="id desc" propertyid="7244" postsql=" select *, SUBSTR(prp_7244, 1,230-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 230)))) || '...' as substr from [db.blog]"></member> </basis>
 <!doctype html>
-<html dir="rtl" lang="fa-IR">
+<html dir="rtl" lang="fa-IR" class="overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>بلاگ | نماسایت </title>
   <meta name="description" content="لیست مقالات نماسایت" />
-  <link href="[##cms.cms.cdn##]/css/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/swiper-bundle.min.css" />
-  <link href="[##cms.cms.cdn##]/css/custom.css" rel="stylesheet">
-  <link rel="canonical" href="https://[##cms.request.full-url##]" />
+<basis core="call" file="styles-mobile.inc" />
 </head>
 <body class="bg-white">
   <basis core="call" file="header-mobile.inc" />
 <div class="mt-4  pb-11 bg-white">
   <div class="container mx-auto ">
-    <h1 class="text-xl font-semibold mb-4 text-customGreen-light p-4">مقالات</h1>
+    <h1 class="text-20px font-semibold  text-customGreen-light p-4 py-0">مقالات</h1>
     <div class="flex flex-col md:flex-row flex-wrap">
         <basis core="print" datamembername="db.blog"> 
             <face> 
@@ -24,7 +21,7 @@
                         <a href="@link"> <img src="[##cms.cms.cdn##]/@00370X00284prp" alt="@title" class="w-full rounded-2xl"></a>
                     <div class="p-4">
                         <a href="@link"> <h3 class="font-bold text-16px text-right text-customGreen-art"> @title</h3></a>
-                      <p class="text-gray-600 mt-2  text-16px text-right">@substr</p>
+                      <p class="text-gray-600 mt-2  text-16px text-justify">@substr</p>
                     </div>
                     <div class="p-4 border-t border-gray-200 text-gray-500 text-right text-12px">
                       <span>@date</span>
@@ -43,13 +40,6 @@
 </div>
 
 <basis core="call" file="footer-mobile-v4.inc" />
-
-
-<script src='[##cms.cms.cdn##]/newjs/gsap-latest-beta.min.js?r=v3.11.3'></script>
-  <script src='[##cms.cms.cdn##]/newjs/ScrollTrigger.min.js'></script>
-  <script src='[##cms.cms.cdn##]/newjs/ScrollSmoother.min.js?v=3.10.0e'></script> 
-  <script src="[##cms.cms.cdn##]/newjs/mainscript.js">
-
-  </script>
+<basis core="call" file="script-mobile.inc" />
 </body>
 </html>

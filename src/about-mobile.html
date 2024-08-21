@@ -25,19 +25,43 @@
 <basis core='dbsource' name='histori' source='basiscore' lid='1' mid='1' catid='208799'>
   <member name='list' type='list' size='425X318' typeid='159' propertyid='8188,8190,8191' perpage='100'></member>
 </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="2359136">
+  <member type="view" name="history" preview=""  postsql="select * from [db.history] where prpID=7246" />
+  </basis>
 
+  <basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="2359168">
+    <member type="view" name="ourteams" preview="" postsql="select * from [db.ourteams] where prpID=7246" />
+    </basis>
+    <basis core="dbsource" source="media" name="History" lid="1" sourcemid="article" usedforid="2359168" >
+    <member type="list" name="ourteamsmedia" preview=""  />
+    </basis>
+    <basis core="inlinesource" name="db">
+    <member name="ourteamsandmedia" lefttblcol="db.ourteams.rownumber" righttblcol="History.ourteamsmedia.rownumber" format="join" jointype="leftjoin"
+        preview="" />
+    </basis>
 <!doctype html>
-<html dir="rtl" lang="fa-IR">
+<html dir="rtl" lang="fa-IR" class="overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <basis core="print" datamembername="cms.seo"> <face> <title>@title</title> <meta name="description" content="@description" /> </face> </basis>
+  <title>نماسایت | درباره ما </title> 
+  <meta name="description" content="نماسایت هویت بصری ما را به دنیای وب پیوند می‌دهد و به طور خلاصه، تمامی خدمات طراحی سایت، فروشگاه اینترنتی و سئو را تحت پوشش قرار می‌دهد." /> 
+
 <basis core="call" file="styles-mobile.inc" />
+<link href="[##cms.cms.cdn##]/css/newabout-mobile.css" rel="stylesheet">
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="5" usedforid="9167" >
+  <member request="json-ld" type="scalar" name="json"  />
+</basis>
+
+<script  type="application/ld+json" >
+ [##db.json.Column1##]
+  </script>
+
 </head>
 <body class="bg-white">
 
   <basis core="call" file="header-mobile.inc" />
-<div class="firstpart mt-0 pb-11 bg-white">
+<div class="firstpart mt-0 pb-4 bg-white">
  
   <div class="container mx-auto py-4 px-7">
     <img src="[##cms.cms.cdn##]/newimages/about.png" class="mx-auto">
@@ -49,7 +73,7 @@
 </basis> 
   <basis core="print" datamembername="about.us"> 
     <face filter="prpid=7244"> 
-      <div class="text-14px py-4 pb-8 mb-4 text-center">
+      <div class="text-14px py-4 pb-8 mb-4 text-justify">
      @Answer
       </div>
     </face>
@@ -83,12 +107,13 @@
           </basis>
    
         </div>  
-        <div class="w-1/2">
-            <basis core="print" datamembername="stronger.text"> 
-                <face filter="TypeID=150"> 
-                  <h2 class="pb-4 rotate-90 text-white" style="font-size: 30px;">@Answer</h2>
-                </face>
-            </basis> 
+        <div class="w-1/2 flex items-center justify-center rotate-180" >
+            
+                  <h2 class="pt-4 rotate-90 text-white" style="font-size: 30px;"> <span class="text-aboutGray">قوی تر از یک تیم ، </span>
+                    <br /> 
+                    <span> یک خانواده  </span></h2>
+              
+                    
         </div>
         <div class="w-1/2 pt-4">
             <basis core="print" datamembername="stronger.images"> 
@@ -123,7 +148,7 @@
             <div class="w-full 2xl:w-1/5 xl:w-1/5 lg:w-1/3 md:w-1/2  text-white">
                 <basis core="print" datamembername="stronger.text"> 
                     <face filter="prpID=7244">
-                      <div class="text-14px">
+                      <div class="text-14px leading-9">
             @Answer
                       </div>
                     </face>
@@ -132,6 +157,95 @@
             
   </div>
 </section>
+<section id="history_slider" class="flex">
+  <div class="container mx-auto py-0">
+  
+      <div >
+        <div class="container mx-auto py-4">
+          <h3 class="text-28px text-customGreen mb-3 text-center font-bold">
+            تیم‌های نماسایت
+          </h3>
+        </div> 
+          <div class="relative flex flex-col" style="direction: ltr; ">
+              <div  class="w-full">
+  
+                  <div class=" d_f jc_c" style="width: 100%;">
+                      <div class="svg_main_wrapper_half relative h-[280px] w-[280px] flex items-center justify-center mx-auto my-0" >
+      
+                        <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="139.669" cy="139.669" r="139.669" fill="#007048"/>
+                          <circle cx="139.443" cy="139.67" r="116.129" stroke="white" stroke-width="0.627726"/>
+                          <image class="about_image" transform="translate(75, 55)" href="/1043137541262001B" id="team-image" height="135" width="135"></image>
+                        
+
+                        <text fill="#fff" class="text-white font-bolf" id="team-title" style="font-size:18px" transform="translate(100, 220)">تیم فروش</text>
+                          </svg>
+                      
+                          
+  
+                      
+  
+                      </div>
+      
+                  </div>
+              </div><!-- .row -->
+  
+              <div  class="w-full p-4">
+              <div class="swiper j_init_history_slider w-full" >
+                <div class="swiper-pagination font-bold  text-18px mt-4 text-center w-full" id="swiper-pagination"></div>
+                <div class="w-[100px] flex relative mx-auto my-0 mt-[70px]" >
+                    <div class="swiper-button-prev-history  w-11 h-11 absolute right-0 top-0 rounded-full bg-white flex items-center justify-center cursor-pointer z-50" >
+                      <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(0.707303 -0.70691 0.59229 0.805725 1 15)" stroke="#979797"></line>
+                        <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(0.707303 0.70691 0.59229 -0.805725 1 0.666016)" stroke="#979797"></line>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next-history  w-11 h-11 mr-10 rounded-full bg-white flex items-center justify-center cursor-pointer z-50">
+                      <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(-0.707303 0.70691 -0.59229 -0.805725 8 0)" stroke="#979797"></line>
+                        <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(-0.707303 -0.70691 -0.59229 0.805725 8 14.334)" stroke="#979797"></line>
+                        </svg>
+                    </div>
+                </div>
+                  <div class="swiper-wrapper ">
+                      <basis core="print" datamembername="db.ourteamsandmedia">
+                        <face>
+                          <div class="swiper-slide" data-title="@db.ourteams.text" data-image="@History.ourteamsmedia.largeIMG">
+  
+                      
+                            <div class="flex items-center justify-center mt-4  text-14px" >
+  
+                                <div class="w-full text-justify leading-9" style="direction: rtl;">
+                                    @db.ourteams.largetext
+                                </div>
+  
+                              
+  
+                            </div>
+  
+                        </div>
+                        </face>
+                      </basis>
+                      
+  
+                  </div><!-- .swiper-wrapper -->
+                
+              </div><!-- .swiper .history_slider -->
+          
+              </div>
+  
+         
+  
+  
+  
+          </div><!-- .col-12 -->
+         
+      </div><!-- .row -->
+  
+   
+  
+  </div>
+  </section>
 <div class="w-full bg-black px-7">
   <div class="container mx-auto py-4">
     <h2 class="text-28px text-white mb-8 text-center">
@@ -191,7 +305,7 @@
             </basis>
       <basis core="print" datamembername="fabout.text"> 
         <face filter="prpid=7244"> 
-          <div class="pb-7 text-14px">
+          <div class="pb-7 text-14px pt-4 leading-9">
             @largetext
           </div>
         </face>
@@ -203,26 +317,23 @@
 </section>
 <section class="w-full">
   <div class="container mx-auto py-4">
-    <h2 class="text-28px text-customGreen mb-8 text-center">
+    <h3 class="text-28px text-customGreen  text-center font-bold ">
       ماموریت ما
-    </h2>
+    </h3>
   </div>
+
+
   <div class="swiper articleswiper">
     <div class="swiper-wrapper">
       
     <basis core="print" datamembername="our.mission"> 
-      <face> 
-          <div class="swiper-slide"> 
-           <div class="container mx-auto py-4 flex  flex-col md:flex-row flex-wrap items-center">
-                  <div class="w-full md:w-1/2 px-7"> <img  class="w-full"  src="[##cms.cms.cdn##]/@largeIMG" alt="@name"></div>
-                  <div> <span class="text-xl py-7 text-center text-customGreen-light">0@RowNumber</span>  </div>
-                  <div class="w-full md:w-1/2 px-7 flex flex-row items-center">
-                    <p class="pb-7 text-14px">@description</p>
-                </div>
-                </div>
-                
-          </div>
-      </face> 
+      <face > <div class="swiper-slide container mx-auto py-4 flex  flex-col md:flex-row flex-wrap items-center">
+        <div class="w-full md:w-1/2 px-7"> <img  class="w-full"  src="[##cms.cms.cdn##]/@largeIMG" alt="@name"></div>
+        <div class="w-full md:w-1/2 px-7 flex flex-row items-center flex-col">
+          <span class="text-xl pb-4 pl-4 text-customGreen font-bold pt-4">0@RowNumber</span> 
+          <p class=" text-14px leading-9">@description</p>
+      </div>
+      </div></face>
   </basis> 
     </div>
     <div class="relative py-4 flex justify-center" style="height: 75px; ">
@@ -232,32 +343,34 @@
   </div>
 
 
-
-</section>
-<section class="w-full">
+  
+  
+  </section>
+<section class="w-full ">
   <div class="container mx-auto py-4">
     <div class="container mx-auto py-4">
-      <h2 class="text-28px text-customGreen mb-8 text-center">
+      <h3 class="text-28px text-customGreen  text-center font-bold">
         تاریخچه
-      </h2>
+      </h3>
     </div> 
-<section class="h--timeline js-h--timeline">
-
+  <section class="h--timeline js-h--timeline">
+  
   <div class="h--timeline-events">
     <ol>
-      <basis core="print" datamembername="histori.list">
+      <basis core="print" datamembername="db.history">
         <face filter="RowNumber=1">
           <li class="h--timeline-event h--timeline-event--selected text-component">
             <div class="container mx-auto py-4 flex  flex-col md:flex-row flex-wrap items-center h--timeline-event-content">
-              <div class="w-full md:w-1/2 px-7 flex flex-col items-center">
-                <p class="pb-7 text-24px w-full">
-                  @prp_8188
+              <div class="w-full "> <img class="w-full rounded-lg"  src="[##cms.cms.cdn##]/pict0326532000017310993000019330101" alt="@text"></div>
+              <div class="w-full md:w-1/2 px-7 flex flex-col items-start leading-9">
+                <p class=" text-24px w-full pt-4">
+                  @text
                   </p>
                 <p class="pb-7 text-14px w-full">
-                  @prp_8191
+                  @largetext
                   </p>
             </div>
-            <div class="w-full md:w-1/2 px-7"> <img class="w-full rounded-lg"  src="[##cms.cms.cdn##]/@00425X00318prp" alt="@title"></div>
+            
       
             </div>
           </li>
@@ -265,15 +378,16 @@
         <face>
           <li class="h--timeline-event text-component">
             <div class="container mx-auto py-4 flex  flex-col md:flex-row flex-wrap items-center h--timeline-event-content">
-              <div class="w-full md:w-1/2 px-7 flex flex-row items-center">
-                <p class="pb-7 text-24px">
-                  @prp_8188
+              <div class="w-full "> <img class="w-full rounded-lg"  src="[##cms.cms.cdn##]/pict0326532000017310993000019330101" alt="@text"></div>
+              <div class="w-full md:w-1/2 px-7 flex flex-col items-start leading-9">
+                <p class="text-24px pt-4 w-full">
+                  @text
                   </p>
                 <p class="pb-7 text-14px">
-                  @prp_8191
+                  @largetext
                   </p>
             </div>
-            <div class="w-full md:w-1/2 px-7"> <img class="w-full rounded-lg"  src="[##cms.cms.cdn##]/@00425X00318prp" alt="@title"></div>
+           
       
             </div>
           </li>
@@ -284,17 +398,17 @@
   
     </ol>
   </div> <!-- .h--timeline-events -->
-
+  
   <div class="h--timeline-container">
     <div class="h--timeline-dates">
     <div class="h--timeline-line">
       <ol>
-      <basis core="print" datamembername="histori.list">
-        <face filter="RowNumber=1">
-          <li><a href="#0" data-date="16/01/2014" class="h--timeline-date h--timeline-date--selected">@prp_8190</a></li>
+      <basis core="print" datamembername="db.history">
+        <face filter="rownumber = 1">
+          <li><a href="#0" data-date="16/01/2014" class="h--timeline-date h--timeline-date--selected">@text</a></li>
         </face>
         <face>
-          <li><a href="#0" data-date="28/02/2013" class="h--timeline-date">@prp_8190</a></li>
+          <li><a href="#0" data-date="28/02/2013" class="h--timeline-date">@text</a></li>
         </face>
       </basis>
       </ol>
@@ -305,33 +419,135 @@
   
     <nav class="h--timeline-navigation-container">
       <ul>
-      <li><a href="#0" class="text-replace h--timeline-navigation h--timeline-navigation--prev h--timeline-navigation--inactive">Prev</a></li>
-      <li><a href="#0" class="text-replace h--timeline-navigation h--timeline-navigation--next">Next</a></li>
+      <li><a href="#0" aria-label="namasite next slider" class="text-replace h--timeline-navigation h--timeline-navigation--prev h--timeline-navigation--inactive flex items-center justify-center">  <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(0.707303 -0.70691 0.59229 0.805725 1 15)" stroke="#979797"></line>
+        <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(0.707303 0.70691 0.59229 -0.805725 1 0.666016)" stroke="#979797"></line>
+        </svg></a></li>
+      <li><a href="#0" aria-label="namasite prev slider" class="text-replace h--timeline-navigation h--timeline-navigation--next flex items-center justify-center">
+        <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(0.707303 -0.70691 0.59229 0.805725 1 15)" stroke="#979797"></line>
+          <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(0.707303 0.70691 0.59229 -0.805725 1 0.666016)" stroke="#979797"></line>
+          </svg>
+      </a></li>
       </ul>
     </nav>
   </div> <!-- .h--timeline-container -->
   
   </section>
   </div>
-</section>
+  </section>
 <basis core="call" file="footer-mobile-v4.inc" />
 
 
 
-<basis core="call" file="formjs.inc" />
-<basis core="call" file="script-mobile.inc" />
 
-    <script>
-         var articleswiper = new Swiper(".articleswiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      freeMode: true,
-      navigation: {
-        prevEl: '.slidePrev-btn',
-        nextEl: '.slideNext-btn'
-      },
+<basis core="call" file="script-mobile.inc" />
+<script src="[##cms.cms.cdn##]/newjs/newabout.js"></script>
+<script>
+
+var articleswiper = new Swiper(".articleswiper", {
+     slidesPerView: 1,
+     spaceBetween: 30,
+     freeMode: true,
+     loop: true, 
+     navigation: {
+       prevEl: '.slidePrev-btn',
+       nextEl: '.slideNext-btn'
+     },
+   });
+  let titlesArray = document.querySelectorAll(".j_dot_title");
+  let yearsArray = document.querySelectorAll(".j_dot_years");
+  let numberOfSlides = 0;
+  let swiperHistory = new Swiper(".j_init_history_slider", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: true,
+    grabCursor: true, //OR mousewheel
+    mousewheel: false,
+    autoplay: false,
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false
+    },
+    preventClicks: false,
+    preventClicksPropagation: false,
+    onInit: function(sw){
+      var offer = document.querySelector('#numberSlides');
+      offer.innerHTML = (sw.activeIndex +  1) + '/' + sw.slides.length + 'Offers';
+    },
+    onSlideChangeEnd: function(sw){
+      var offer = document.querySelector('#numberSlides');
+      offer.innerHTML = (sw.activeIndex +  1) + '/' + sw.slides.length + 'Offers';
+    },
+    navigation: {
+        nextEl: ".swiper-button-next-history",
+        prevEl: ".swiper-button-prev-history"
+    },
+  
+    on: {
+        slideChange: function (sw) {
+            let index = sw.activeIndex;
+            let years =
+                sw.slides[index].children[0].children[0].children[0].dataset
+                    .years;
+            let i = index % 4;
+            rotateCircle(index * -90);
+            document.querySelector("#swiper-pagination").innerHTML = (sw.activeIndex +  1) + '/' + sw.slides.length
+            
+            // const active = document.querySelector(".swiper-slide-active")
+            const title = sw.slides[index].getAttribute("data-title")
+            const image = sw.slides[index].getAttribute("data-image")
+            document.getElementById("team-title").textContent = title
+            document.getElementById("team-image").setAttribute("href" , image)
+            
+            // console.log((sw.activeIndex +  1) + '/' + sw.slides.length + 'Offers')
+        }, // .slideChange
+  
+        init: function (sw) {
+            numberOfSlides = sw.slides.length;
+            let index = sw.realIndex;
+            let years =
+                sw.slides[index].children[0].children[0].children[0].dataset
+                    .years;
+            let i = index % 4;
+        } // .init
+    } // .on
+  }); // .swiperInit
+  
+  
+  gsap.set("#circle", {
+    transformOrigin: "50% 50%"
+  });
+  
+  let snapDeg = 90;
+  let degree = 0;
+  const swiper = document.querySelector(".j_init_history_slider").swiper;
+  
+  // ANCHOR Drag the circle
+  // let drag = Draggable.create("#circle", {
+  //   type: "rotation",
+  //   bounds: {
+  //       minRotation: 0, // don't want to rotate past the first slide
+  //       maxRotation: (numberOfSlides - 1) * -90 // 90 * number of slides - 1
+  //   },
+  //   onDragEnd: function () {
+  //       let degree = Math.round(this.rotation / snapDeg) * snapDeg;
+  //       let slideTo = degree != 0 ? Math.abs(degree) / snapDeg : 0;
+  
+  //       rotateCircle(degree);
+  //       swiper.slideTo(slideTo);
+  //   }
+  // });
+  
+  function rotateCircle(degree) {
+    gsap.to("#circle", {
+        rotation: degree,
+        ease: "none"
     });
- 
-    </script>
+  }
+  
+
+  </script>
 </body>
 </html>

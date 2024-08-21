@@ -53,7 +53,7 @@
   </basis>
 
 <!doctype html>
-<html dir="rtl" lang="fa-IR">
+<html dir="rtl" lang="fa-IR" class="overflow-x-hidden">
 
 <head>
   <meta charset="UTF-8">
@@ -61,10 +61,19 @@
   <title>طراحی سایت شرکتی | namasite | نماسایت</title>
   <meta name="description" content="طراحی وب‌سایت شرکتی نمایی برازندۀ کسب و کار شما می‌سازیم" /> 
 <basis core="call" file="styles-mobile.inc" />
+   <link href="[##cms.cms.cdn##]/css/newlanding-mobile.css" rel="stylesheet">
+   <basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="2357435" >
+    <member request="json-ld" type="scalar" name="json"  />
+  </basis>
+  
+  <script  type="application/ld+json" >
+   [##db.json.Column1##]
+    </script>
 </head>
+
 <body class="!bg-white">
 
-  <div class="seo-main  mx-auto  bg-center bg-no-repeat flex justify-center items-end" style="background-image: url(newimages/landing/2357435.jpg);">
+  <div class="seo-main  mx-auto  bg-center bg-no-repeat flex justify-center items-end bg-cover" style="background-image: url(newimages/landing/2357435-mobile.jpg);">
       
     <div class="header-text !pt-[100px]">
       <h1 class="pb-5"> 
@@ -174,11 +183,11 @@
            
           </layout>
           <face filter="rownumber = 1">
-            <div class="swiper-slide w-[64px] h-[44px] ">
+            <div class="swiper-slide w-[64px] h-[44px]  ">
               <span></span>
               <div class="adv_slides flex flex-col items-center justify-center absolute top-0 cursor-pointer" onclick="showavgs(this,'@rownumber')">
               <div class="w-[13px] h-[13px] bg-sliderGray rounded-full mb-4 "></div>
-              <img src="[##cms.cms.cdn##]/@largeIMG" class="grayscale" alt="نماسایت" />
+              <img src="[##cms.cms.cdn##]/@largeIMG"   class="grayscale" alt="نماسایت" />
             </div> 
             </div>
           </face>
@@ -187,7 +196,7 @@
               <span></span>
               <div class="adv_slides flex flex-col items-center justify-center absolute top-0 cursor-pointer" onclick="showavgs(this,'@rownumber')">
               <div class="w-[13px] h-[13px] bg-sliderGray rounded-full mb-4 "></div>
-              <img src="[##cms.cms.cdn##]/@largeIMG" class="grayscale" alt="نماسایت" />
+              <img src="[##cms.cms.cdn##]/@largeIMG"   class="grayscale" alt="نماسایت" />
             </div> 
             </div>
           </face>
@@ -196,14 +205,14 @@
        
         
       </div>
-      <div class="advantageSwiper-prev advantageSwiper-arrows w-11 h-11 absolute left-0  rounded-full bg-white flex items-center justify-center cursor-pointer z-50">
+      <div class="advantageSwiper-prev advantageSwiper-arrows w-11 h-11 absolute left-[-10px]  rounded-full bg-white flex items-center justify-center cursor-pointer z-50">
         <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(-0.707303 0.70691 -0.59229 -0.805725 8 0)" stroke="#979797"/>
           <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(-0.707303 -0.70691 -0.59229 0.805725 8 14.334)" stroke="#979797"/>
           </svg>
           
       </div>
-      <div class="advantageSwiper-next advantageSwiper-arrows w-11 h-11 absolute right-0  top- rounded-full bg-white flex items-center justify-center cursor-pointer z-50" onclick="findPrevElement(this,event)">
+      <div class="advantageSwiper-next advantageSwiper-arrows w-11 h-11 absolute right-[-10px]  top-0 rounded-full bg-white flex items-center justify-center cursor-pointer z-50" onclick="findPrevElement(this,event)">
         <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(0.707303 -0.70691 0.59229 0.805725 1 15)" stroke="#979797"/>
           <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(0.707303 0.70691 0.59229 -0.805725 1 0.666016)" stroke="#979797"/>
@@ -296,7 +305,7 @@
     <section  class="container mx-auto px-4 relative min-h-96 ">
         <div class="title  mb-8">
             <h4 class="text-customGreen text-28px gs_reveal gs_reveal_fromLeft font-bold text-center">مراحل طراحی سایت </h4>
-            <a class="moreNama gs_reveal ipsType_right !hidden" href="/">  بیشتر بدانید</a>
+            
           </div>
           <div>
             
@@ -475,16 +484,17 @@
               <div class="form-contact requestBox1">
                 <div> <h3 class="text-24px font-bold mb-5 text-customGreen">فرم ارتباط با نماسایت</h3>
                   <p class="mb-5 text-14px text-center">با مشاوره رایگان برای طراحی سایت تجاری، فروشگاهی و سئو همراه شما هستیم</p>
+                  <div class="loader" id="loader" ><img src="/images/loading_v4.png" alt="نماسایت" /></div>
                   <form id="contact-form">
     
                     <basis core='schema' run='AtClient' schemaurl='/schema/domainform'
                      paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='.contatcus_btn' 
                      resultsourceid='demo.data1' 
-                     triggers="db.refreshform"></basis>
+                     triggers="db.refreshform" onrendered='stoploading1'></basis>
                      <basis core='callback' run='AtClient' method='onSource1' triggers='demo.data1'></basis>
-                     <basis core='api' if='{##edit.object1##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' 
-                     body='object_edit={##edit.object1.value##}&captcha={##edit.object1.captcha##}&captchaid={##edit.object1.captchaid##}' 
-                     content-type='application/x-www-form-urlencoded' triggers='edit.object1' onprocessed='OnProcessedEditObject2'></basis>
+                     <basis core='api' if='{##edit.object2##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' 
+                     body='object_edit={##edit.object2.value##}&captcha={##edit.object2.captcha##}&captchaid={##edit.object2.captchaid##}' 
+                     content-type='application/x-www-form-urlencoded' triggers='edit.object2' onprocessed='OnProcessedEditObject2'></basis>
                     
                     <div data-bc-question="" class="qclass8">
                   
@@ -495,7 +505,12 @@
                         <input type="text" class="codeinputm absolute" name="captcha1" placeholder="کد امنیتی را وارد نمایید .." /> </face> </basis> <div class="clr"></div> </div>
                     <div class="flexinner1 Formbb wow fadeIn ">
                       
-                      <a id="openModalBtn" href="#" class="section-1-call-to-action calltoaction contatcus_btn">ثبت</a>
+                      <a id="openModalBtn" href="#" class="section-1-call-to-action calltoaction contatcus_btn !flex items-center justify-center">
+                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn_loader hidden ml-2 btn_loader2" >
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3637 0.057207C15.7779 0.0572071 16.1137 0.392993 16.1137 0.807207L16.1137 5.04985C16.1137 5.46406 15.7779 5.79985 15.3637 5.79985L11.1211 5.79985C10.7069 5.79985 10.3711 5.46406 10.3711 5.04985C10.3711 4.63563 10.7069 4.29985 11.1211 4.29985H13.4815C10.6361 2.05677 6.49848 2.24784 3.87325 4.87307C1.04195 7.70437 1.04195 12.2948 3.87325 15.1261C6.70455 17.9574 11.295 17.9574 14.1263 15.1261C16.0232 13.2292 16.6502 10.5424 16.0037 8.12146C15.8968 7.72127 16.1346 7.31022 16.5348 7.20335C16.935 7.09648 17.346 7.33426 17.4529 7.73445C18.2319 10.6514 17.4778 13.896 15.187 16.1868C11.7699 19.6039 6.22968 19.6039 2.81259 16.1868C-0.604499 12.7697 -0.604498 7.2295 2.81259 3.81241C6.04461 0.580395 11.176 0.405347 14.6137 3.28727L14.6137 0.807207C14.6137 0.392994 14.9495 0.0572071 15.3637 0.057207Z" fill="#007048"/>
+                            </svg>
+                        ثبت
+                    </a>
                     </div>
                     <div class="clr" style="clear: both;"></div>
                     </div>
@@ -571,7 +586,7 @@
 <footer class="bg-white ">
   <section  class="container  mx-auto relative border-t-2 border-black pt-8 border-b-gray-200 px-7">
     <div class="w-full ">
-      <div><img src="[##cms.cms.cdn##]/newimages/footer-logo.png" class="mx-auto" /> </div>
+      <div><img src="[##cms.cms.cdn##]/newimages/footer-logo.png" class="mx-auto" alt="نماسایت" /> </div>
 
     <div>
       <div class="flex w-full mx-auto justify-center">
@@ -588,12 +603,14 @@
     </div>
   </section>
 </footer>
-<div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden " style="z-index: 999;">
+<div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden !pt-[100px]" style="z-index: 999;">
   <div class="shadow-lg p-6 max-w-3xl w-full relative" >
-    <img id="closeModalBtn" class="closeModalBtn cursor-pointer" src="newimages/close.png" alt="">
+    <img id="closeModalBtn" class="closeModalBtn cursor-pointer" src="[##cms.cms.cdn##]/newimages/close.png" alt="">
     <div class="p-8 rounded shadow-lg w-full bg-white">
       <div class="text-center mb-8">
-        <div class="text-customGreen-light text-2xl font-bold flex justify-center" dir="ltr"><p class="pr-4" style="line-height: 44px;">(+9821) 22 55 55 55 </p><p><img src="newimages/calltocation.png" alt=""></p></div>
+        <div class="text-customGreen-light text-2xl font-bold flex justify-center" dir="ltr"><p class="pr-4 text-18px" style="line-height: 44px;">(+9821) 22 55 55 55 </p><p>
+          <img src="[##cms.cms.cdn##]/newimages/calltocation.png" alt=""></p></div>
+                  <div class="loader" id="loader2" ><img src="/images/loading_v4.png" alt="نماسایت" /></div>
         <p class="text-gray-600 mt-2 text-right text-black text-16px">فرم درخواست مشاوره</p>
         <p class="text-gray-500 mt-1  text-right text-black  text-14px">برای دریافت مشاوره تخصصی رایگان اطلاعات زیر را تکمیل کنین تا کارشناسان ما در اولین فرصت با شما تماس بگیرن!</p>
       </div>
@@ -601,13 +618,19 @@
       <div class="form-contact requestBox1 " >
         <form id="contact-form">
 
-        <basis core='schema' run='AtClient' schemaurl='/schema/domainform' paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='[data-btn-add]' resultsourceid='demo.data'></basis><basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis><basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
+        <basis core='schema' run='AtClient' schemaurl='/schema/domainform' paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='[data-btn-add]' resultsourceid='demo.data' onrendered='stoploading2'></basis><basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis><basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
         
         <div data-bc-question="" class="qclass8">
       
-        <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code2" type="scalar" request="captcha"></member> </basis> <basis datamembername="captcha2.code2" core="print"> <face> <span class="captcha-sefaresh"> <img src="/@captcha" width="88" height="44" class="captcha-sefaresh" alt="captcha" title="captcha" /> <input type="hidden" name="captchaid" value="@captcha" /> </span> <img src="newimages/refresh.png" class="refressh refressh1" /> <input type="text" class="codeinputm absolute" name="captcha" placeholder="کد امنیتی را وارد نمایید .." /> </face> </basis> <div class="clr"></div> </div>
+        <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code2" type="scalar" request="captcha"></member> </basis> <basis datamembername="captcha2.code2" core="print"> <face> <span class="captcha-sefaresh"> <img src="/@captcha" width="88" height="44" class="captcha-sefaresh" alt="captcha" title="captcha" /> <input type="hidden" name="captchaid" value="@captcha" /> </span> <img src="newimages/refresh.png" class="refressh refressh1" /> 
+          <input type="text" class="codeinputm absolute" aria-label="کد کپچا" name="captcha" placeholder="کد امنیتی را وارد نمایید .." /> </face> </basis> <div class="clr"></div> </div>
         <div class="flexinner1 Formbb wow fadeIn ">
-          <input type="image" src="newimages/submitform.png" data-btn-add data-btn-submit alt="ثبت" width="170" height="54"> 
+          <a id="openModalBtn" href="#" data-btn-add data-btn-submit class="section-1-call-to-action calltoaction  !flex items-center justify-center">
+            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn_loader hidden ml-2 btn_loader1" >
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3637 0.057207C15.7779 0.0572071 16.1137 0.392993 16.1137 0.807207L16.1137 5.04985C16.1137 5.46406 15.7779 5.79985 15.3637 5.79985L11.1211 5.79985C10.7069 5.79985 10.3711 5.46406 10.3711 5.04985C10.3711 4.63563 10.7069 4.29985 11.1211 4.29985H13.4815C10.6361 2.05677 6.49848 2.24784 3.87325 4.87307C1.04195 7.70437 1.04195 12.2948 3.87325 15.1261C6.70455 17.9574 11.295 17.9574 14.1263 15.1261C16.0232 13.2292 16.6502 10.5424 16.0037 8.12146C15.8968 7.72127 16.1346 7.31022 16.5348 7.20335C16.935 7.09648 17.346 7.33426 17.4529 7.73445C18.2319 10.6514 17.4778 13.896 15.187 16.1868C11.7699 19.6039 6.22968 19.6039 2.81259 16.1868C-0.604499 12.7697 -0.604498 7.2295 2.81259 3.81241C6.04461 0.580395 11.176 0.405347 14.6137 3.28727L14.6137 0.807207C14.6137 0.392994 14.9495 0.0572071 15.3637 0.057207Z" fill="#007048"/>
+                </svg>
+            ثبت
+        </a>
         </div>
         <div class="clr" style="clear: both;"></div>
         </div>
@@ -623,46 +646,10 @@
   </div>
 </div>
 </div>
-<div id="" class="fixed bottom-12 right-12 cursor-pointer calltocationfixed" ><a href="tel:+982122555555"><img src="newimages/calltocation.png"></a></div>
-
-</script>
-<div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden " style="z-index: 999;">
-  <div class="shadow-lg p-6 max-w-3xl w-full relative" >
-    <img id="closeModalBtn" class="closeModalBtn cursor-pointer" src="newimages/close.png" alt="فرم درخواست مشاوره">
-    <div class="p-8 rounded shadow-lg w-full bg-white">
-      <div class="text-center mb-8">
-        <div class="text-customGreen-light text-2xl font-bold flex justify-center" dir="ltr"><p class="pr-4" style="line-height: 44px;">(+9821) 22 55 55 55 </p><p><img src="newimages/calltocation.png" alt=""></p></div>
-        <p class="text-gray-600 mt-2 text-right text-black text-16px">فرم درخواست مشاوره</p>
-        <p class="text-gray-500 mt-1  text-right text-black  text-14px">برای دریافت مشاوره تخصصی رایگان اطلاعات زیر را تکمیل کنین تا کارشناسان ما در اولین فرصت با شما تماس بگیرن!</p>
-      </div>
-      
-      <div class="form-contact requestBox1 " >
-        <form id="contact-form">
-
-        <basis core='schema' run='AtClient' schemaurl='/schema/domainform' paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='[data-btn-add]' resultsourceid='demo.data' triggers="db.refreshform"></basis><basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis><basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
-        
-        <div data-bc-question="" class="qclass8">
-      
-        <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code2" type="scalar" request="captcha"></member> </basis> <basis datamembername="captcha2.code2" core="print"> <face> <span class="captcha-sefaresh"> <img src="/@captcha" width="88" height="44" class="captcha-sefaresh" alt="captcha" title="captcha" /> <input type="hidden" name="captchaid" value="@captcha" /> </span> <img src="newimages/refresh.png" class="refressh refressh1" /> <input type="text" class="codeinputm absolute" name="captcha" placeholder="کد امنیتی را وارد نمایید .." /> </face> </basis> <div class="clr"></div> </div>
-        <div class="flexinner1 Formbb wow fadeIn ">
-          <input type="image" src="newimages/submitform.png" data-btn-add data-btn-submit alt="ثبت" width="170" height="54"> 
-        </div>
-        <div class="clr" style="clear: both;"></div>
-        </div>
-        
-        
-        </form>
-        
-        </div>
+<div id="" class="fixed bottom-12 right-12 cursor-pointer calltocationfixed" ><a aria-label="تماس با نماسایت" href="tel:+982122555555">
+  <img src="[##cms.cms.cdn##]/newimages/calltocation.png" alt="تماس با نماسایت"></a></div>
 
 
-
-      
-  </div>
-</div>
-</div>
-<div id="openModalBtnFooter" class="fixed bottom-12 right-12 cursor-pointer calltocationfixed" >
-  <img src="[##cms.cms.cdn##]/newimages/calltocation.png" alt="نماسایت"></div>
 
 
 
@@ -720,6 +707,7 @@
           // slidesIcons.forEach(e => {
           //   e.classList.remove("advantageSwiperactive")
           // })
+         
           // el.closest(".swiper-slide").classList.add("advantageSwiperactive")
           setTimeout(function ()  {
             cSlides.classList.add("h--timeline-event--selected")
@@ -786,21 +774,24 @@ function onSource1(args) {
          const captchaid = document.querySelector("input[name='captchaid1']").value;
          const stringJson = JSON.stringify(args.source?.rows[0]);
          
-         $bc.setSource('edit.object1', {
+         $bc.setSource('edit.object2', {
          value: stringJson,
          captcha: captcha,
          captchaid: captchaid
          })
+         $(".btn_loader2").show()
          }
 
          async function OnProcessedEditObject2(args) {
+          
          const response = args.response;
          const json = await response.json();
         
          //alert("errorid : " + json.errorid + " , message : " + json.message)
         
          if (json.errorid == 6) {
-         $(".requestBox1").append('<div class="lds-ellipsis1"> <div class="backkkkk"><div class="lds-ellipsis"> فرم شما با موفقیت ثبت شد <br> <div></div><div></div><div></div><div></div></div></div></div>')
+          $(".lds-ellipsis1").remove()
+         $("body").append('<div class="lds-ellipsis1"> <div class="backkkkk"><p> فرم شما با موفقیت ثبت شد </p> <div class="lds-ellipsis w-0 h-[40px]"><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div></div></div></div>')
         $bc.setSource("db.refreshform",true)
          setTimeout(function () { 
             $(".lds-ellipsis1").remove()
@@ -811,14 +802,25 @@ function onSource1(args) {
          }, 3000);
 
          }
-         if (json.errorid == 4) {
-         $(".requestBox1").append('<div class="lds-ellipsis1"> <div class="backkkkk"><div class="lds-ellipsis lds-ellipsisrr"> لطفا کد امنیتی را وارد کنید <div></div><div></div><div></div><div></div></div></div></div>')
+         else if (json.errorid == 4) {
+          
+          $(".lds-ellipsis1").remove()
+         $("body").append('<div class="lds-ellipsis1"> <div class="backkkkk"><p> لطفا کد امنیتی را وارد کنید </p> <div class="lds-ellipsis w-0 h-[40px]"><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div></div></div></div> ')
         
          setTimeout(function () { $(".lds-ellipsis1").remove() }, 3000);
          }
-        
+         $(".btn_loader2").hide()
          }
-        
+         function stoploading1(){
+            const loader = document.getElementById("loader")
+            loader.style.display="none"
+      
+        }
+        function stoploading2(){
+            const loader = document.getElementById("loader2")
+            loader.style.display="none"
+      
+        }
 
 </script>
 </body>

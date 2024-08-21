@@ -59,6 +59,9 @@
 .advantageSwiperactive img{
     filter: grayscale(0) !important;
 }
+/* .swiper-slide-active img{
+    filter: grayscale(0) !important;
+} */
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -98,4 +101,21 @@
     background-color:#000000 ;
     top: 0;
     left: -30%;
+}
+.advantageSwipermobile .swiper-slide-active img{
+    filter: grayscale(0) !important;
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+.btn_loader{
+    animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
 }

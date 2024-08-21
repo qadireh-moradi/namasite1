@@ -100,7 +100,7 @@
    background-color: transparent !important
    }
     .lds-ellipsis{ margin:0 auto; width: 100%;}
-    .lds-ellipsis{position:relative;width:80px;height:80px;}
+    .lds-ellipsis{position:relative;width:0;height:80px;}
     .lds-ellipsis div{position:absolute;top:47px;width:13px;height:13px;border-radius:50%;background:#22B14C;animation-timing-function:cubic-bezier(0, 1, 1, 0);}
     .lds-ellipsis div:nth-child(1){animation:lds-ellipsis1 0.6s infinite;}
     .lds-ellipsis div:nth-child(2){animation:lds-ellipsis2 0.6s infinite;}

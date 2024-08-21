@@ -26,6 +26,7 @@ module.exports = {
         '12px': '12px',
         '14px': '14px',
         '18px': '18px',
+        '20px': '20px',
         '24px': '24px',
         '16px': '16px',
         '28px': '28px',
@@ -53,8 +54,10 @@ module.exports = {
           base:"#EFEFEF"
         },
         sliderGray : '#D9D9D9',
-        aboutGray : '#A3A3A3'
-      },
+        aboutGray : '#A3A3A3',
+        menuGray: "#3C3C3C"
+      }
+      
     },
     backgroundImage: {
       herodefault: "url('https://www.namasite.ir/images/slider_bg.jpg')",

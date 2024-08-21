@@ -150,6 +150,11 @@ if(menuCloseBtn){
     }
     
 }
+const mmenu = document.querySelector(".nav-links");
+function closeMenuMobile(){
+  mmenu.classList.toggle("hidden");
+}
+  
 
 
 // sidebar submenu open close js code
@@ -260,6 +265,7 @@ $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display
 
 
 });
+
 
 
 

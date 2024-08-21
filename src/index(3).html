@@ -1,0 +1,127 @@
+<!-- 206713 -->
+
+
+<basis core="dbsource" source="basiscore" name="db"   catid="206365"  lid="1"  run="atclient"  mid="20">        
+    <member type="list"  name="memberName" preview="" />
+    <!-- schemaid="3705" -->
+    <!-- usedforid="2351190" -->
+</basis>
+
+<!-- Products -->
+<basis core="dbsource" source="basiscore" name="basisName" lid="1" run="atclient" mid="20" >
+	<member request="cat" type="tree" name="memberName" parentid="206713" preview="" />
+</basis>
+
+
+<!-- Course Online -->
+<basis core="dbsource" source="basiscore"  name="onlineCourse" lid="1" run="atclient" mid="20" >
+	<member request="cat" type="tree"  name="course" parentid="206714" preview="true" />
+
+</basis>
+
+
+<div
+    class="w-full max-w-[1295px]  mx-auto hidden lg:flex  items-center justify-between lg:pt-[25px] px-[30px] h-[62px]">
+    <div>
+        <a href=""><img src="src/assets/svg/logo.svg" alt=""></a>
+    </div>
+    <div>
+        <ul class="w-[518px] h-[17px] flex items-center justify-between text-[14px] text-[#344054]">
+            <li><a href="src/page/aboutme/aboutme.html">درباره من</a></li>
+            <li><a href="">تعیین سطح</a></li>
+            <li><a href="">مطالب آموزشی</a></li>
+            <li>دوره های آنلاین                
+                
+                    <basis core="tree" datamembername="onlineCourse.course" idcol="catid" parentidcol="parentid" nullvalue="206714" run="atclient" >
+                        <layout>
+                            <ul>@child</ul>
+                        </layout>
+                        <face level="1">
+                            <script type="text/template">
+                            <li>@title@</li>
+                            <ul>
+                            @child
+                        </ul>
+                    </script>
+                        </face>
+                        <face level="2">
+                            <script type="text/template">
+                            <li class="text-red-700">@title@</li>
+                            @child
+                        </script>
+                        </face>
+                        <face level="end">
+                            <script type="text/template">
+                            <li class="text-red-700">@title@</li>
+                            </script>
+                        </face>
+                            
+                      </basis>                    
+                
+            
+            </li>
+            <li class="group p-[5px] relative" >
+                محصولات
+                <ul class="group-hover:flex hidden flex-col absolute">
+                    <basis core="tree" datamembername="basisName.memberName" idcol="catid" parentidcol="parentid" nullvalue="206713" run="atclient" >
+                        <face level="end">
+                          <li >@title@</li>
+                        </face>
+                      </basis>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="flex flex-row items-center ">
+        <div class="w-[64px] ml-[30px] h-[24px]">
+            <button><img src="src/assets/svg/User.svg" alt=""></button>
+            <button><img src="src/assets/svg/Tote.svg " alt=""></button>
+
+        </div>
+        <button class="w-[149px] h-[48px] rounded-[9px] bg-[#6941C6] text-[#fff]">ورود / ثبت نام</button>
+    </div>
+</div>
+<!-- Mobile -->
+<div class="flex justify-between items-center p-[25px] lg:hidden">
+    <div class="">
+        <a href=""><img class="w-[20px] h-[25px]" src="src/assets/svg/logo.svg" alt=""></a>
+    </div>
+
+    <div class="">
+        <button><img src="src/assets/svg/mobile/ham-menu.svg" alt=""></button>
+    </div>
+</div>
+
+
+<script src="https://cdn.basiscore.net/basispanel.ir/_js/basiscore-2.23.1.js"></script>
+<script src="https://cdn.basiscore.net/basispanel.ir/_js/alasql.min.js"></script>
+
+
+<script src="src/js/app.js"></script>
+
+
+<script>
+
+    var host = {
+        debug: false,
+
+        settings: {
+            'connection.web.callcommand': 'http://127.0.0.1:5500/',
+            'connection.web.basiscore': 'https://basiscore.net/apicms',
+            // 'connection.web.callcommand'
+            'default.dbsource.verb': 'post',
+            'default.call.verb': 'get',
+            'default.viewCommand.groupColumn': 'prpid',
+            'default.dmnid': '14',
+            'default.binding.regex': '\\{##([^#]*)##\\}'
+
+        }
+    }
+    console.log("TEST", host);
+    function test(args) {
+        console.log(args)
+    }
+</script>
+
+</body>

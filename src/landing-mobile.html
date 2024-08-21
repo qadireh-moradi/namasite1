@@ -3,7 +3,7 @@
   postsql=" select *, SUBSTR(prp_7244, 1,230-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 230)))) || '...' as substr from [db.blog]">
 </member> </basis>
 
-<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id|2357435##]">
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]">
     <member type="view" name="multipart" postsql="select * from [db.multipart] where prpID=7246"  preview="" />
     <member type="view" name="all"  />
   </basis>
@@ -33,82 +33,77 @@
    
 
 <basis core="dbsource" source="media" name="slider" lid="1" sourcemid="article" usedforid="2358724" >
-	<member type="list" name="landing" preview=""   />
-</basis>
-<basis core="dbsource" source="media" name="nazarat" lid="1" sourcemid="article" usedforid="2351601" >
-	<member type="list" name="landing" preview=""   />
+    <member type="list" name="landing" preview=""   />
 </basis>
 
-<basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
-  <member type="list" name="list" request="taglist" preview=""  ></member>
+
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="2351601">
+  <member type="view" name="nazaratlink" postsql="select * from [db.nazaratlink] where prpID=7246"   preview="" />
 </basis>
+
+<basis core="dbsource" source="media" name="nazarat" lid="1" sourcemid="article" usedforid="2351601" >
+  <member type="list" name="landing" preview=""  propertyid="1002" typeid="234" />
+</basis>
+<basis core="inlinesource" name="db">
+  <member name="nazaratAll" lefttblcol="db.nazaratlink.rownumber" righttblcol="nazarat.landing.rownumber" format="join" jointype="leftjoin"
+      preview="" />
+  </basis>
+  <basis core="dbsource" source="media" name="db" lid="1" sourcemid="article" usedforid="2359761" >
+    <member type="list" name="logos" preview=""   />
+  </basis>
 
 <!doctype html>
-<html dir="rtl" lang="fa-IR">
+<html dir="rtl" lang="fa-IR" class="overflow-x-hidden">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>[##cms.seo.title##]</title>
   <meta name="description" content="[##cms.seo.description##]" /> 
-   <link rel="stylesheet" href="[##cms.cms.cdn##]/css/new/swiper-bundle.min.css" />
-   <link href="[##cms.cms.cdn##]/css/custom.css" rel="stylesheet">
+<basis core="call" file="styles-mobile.inc" />
    <link href="[##cms.cms.cdn##]/css/newlanding-mobile.css" rel="stylesheet">
-    <link href="[##cms.cms.cdn##]/css/formbccss.css" rel="stylesheet">
-    <link href="[##cms.cms.cdn##]/css/output.css" rel="stylesheet">
-    <link rel="canonical" href="https://[##cms.request.full-url##]" />
-    <basis core="print" datamembername="tag.list">  
-        <face filter="key <> 'canonical'">      
-          <meta property="@key" content="@value" />
-      </face>
-      </basis>
-      <style>
-        .advantageSwiper .swiper-slide:nth-child(5n+5) span{
-          display: block;
-        }
-      </style>
+   <basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]" >
+    <member request="json-ld" type="scalar" name="json"  />
+  </basis>
+  
+  <script  type="application/ld+json" >
+   [##db.json.Column1##]
+    </script>
 </head>
 <body class="!bg-white">
-
-    <basis core="call" file="header-mobile.inc" />
-    <div class="seo-main  mx-auto  bg-center bg-no-repeat flex justify-center items-end" style="background-image: url(newimages/landing/[##cms.query.id|2357435##].jpg);">
+  <basis core="call" file="header-mobile.inc" />
+  <div class="seo-main  mx-auto  bg-center bg-no-repeat flex justify-center items-end" style="background-image: url(newimages/landing/[##cms.query.id##].jpg);">
       
-<<<<<<< HEAD
-      <div class="header-text !pt-[100px]">
-        <h1 class="pb-5 "> 
-=======
-      <div class="header-text ">
-        <h1 class="pb-5 text-34px font-bold"> 
->>>>>>> 5aa2dd26d6a53fd15b48f472db3f7252c823d2f1
-          <basis core="print" datamembername="db.all"> 
-              <face filter="TypeID=150"> 
-                  @Answer
-              </face>
-          </basis>
-      </h1>
-<<<<<<< HEAD
-      <h2 class="pb-5 "> 
-=======
-      <h2 class="pb-5 text-28px text-[#dfdfdf]"> 
->>>>>>> 5aa2dd26d6a53fd15b48f472db3f7252c823d2f1
+    <div class="header-text !pt-[100px]">
+      <h1 class="pb-5"> 
         <basis core="print" datamembername="db.all"> 
-            <face filter="prpID=7245"> 
+            <face filter="TypeID=150"> 
                 @Answer
             </face>
         </basis>
-    </h2>
-      
-    <div>
-            <a id="openModalBtn" href="#" class="section-1-call-to-action calltoaction">به مشاوره نیاز دارید ؟ </a>
-    </div>
-    </div>
+    </h1>
+    <h2 class="pb-5 "> 
+      <basis core="print" datamembername="db.all"> 
+          <face filter="prpID=7245"> 
+              @Answer
+          </face>
+      </basis>
+  </h2>
     
-      </div>
+  <div>
+          <a id="openModalBtn" href="#" class="section-1-call-to-action calltoaction">به مشاوره نیاز دارید ؟ </a>
+  </div>
+  </div>
+  
+    </div>
+
+  
+
     
 
 <div class="bg-white">
 
-  <div class="container mx-auto ">
+  <div class="container mx-auto section1 ">
  <div class=" bg-about  w-full !bg-contain bg-no-repeat h-auto p-[15px] text-justify">
   <basis core="print" datamembername="db.all"> 
     <face filter="prpid=7244"> 
@@ -128,7 +123,7 @@
 
  
 </div>
-<section class="w-full bg-white p-[15px]">
+<section class="w-full bg-white p-[15px] overflow-hidden">
     <div class="container mx-auto py-4">
       <div class="container mx-auto py-4">
         <h3 class="text-28px text-customGreen mb-8 text-center font-bold">
@@ -178,7 +173,7 @@
     </div> <!-- .h--timeline-events -->
   
 
-    <div class="swiper advantageSwiper flex h-[100px] w-full mt-[40px]">
+    <div class="swiper advantageSwiper advantageSwipermobile flex h-[100px] w-full mt-[40px]">
      
       <div class="swiper-wrapper w-[80%]">
         <basis core="print" datamembername="db.avdSlider">
@@ -191,7 +186,7 @@
               <span></span>
               <div class="adv_slides flex flex-col items-center justify-center absolute top-0 cursor-pointer" onclick="showavgs(this,'@rownumber')">
               <div class="w-[13px] h-[13px] bg-sliderGray rounded-full mb-4 "></div>
-              <img src="[##cms.cms.cdn##]/@largeIMG" class="" alt="نماسایت" />
+              <img src="[##cms.cms.cdn##]/@largeIMG" class="grayscale" alt="نماسایت" />
             </div> 
             </div>
           </face>
@@ -200,7 +195,7 @@
               <span></span>
               <div class="adv_slides flex flex-col items-center justify-center absolute top-0 cursor-pointer" onclick="showavgs(this,'@rownumber')">
               <div class="w-[13px] h-[13px] bg-sliderGray rounded-full mb-4 "></div>
-              <img src="[##cms.cms.cdn##]/@largeIMG" class="" alt="نماسایت" />
+              <img src="[##cms.cms.cdn##]/@largeIMG" class="grayscale" alt="نماسایت" />
             </div> 
             </div>
           </face>
@@ -209,14 +204,14 @@
        
         
       </div>
-      <div class="advantageSwiper-prev advantageSwiper-arrows w-11 h-11 absolute left-0 top-3 rounded-full bg-white flex items-center justify-center cursor-pointer z-50">
+      <div class="advantageSwiper-prev advantageSwiper-arrows w-11 h-11 absolute left-0  rounded-full bg-white flex items-center justify-center cursor-pointer z-50">
         <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(-0.707303 0.70691 -0.59229 -0.805725 8 0)" stroke="#979797"/>
           <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(-0.707303 -0.70691 -0.59229 0.805725 8 14.334)" stroke="#979797"/>
           </svg>
           
       </div>
-      <div class="advantageSwiper-next advantageSwiper-arrows w-11 h-11 absolute right-0  top-3 rounded-full bg-white flex items-center justify-center cursor-pointer z-50">
+      <div class="advantageSwiper-next advantageSwiper-arrows w-11 h-11 absolute right-0  top- rounded-full bg-white flex items-center justify-center cursor-pointer z-50" onclick="findPrevElement(this,event)">
         <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="-0.5" x2="9.97166" y2="-0.5" transform="matrix(0.707303 -0.70691 0.59229 0.805725 1 15)" stroke="#979797"/>
           <line y1="-0.5" x2="10.0046" y2="-0.5" transform="matrix(0.707303 0.70691 0.59229 -0.805725 1 0.666016)" stroke="#979797"/>
@@ -246,7 +241,7 @@
  
       <basis core="print" datamembername="db.all">
         <layout>
-          <section class="container mx-auto p-4">
+          <section class="container mx-auto p-4 articletext">
             <div class="pb-4 text-16px text-justify">
               @child
             </div>
@@ -266,7 +261,7 @@
      
   <basis core="print" datamembername="slider.landing">
     <layout> 
-<div class="gallery galleynewa bg-herodefault ">
+<div class="gallery galleynewa bg-herodefault " style="overflow-x:hidden">
       <div class="swiper-container">
         <div class="swiper-wrapper">
           @child
@@ -305,11 +300,11 @@
       </div>
     </face>
    </basis>
-   <div class="bg-white py-5  mt-20" style="height: 800px;">
+   <div class="bg-white py-5  mt-25" style="height: 800px;">
     <section  class="container mx-auto px-4 relative min-h-96 ">
         <div class="title  mb-8">
             <h4 class="text-customGreen text-28px gs_reveal gs_reveal_fromLeft font-bold text-center">مراحل طراحی سایت </h4>
-            <a class="moreNama gs_reveal ipsType_right !hidden" href="/">  بیشتر بدانید</a>
+            
           </div>
           <div>
             
@@ -320,11 +315,8 @@
   
        
       <div id="circle_wrapper" style="position: relative;width: 100%;height: 300px;">
-      <svg width="170" height="175" viewBox="0 0 239 175" fill="none" xmlns="http://www.w3.org/2000/svg" style="left:0;top:-40px">
-          <path class="semicircularPath" d="M238.094 0.500454C189.994 0.587885 142.755 13.2901 101.094 37.343C59.4328 61.3959 24.8129 95.9551 0.687195 137.567L63.0476 173.571C80.8533 142.905 106.383 117.436 137.098 99.7033C167.812 81.9704 202.634 72.5954 238.094 72.5081V0.500454Z" fill="#02472F" stroke="white"/>
-          </svg>
-          
-      <svg width="400" id="circle_svg" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="top: 0;left: 30px; width:80%">
+    
+      <svg width="400" id="circle_svg" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%">
           <g clip-path="url(#clip0_316_9651)">
           <mask id="path-1-inside-1_316_9651" fill="white" >
           <path  d="M200 0C235.107 4.18651e-07 269.596 9.24125 300 26.7949C330.404 44.3486 355.651 69.5961 373.205 100L364.545 105C347.869 76.1163 323.884 52.1311 295 35.4552C266.116 18.7792 233.352 10 200 10V0Z"/>
@@ -357,7 +349,7 @@
           <clipPath id="clip0_316_9651">
           <rect width="400" height="400"  fill="white"/>
           </clipPath>
-          <img id="image0_316_9650" alt="مراحل طراحی سایت" style="position: absolute; top: 120px; left: 110px;"  src="[##cms.cms.cdn##]/images/sliderlogo.png" />
+          <img id="image0_316_9650" alt="مراحل طراحی سایت" style="position: absolute; top: 120px; left: 30%;"  src="[##cms.cms.cdn##]/images/sliderlogo.png" />
           </defs>
           </svg>
       </div>
@@ -405,57 +397,12 @@
     </section>
   </div>
    
-   <div class="  pb-11 bg-white">
-    <div class="container mx-auto p-4">
-      <div class="flex flex-col lg:flex-row items-center">
-        <div class="w-full lg:w-1/2 p-2">
-          <img class="float-left" src="[##cms.cms.cdn##]/newimages/landing-contact.png" alt="فرم ارتباط با نماسایت">
-         </div>
-          <div class="w-full lg:w-1/2 p-2">
-              <div class="form-contact requestBox1">
-                <div> <h3 class="text-24px font-bold mb-5 text-customGreen">فرم ارتباط با نماسایت</h3>
-                  <p class="mb-5 text-14px text-center">با مشاوره رایگان برای طراحی سایت تجاری، فروشگاهی و سئو همراه شما هستیم</p>
-   <form id="contact-form">
-  
-          <basis core='schema' run='AtClient' schemaurl='/schema/domainform'
-           paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='.contatcus_btn' 
-           resultsourceid='demo.data' 
-           triggers="db.refreshform"></basis>
-           <basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis>
-           <basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
-          
-          <div data-bc-question="" class="qclass8">
-        
-          <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code2" type="scalar" request="captcha"></member> </basis> <basis datamembername="captcha2.code2" core="print"> <face> <span class="captcha-sefaresh">
-             <img src="[##cms.cms.cdn##]/@captcha" width="88" height="44" class="captcha-sefaresh" alt="فرم ارتباط با نماسایت" title="captcha" /> 
-             <input type="hidden" name="captchaid" value="@captcha" /> </span>
-              <img src="[##cms.cms.cdn##]/newimages/refresh.png" class="refressh refressh1" alt="فرم ارتباط با نماسایت"  /> 
-              <input type="text" class="codeinputm absolute" name="captcha" placeholder="کد امنیتی را وارد نمایید .." /> </face> </basis> <div class="clr"></div> </div>
-          <div class="flexinner1 Formbb wow fadeIn ">
-            
-            <a id="openModalBtn" href="#" class="section-1-call-to-action calltoaction contatcus_btn">ثبت</a>
-          </div>
-          <div class="clr" style="clear: both;"></div>
-          </div>
-          
-          
-          </form>              
-  
-  </div>
-              </div>
-          </div>
-         
-      </div>
-  </div>
-  
-   
-  </div>
 
 
 
 
 
-<section class="container mx-auto">
+<section class="container mx-auto quesions">
   <h3 class="text-customGreen-light text-24px py-[15px] text-center font-bold" id="4002048">سوالات متداول شما</h3>
  <div class="pb-4 text-14px text-justify m-[15px]">
  <div class="accordion-container">
@@ -475,7 +422,7 @@
             <div class="toggle__control"></div>
           </label> -->
         </div>
-        <div class="content bg-[#F3F3F3] text-black text-right text-14px py-5 md:pr-52">
+        <div class="content bg-[#F3F3F3] text-black text-right text-14px py-5 md:pr-52 p-[15px]">
 @largetext
 </div>
       </div>
@@ -487,17 +434,74 @@
 </div>
 </section>
 
-<section class="container mx-auto">
+
+  
+  <div class="  pb-11 bg-white contactus_form">
+    <div class="container mx-auto p-4">
+      <div class="flex flex-col lg:flex-row items-center">
+        <div class="w-full lg:w-1/2 p-2">
+          <img class="float-left" src="[##cms.cms.cdn##]/newimages/landing-contact.png" alt="فرم ارتباط با نماسایت">
+         </div>
+          <div class="w-full lg:w-1/2 p-2">
+              <div class="form-contact requestBox1">
+                <div> <h3 class="text-24px font-bold mb-5 text-customGreen">فرم ارتباط با نماسایت</h3>
+                  <p class="mb-5 text-14px text-center">با مشاوره رایگان برای طراحی سایت تجاری، فروشگاهی و سئو همراه شما هستیم</p>
+                  <div class="loader" id="loader" ><img src="/images/loading_v4.png" alt="نماسایت" /></div>
+                  <form id="contact-form">
+    
+                    <basis core='schema' run='AtClient' schemaurl='/schema/domainform'
+                     paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='.contatcus_btn' 
+                     resultsourceid='demo.data1' 
+                     triggers="db.refreshform" onrendered='stoploading1'></basis>
+                     <basis core='callback' run='AtClient' method='onSource1' triggers='demo.data1'></basis>
+                     <basis core='api' if='{##edit.object2##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' 
+                     body='object_edit={##edit.object2.value##}&captcha={##edit.object2.captcha##}&captchaid={##edit.object2.captchaid##}' 
+                     content-type='application/x-www-form-urlencoded' triggers='edit.object2' onprocessed='OnProcessedEditObject2'></basis>
+                    
+                    <div data-bc-question="" class="qclass8">
+                  
+                    <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code2" type="scalar" request="captcha"></member> </basis> <basis datamembername="captcha2.code2" core="print"> <face> <span class="captcha-sefaresh">
+                       <img src="[##cms.cms.cdn##]/@captcha" width="88" height="44" class="captcha-sefaresh" alt="فرم ارتباط با نماسایت" title="captcha" /> 
+                       <input type="hidden" name="captchaid1" value="@captcha" /> </span>
+                        <img src="[##cms.cms.cdn##]/newimages/refresh.png" class="refressh refressh1" alt="فرم ارتباط با نماسایت"  /> 
+                        <input type="text" class="codeinputm absolute" name="captcha1" placeholder="کد امنیتی را وارد نمایید .." /> </face> </basis> <div class="clr"></div> </div>
+                    <div class="flexinner1 Formbb wow fadeIn ">
+                      
+                      <a id="openModalBtn" href="#" class="section-1-call-to-action calltoaction contatcus_btn !flex items-center justify-center">
+                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn_loader hidden ml-2 btn_loader2" >
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3637 0.057207C15.7779 0.0572071 16.1137 0.392993 16.1137 0.807207L16.1137 5.04985C16.1137 5.46406 15.7779 5.79985 15.3637 5.79985L11.1211 5.79985C10.7069 5.79985 10.3711 5.46406 10.3711 5.04985C10.3711 4.63563 10.7069 4.29985 11.1211 4.29985H13.4815C10.6361 2.05677 6.49848 2.24784 3.87325 4.87307C1.04195 7.70437 1.04195 12.2948 3.87325 15.1261C6.70455 17.9574 11.295 17.9574 14.1263 15.1261C16.0232 13.2292 16.6502 10.5424 16.0037 8.12146C15.8968 7.72127 16.1346 7.31022 16.5348 7.20335C16.935 7.09648 17.346 7.33426 17.4529 7.73445C18.2319 10.6514 17.4778 13.896 15.187 16.1868C11.7699 19.6039 6.22968 19.6039 2.81259 16.1868C-0.604499 12.7697 -0.604498 7.2295 2.81259 3.81241C6.04461 0.580395 11.176 0.405347 14.6137 3.28727L14.6137 0.807207C14.6137 0.392994 14.9495 0.0572071 15.3637 0.057207Z" fill="#007048"/>
+                            </svg>
+                        ثبت
+                    </a>
+                    </div>
+                    <div class="clr" style="clear: both;"></div>
+                    </div>
+                    
+                    
+                    </form>                 
+  
+  </div>
+              </div>
+          </div>
+         
+      </div>
+  </div>
+  
+   
+  </div>
+
+
+<section class="container mx-auto comments" >
   <h3 class="text-customGreen-light text-24px py-2 text-center font-bold" > نظرات  ارزشمند مشتریان</h3>
   <div class="container11 nazarat m-[15px]">
     <div class="swiper swiperCarousel">
         <div class="swiper-wrapper">
-          <basis core="print" datamembername="nazarat.landing">
+          <basis core="print" datamembername="db.nazaratAll">
             <face>
               <div class="swiper-slide">
                 <div class="card">
                   <div class="avatar">
-                    <img class="" src="[##cms.cms.cdn##]/@largeIMG" alt="@name" />
+                    <img class="" src="[##cms.cms.cdn##]/@nazarat.landing.largeIMG" alt="@nazarat.landing.name" />
                   </div>
                     <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="50px" height="50px">
               <path
@@ -505,11 +509,11 @@
               />
             </svg>
                     <div class="header">
-                        <h3 class="title">@name</h3>
+                      <h3 class="title"><a aria-label="@nazarat.landing.name" target="_blank" href="@db.nazaratlink.text">@nazarat.landing.name</a></h3>
                     </div>
                     <div class="quote-container">
                         <p class="quote">
-@description                        </p>
+                          @nazarat.landing.description                             </p>
                     </div>
                 </div>
             </div>
@@ -544,7 +548,7 @@
 <basis core="call" file="footer-mobile-v4.inc" />
 <div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden " style="z-index: 999;">
   <div class="shadow-lg p-6 max-w-3xl w-full relative" >
-    <img id="closeModalBtn" class="closeModalBtn cursor-pointer" src="newimages/close.png" alt="فرم درخواست مشاوره">
+    <img id="closeModalBtn" class="closeModalBtn cursor-pointer" src="newimages/close.png" alt="">
     <div class="p-8 rounded shadow-lg w-full bg-white">
       <div class="text-center mb-8">
         <div class="text-customGreen-light text-2xl font-bold flex justify-center" dir="ltr"><p class="pr-4" style="line-height: 44px;">(+9821) 22 55 55 55 </p><p><img src="newimages/calltocation.png" alt=""></p></div>
@@ -555,13 +559,20 @@
       <div class="form-contact requestBox1 " >
         <form id="contact-form">
 
-        <basis core='schema' run='AtClient' schemaurl='/schema/domainform' paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='[data-btn-add]' resultsourceid='demo.data' triggers="db.refreshform"></basis><basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis><basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
+        <basis core='schema' run='AtClient' schemaurl='/schema/domainform' 
+        paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' 
+        displaymode='new' button='[data-btn-add]' resultsourceid='demo.data'></basis><basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis><basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
         
         <div data-bc-question="" class="qclass8">
       
-        <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code2" type="scalar" request="captcha"></member> </basis> <basis datamembername="captcha2.code2" core="print"> <face> <span class="captcha-sefaresh"> <img src="/@captcha" width="88" height="44" class="captcha-sefaresh" alt="captcha" title="captcha" /> <input type="hidden" name="captchaid" value="@captcha" /> </span> <img src="newimages/refresh.png" class="refressh refressh1" /> <input type="text" class="codeinputm absolute" name="captcha" placeholder="کد امنیتی را وارد نمایید .." /> </face> </basis> <div class="clr"></div> </div>
+        <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code2" type="scalar" request="captcha"></member> </basis> <basis datamembername="captcha2.code2" core="print"> <face> <span class="captcha-sefaresh"> <img src="/@captcha" width="88" height="44" class="captcha-sefaresh" alt="captcha" title="captcha" /> <input type="hidden" name="captchaid" value="@captcha" aria-label="کد کپجا" /> </span> <img src="newimages/refresh.png" class="refressh refressh1" /> <input type="text" class="codeinputm absolute" name="captcha" placeholder="کد امنیتی را وارد نمایید .." aria-label="کد امنیتی را وارد نمایید .." /> </face> </basis> <div class="clr"></div> </div>
         <div class="flexinner1 Formbb wow fadeIn ">
-          <input type="image" src="newimages/submitform.png" data-btn-add data-btn-submit alt="ثبت" width="170" height="54"> 
+          <a id="openModalBtn" href="#" data-btn-add data-btn-submit class="section-1-call-to-action calltoaction  !flex items-center justify-center">
+            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn_loader hidden ml-2 btn_loader1" >
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3637 0.057207C15.7779 0.0572071 16.1137 0.392993 16.1137 0.807207L16.1137 5.04985C16.1137 5.46406 15.7779 5.79985 15.3637 5.79985L11.1211 5.79985C10.7069 5.79985 10.3711 5.46406 10.3711 5.04985C10.3711 4.63563 10.7069 4.29985 11.1211 4.29985H13.4815C10.6361 2.05677 6.49848 2.24784 3.87325 4.87307C1.04195 7.70437 1.04195 12.2948 3.87325 15.1261C6.70455 17.9574 11.295 17.9574 14.1263 15.1261C16.0232 13.2292 16.6502 10.5424 16.0037 8.12146C15.8968 7.72127 16.1346 7.31022 16.5348 7.20335C16.935 7.09648 17.346 7.33426 17.4529 7.73445C18.2319 10.6514 17.4778 13.896 15.187 16.1868C11.7699 19.6039 6.22968 19.6039 2.81259 16.1868C-0.604499 12.7697 -0.604498 7.2295 2.81259 3.81241C6.04461 0.580395 11.176 0.405347 14.6137 3.28727L14.6137 0.807207C14.6137 0.392994 14.9495 0.0572071 15.3637 0.057207Z" fill="#007048"/>
+                </svg>
+            ثبت
+        </a>
         </div>
         <div class="clr" style="clear: both;"></div>
         </div>
@@ -577,8 +588,8 @@
   </div>
 </div>
 </div>
-<div id="openModalBtnFooter" class="fixed bottom-12 right-12 cursor-pointer calltocationfixed" >
-  <img src="[##cms.cms.cdn##]/newimages/calltocation.png" alt="نماسایت"></div>
+<div id="" class="fixed bottom-12 right-12 cursor-pointer calltocationfixed" ><a aria-label="تماس با نماسایت" href="tel:+982122555555">
+  <img src="[##cms.cms.cdn##]/newimages/calltocation.png" alt="تماس با نماسایت"></a></div>
 
 
 
@@ -589,8 +600,16 @@
   <script src="[##cms.cms.cdn##]/newjs/swiper-bundle.min.js"></script>
   <basis core="call" file="formjs.inc" />
   <script src="[##cms.cms.cdn##]/newjs/newlanding.js"></script>
+  
+  
    <script>
+const btn = document.querySelector(".mobile-menu-button");
+const dropDowns = document.querySelectorAll(".bxs-chevron-down")
+const menu = document.querySelector(".nav-links");
 
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+})
     const swiperCarousel = new Swiper(".swiperCarousel", {
       slidesPerView: 1,
       centeredSlides: true,
@@ -649,8 +668,7 @@
       
       const circle_svg = document.getElementById("circle_svg")
       circle_svg.style.transform=`rotate(-${rotateDegree}deg)`
-      const semicircularPath = document.querySelector(".semicircularPath")
-      semicircularPath.style.fill = color
+
       const circleTexts = document.querySelectorAll(".animate")
       circleTexts.forEach((e,cindex) => {
         e.classList.remove("active")
@@ -670,6 +688,68 @@
   for (let i=0; i<paths.length; i++) {
   paths[i].addEventListener('click', event => selectSlides(i, paths[i].getAttribute("fill")));
   } 
+
+gsap.from(".section1", { scrollTrigger: '.section1', opacity: 0, y: 200, duration: 1 });
+gsap.from(".header-text", { scrollTrigger: '.header-text', opacity: 0, y: 200, duration: 1 });
+gsap.from(".quesions", { scrollTrigger: '.quesions', opacity: 0, y: 200, duration: 1 });
+gsap.from(".contactus_form", { scrollTrigger: '.contactus_form', opacity: 0, y: 200, duration: 1 });
+gsap.from(".comments", { scrollTrigger: '.comments', opacity: 0, y: 200, duration: 1 });
+gsap.from(".articletext", { scrollTrigger: '.articletext', opacity: 0, y: 200, duration: 1 });
+function findPrevElement(el , event){
+var parent = document.querySelector(".swiper-slide-prev")
+var prev = parent.previousElementSibling;
+prev.classList.add("hidden_line")
+
+}
+
+function onSource1(args) {
+         const captcha = document.querySelector("input[name='captcha1']").value;
+         const captchaid = document.querySelector("input[name='captchaid1']").value;
+         const stringJson = JSON.stringify(args.source?.rows[0]);
+         
+         $bc.setSource('edit.object2', {
+         value: stringJson,
+         captcha: captcha,
+         captchaid: captchaid
+         })
+         $(".btn_loader2").show()
+         }
+
+         async function OnProcessedEditObject2(args) {
+          
+         const response = args.response;
+         const json = await response.json();
+        
+         //alert("errorid : " + json.errorid + " , message : " + json.message)
+        
+         if (json.errorid == 6) {
+          $(".lds-ellipsis1").remove()
+         $("body").append('<div class="lds-ellipsis1"> <div class="backkkkk"><p> فرم شما با موفقیت ثبت شد </p> <div class="lds-ellipsis w-0 h-[40px]"><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div></div></div></div>')
+        $bc.setSource("db.refreshform",true)
+         setTimeout(function () { 
+            $(".lds-ellipsis1").remove()
+            var thisModal = document.getElementById('modal');
+            thisModal.classList.remove('fade-in');
+            thisModal.classList.add('fade-out');
+            thisModal.classList.add('hidden');
+         }, 3000);
+
+         }
+         else if (json.errorid == 4) {
+          
+          $(".lds-ellipsis1").remove()
+         $("body").append('<div class="lds-ellipsis1"> <div class="backkkkk"><p> لطفا کد امنیتی را وارد کنید </p> <div class="lds-ellipsis w-0 h-[40px]"><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div></div></div></div> ')
+        
+         setTimeout(function () { $(".lds-ellipsis1").remove() }, 3000);
+         }
+         $(".btn_loader2").hide()
+         }
+         function stoploading1(){
+            const loader = document.getElementById("loader")
+            loader.style.display="none"
+      
+        }
+        
 
 </script>
 </body>

@@ -35,6 +35,7 @@
          captcha: captcha,
          captchaid: captchaid
          })
+         $(".btn_loader1").show()
          }
         
          async function OnProcessedEditObject1(args) {
@@ -44,7 +45,7 @@
          //alert("errorid : " + json.errorid + " , message : " + json.message)
         
          if (json.errorid == 6) {
-         $(".requestBox1").append('<div class="lds-ellipsis1"> <div class="backkkkk"><div class="lds-ellipsis"> فرم شما با موفقیت ثبت شد <br> <div></div><div></div><div></div><div></div></div></div></div>')
+         $("body").append('<div class="lds-ellipsis1"> <div class="backkkkk"><p> لطفا کد امنیتی را وارد کنید </p> <div class="lds-ellipsis w-0 h-[40px]"><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div></div></div></div> ')
         $bc.setSource("db.refreshform",true)
          setTimeout(function () { 
             $(".lds-ellipsis1").remove()
@@ -56,10 +57,11 @@
 
          }
          if (json.errorid == 4) {
-         $(".requestBox1").append('<div class="lds-ellipsis1"> <div class="backkkkk"><div class="lds-ellipsis lds-ellipsisrr"> لطفا کد امنیتی را وارد کنید <div></div><div></div><div></div><div></div></div></div></div>')
+         $("body").append('<div class="lds-ellipsis1"> <div class="backkkkk"><p> لطفا کد امنیتی را وارد کنید </p> <div class="lds-ellipsis w-0 h-[40px]"><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div></div></div></div> ')
         
          setTimeout(function () { $(".lds-ellipsis1").remove() }, 3000);
          }
+         $(".btn_loader1").hide()
         
          }
         
@@ -121,10 +123,10 @@ $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display
 
 
 
- $(".Contact-4 textarea").focusin(function(){
+ $(".Contact-4 _textarea").focusin(function(){
 $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
 });
- $(".Contact-4 textarea").focusout(function(){
+ $(".Contact-4 _textarea").focusout(function(){
 if($(this).val()){
 
 $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";

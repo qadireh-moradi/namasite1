@@ -5120,10 +5120,7 @@ body {
       justify-content: space-between;
       padding: 20px;
       direction: ltr;
-<<<<<<< HEAD
       padding-bottom: 0;
-=======
->>>>>>> 5aa2dd26d6a53fd15b48f472db3f7252c823d2f1
   }
   .sidebar-logo .logo-name {
       font-size: 25px;
@@ -5278,13 +5275,12 @@ body {
   height: calc(100vh);
 }
 .header-text {
-  /* padding-top: 20vh; */
+  padding-top: 20vh;
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
   color: #fff;
-  /* min-height: 45vh; */
-  margin-bottom: 30px;
+  min-height: 45vh;
 }
 .sites {
   grid-row-gap: 16px;
@@ -5422,31 +5418,37 @@ body {
       content: "";
       display: block;
       width: 100%;
-      height: 0; /* Adjust the thickness of the line */
-      background-color: #838383; /* Adjust the color of the line */
+      height: 1px; /* Adjust the thickness of the line */
+      background-color: #007048; /* Adjust the color of the line */
       position: relative;
-      left: 50%;
+      left: 0;
       transform: translateX(0) rotate(0);
       color: #727171;
+      top: 75px;
       text-align: center;
   }
+  .btn_lines{
+    height: 170px;
+    position: relative;
+  }
   .who-notactive {
-      width: 163px;
-      height: 54px;
-      background: url(../newimages/hastim.png) no-repeat -14px -1px;
-      position: relative;
-      right: calc(50% - 89px);
-      top: 0;
-      z-index: 2;
+    width: 163px;
+    height: 54px;
+    background: url(../newimages/hastim.png) no-repeat ;
+    position: absolute;
+    right: calc(50% - 40px);
+    top: 40px;
+    z-index: 99;
   }
   .who-notactive1 {
-      width: 163px;
-      height: 54px;
-      background: url(../newimages/nistim.png) no-repeat 3px -1px;
-      position: relative;
-      right: calc(50% - 89px);
-      top: 0;
-      z-index: 2;
+    width: 163px;
+    height: 54px;
+    background: url(../newimages/nistim.png) no-repeat;
+    position: absolute;
+    background-size: cover;
+    right: calc(50% - 130px);
+    top: 40px;
+    z-index: 99;
   }
 }
 
@@ -5600,19 +5602,22 @@ body {
   color: white;
 }
 .section-1-call-to-action {
-  border-radius: 25px;
-  width: fit-content;
-  height: 56px;
-  border: 1px solid #fff;
-  font-size: 28px;
-  font-weight: bold;
-  box-shadow: 0 0 20px #515151;
   display: inline-block;
-  padding: 5px 15px;
-  line-height: 50px;
-
+  background: url(../newimages/section-1-call-to-action.png) no-repeat;
+  width: 170px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  margin: 0;
+  font-weight: 300;
 }
-
+.section-1-call-to-action:hover {
+  background: url(../newimages/section-1-calltoaction-hover.png) no-repeat;
+  color: #007048;
+  font-weight: bold;
+}
 
 .fade-in {
   animation: fadeIn 0.5s forwards;
@@ -5719,7 +5724,6 @@ body {
 
 .article_header{
   width: 100%;
-<<<<<<< HEAD
   background: url("https://namasite.ir/images/article_header.png") no-repeat top center ;
 }
 .section-1-call-to-action1{
@@ -5756,7 +5760,4 @@ body {
   opacity: 0.7;
 }
 
-=======
-  background: url("/images/article_header.png") no-repeat top center ;
-}
->>>>>>> 5aa2dd26d6a53fd15b48f472db3f7252c823d2f1
+
