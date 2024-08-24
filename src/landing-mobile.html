@@ -546,7 +546,7 @@
 </div>
 </section>
 <basis core="call" file="footer-mobile-v4.inc" />
-<div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden " style="z-index: 999;">
+<div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden !pt-[100px]" style="z-index: 999;">
   <div class="shadow-lg p-6 max-w-3xl w-full relative" >
     <img id="closeModalBtn" class="closeModalBtn cursor-pointer" src="newimages/close.png" alt="">
     <div class="p-8 rounded shadow-lg w-full bg-white">
@@ -561,7 +561,7 @@
 
         <basis core='schema' run='AtClient' schemaurl='/schema/domainform' 
         paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' 
-        displaymode='new' button='[data-btn-add]' resultsourceid='demo.data'></basis><basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis><basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
+        displaymode='new' button='[data-btn-add]' resultsourceid='demo.data' onRendered="stoploading1"></basis><basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis><basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
         
         <div data-bc-question="" class="qclass8">
       
@@ -724,7 +724,7 @@ function onSource1(args) {
         
          if (json.errorid == 6) {
           $(".lds-ellipsis1").remove()
-         $("body").append('<div class="lds-ellipsis1"> <div class="backkkkk"><p> فرم شما با موفقیت ثبت شد </p> <div class="lds-ellipsis w-0 h-[40px]"><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div></div></div></div>')
+         $("body").append('<div class="lds-ellipsis1"> <div class="backkkkk"><p> اطلاعات شما با موفقیت ثبت شد </p> <div class="lds-ellipsis w-0 h-[40px]"><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div></div></div></div>')
         $bc.setSource("db.refreshform",true)
          setTimeout(function () { 
             $(".lds-ellipsis1").remove()
@@ -746,8 +746,69 @@ function onSource1(args) {
          }
          function stoploading1(){
             const loader = document.getElementById("loader")
-            loader.style.display="none"
-      
+            if(loader){
+              loader.style.display="none"
+            }
+            
+            $(".Contact-2 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+
+$(".Contact-2 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+$(".Contact-3 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+$(".Contact-3 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+$(".Contact-1 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+
+$(".Contact-1 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+
+
+$(".Contact-4 textarea").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+$(".Contact-4 textarea").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
         }
         
 

@@ -495,7 +495,9 @@
             
             <div data-bc-question="" class="qclass8">
           
-            <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code2" type="scalar" request="captcha"></member> </basis> <basis datamembername="captcha2.code2" core="print"> <face> <span class="captcha-sefaresh">
+            <div id="requestBox" class="captchaContainerclass captcha-sefaresh2 relative" style="margin-bottom: 20px;" data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58" data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text"> 
+              <basis core="dbsource" source="trust_login" name="captcha2"> <member name="code3" type="scalar" request="captcha"></member> </basis>
+               <basis datamembername="captcha2.code3" core="print"> <face> <span class="captcha-sefaresh">
                <img src="[##cms.cms.cdn##]/@captcha" width="88" height="44" class="captcha-sefaresh" alt="فرم ارتباط با نماسایت" title="captcha" /> 
                <input type="hidden" name="captchaid1" value="@captcha" /> </span>
                 <img src="[##cms.cms.cdn##]/newimages/refresh.png" class="refressh refressh1" alt="فرم ارتباط با نماسایت"  /> 
@@ -771,7 +773,7 @@ async function OnProcessedEditObject2(args) {
          //alert("errorid : " + json.errorid + " , message : " + json.message)
         
          if (json.errorid == 6) {
-         $("body").append('<div class="lds-ellipsis1"> <div class="backkkkk"><p> لطفا کد امنیتی را وارد کنید </p> <div class="lds-ellipsis w-0 h-[40px]"><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div></div></div></div> ')
+         $("body").append('<div class="lds-ellipsis1"> <div class="backkkkk"><p> اطلاعات با موفقیت ثبت شد </p> <div class="lds-ellipsis w-0 h-[40px]"><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div></div></div></div> ')
         $bc.setSource("db.refreshform",true)
          setTimeout(function () { 
             $(".lds-ellipsis1").remove()
@@ -792,6 +794,65 @@ async function OnProcessedEditObject2(args) {
          function stoploading1(){
             const loader = document.getElementById("loader2")
             loader.style.display="none"
+            $(".Contact-2 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+
+$(".Contact-2 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+$(".Contact-3 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+$(".Contact-3 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+$(".Contact-1 input").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+
+$(".Contact-1 input").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
+
+
+
+$(".Contact-4 textarea").focusin(function(){
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+});
+$(".Contact-4 textarea").focusout(function(){
+if($(this).val()){
+
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
+
+}else{
+$(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="block";
+
+}
+});
       
         }              
 </script>

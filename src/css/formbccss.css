@@ -82,12 +82,12 @@
     width: 99%;
    }
     .form-contact [data-bc-answer-container] textarea{
+      border: 1px solid #e8e8e8;
     background: transparent;
     box-shadow:unset;
    outline: none;
-   border: none;
    background-color: transparent !important;
-   border-bottom: 2px solid #ddd;
+   border-bottom: 2px solid #ddd ;
     }
     .form-contact [data-bc-answer-container] textarea:focus{
     border-color: unset !important;
@@ -166,6 +166,7 @@ grid-template-rows: repeat(3, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
 direction: ltr;
+grid-column-gap : 15px
 }
 
 
@@ -423,3 +424,4 @@ border: 0 !important;
     color: #B40020;
     font-size: 14px;
   }
+

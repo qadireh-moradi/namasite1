@@ -62,7 +62,7 @@
         <div class="loader" id="loader" ><img src="/images/loading_v4.png" /></div>
         <form id="contact-form">
 
-        <basis core='schema' run='AtClient' schemaurl='/schema/domainform' paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='[data-btn-add]' resultsourceid='demo.data' onRendered="stoploading"></basis>
+        <basis core='schema' run='AtClient' schemaurl='/schema/domainform' paramurl='/FA4E47BF-2154-472C-B7B5-DDA232925181/CDC860D8-1DAA-437A-A2FA-B20F928A712D/fa/popupForm' displaymode='new' button='[data-btn-add]' resultsourceid='demo.data' onRendered="stoploading" triggers="db.refreshform"></basis>
         <basis core='callback' run='AtClient' method='onSource' triggers='demo.data'></basis><basis core='api' if='{##edit.object##}' run='AtClient' url='/schema/domainform/FA4E47BF-2154-472C-B7B5-DDA232925181/fa/editobject' method='post' body='object_edit={##edit.object.value##}&captcha={##edit.object.captcha##}&captchaid={##edit.object.captchaid##}' content-type='application/x-www-form-urlencoded' triggers='edit.object' onprocessed='OnProcessedEditObject1'></basis>
         
         <div data-bc-question="" class="qclass8">
@@ -89,7 +89,7 @@
   </div>
 </div>
 </div>
-<div id="openModalBtnFooter" class="fixed bottom-12 right-12 cursor-pointer calltocationfixed" ><img src="newimages/calltocation.png" alt="namasite"></div>
+<div id="openModalBtnFooter" class="fixed bottom-12 right-12 cursor-pointer calltocationfixed" ><a href="tel:02122555555 "><img src="newimages/calltocation.png" alt="namasite"></a></div>
 
 <script>
 // const btn = document.querySelector("button.mobile-menu-button");

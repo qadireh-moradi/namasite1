@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
   closeModalBtn.addEventListener('click', function() {
       modal.classList.remove('fade-in');
       modal.classList.add('fade-out');
+      $bc.setSource("db.refreshform",true)
       modal.addEventListener('animationend', function() {
           if (modal.classList.contains('fade-out')) {
               modal.classList.add('hidden');
@@ -265,6 +266,7 @@ $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display
 
 
 });
+
 
 
 

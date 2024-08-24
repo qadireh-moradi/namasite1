@@ -1,87 +1,32 @@
- <script src="[##cms.cms.cdn##]/newjs/mainscript.js">
-  </script>
-    <script src="[##cms.cms.cdn##]/newjs/Library.js" type="text/javascript"></script>
-    <script src="[##cms.cms.cdn##]/newjs/core.min.js" type="text/javascript"></script>
-    <script src="[##cms.cms.cdn##]/_js/basiscore-2.28.0.min.js"></script>
-    <script>
+<script src="[##cms.cms.cdn##]/newjs/mainscript.js?ver=1">
+</script>
+  <script src="[##cms.cms.cdn##]/newjs/Library.js" type="text/javascript"></script>
+  <script src="[##cms.cms.cdn##]/newjs/core.min.js" type="text/javascript"></script>
+  <script src="[##cms.cms.cdn##]/_js/basiscore-2.28.0.min.js"></script>
+  <script>
 
-        var rkey = get_cookie("rkey")
-        var host = {
-         debug: false,
-         settings: {
-         'connection.web.callcommand': 'https://namasite.ir',
-         'default.dbsource.verb': 'post',
-         'default.call.verb': 'get',
-         'default.viewCommand.groupColumn': 'prpid',
-         'default.dmnid': '4313',
-         'default.binding.regex': '\\{##([^#]*)##\\}'
-        
-         }
-        }
-        
-        function stoploading(){
-            const loader = document.getElementById("loader")
-            loader.style.display="none"
+      var rkey = get_cookie("rkey")
+      var host = {
+       debug: false,
+       settings: {
+       'connection.web.callcommand': 'https://namasite.ir',
+       'default.dbsource.verb': 'post',
+       'default.call.verb': 'get',
+       'default.viewCommand.groupColumn': 'prpid',
+       'default.dmnid': '4313',
+       'default.binding.regex': '\\{##([^#]*)##\\}'
       
-        }
-        
-         function onSource(args) {
-         
-         const captcha = document.querySelector("input[name='captcha']").value;
-         const captchaid = document.querySelector("input[name='captchaid']").value;
-         const stringJson = JSON.stringify(args.source?.rows[0]);
-         $bc.setSource('edit.object', {
-         value: stringJson,
-         captcha: captcha,
-         captchaid: captchaid
-         })
-         $(".btn_loader1").show()
-         }
-        
-         async function OnProcessedEditObject1(args) {
-         const response = args.response;
-         const json = await response.json();
-        
-         //alert("errorid : " + json.errorid + " , message : " + json.message)
-        
-         if (json.errorid == 6) {
-         $("body").append('<div class="lds-ellipsis1"> <div class="backkkkk"><p> لطفا کد امنیتی را وارد کنید </p> <div class="lds-ellipsis w-0 h-[40px]"><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div></div></div></div> ')
-        $bc.setSource("db.refreshform",true)
-         setTimeout(function () { 
-            $(".lds-ellipsis1").remove()
-            var thisModal = document.getElementById('modal');
-            thisModal.classList.remove('fade-in');
-            thisModal.classList.add('fade-out');
-            thisModal.classList.add('hidden');
-         }, 3000);
-
-         }
-         if (json.errorid == 4) {
-         $("body").append('<div class="lds-ellipsis1"> <div class="backkkkk"><p> لطفا کد امنیتی را وارد کنید </p> <div class="lds-ellipsis w-0 h-[40px]"><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div></div></div></div> ')
-        
-         setTimeout(function () { $(".lds-ellipsis1").remove() }, 3000);
-         }
-         $(".btn_loader1").hide()
-        
-         }
-        
-        
-         $("body").on("click", ".refressh1", function (e) {
-        
-         $(".captcha-sefaresh").load("/captcha.bc");
-         return false;
-         });
-        
-     
-        
-$(document).ready(function(){
-window.onload = function () {
- setTimeout(function () {
- $(".Contact-2 input").focusin(function(){
+       }
+      }
+      
+      function stoploading(){
+          const loader = document.getElementById("loader")
+          loader.style.display="none"
+          $(".Contact-2 input").focusin(function(){
 $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
 });
 
- $(".Contact-2 input").focusout(function(){
+$(".Contact-2 input").focusout(function(){
 if($(this).val()){
 
 $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
@@ -92,10 +37,10 @@ $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display
 }
 });
 
- $(".Contact-3 input").focusin(function(){
+$(".Contact-3 input").focusin(function(){
 $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
 });
- $(".Contact-3 input").focusout(function(){
+$(".Contact-3 input").focusout(function(){
 if($(this).val()){
 
 $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
@@ -106,11 +51,11 @@ $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display
 }
 });
 
- $(".Contact-1 input").focusin(function(){
+$(".Contact-1 input").focusin(function(){
 $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
 });
 
- $(".Contact-1 input").focusout(function(){
+$(".Contact-1 input").focusout(function(){
 if($(this).val()){
 
 $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
@@ -123,10 +68,10 @@ $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display
 
 
 
- $(".Contact-4 _textarea").focusin(function(){
+$(".Contact-4 textarea").focusin(function(){
 $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
 });
- $(".Contact-4 _textarea").focusout(function(){
+$(".Contact-4 textarea").focusout(function(){
 if($(this).val()){
 
 $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display="none";
@@ -136,16 +81,58 @@ $(this).parents()[5].querySelector("div[data-bc-title-container]").style.display
 
 }
 });
+    
+      }
+      
+       function onSource(args) {
+       
+       const captcha = document.querySelector("input[name='captcha']").value;
+       const captchaid = document.querySelector("input[name='captchaid']").value;
+       const stringJson = JSON.stringify(args.source?.rows[0]);
+       $bc.setSource('edit.object', {
+       value: stringJson,
+       captcha: captcha,
+       captchaid: captchaid
+       })
+       $(".btn_loader1").show()
+       }
+      
+       async function OnProcessedEditObject1(args) {
+       const response = args.response;
+       const json = await response.json();
+      
+       //alert("errorid : " + json.errorid + " , message : " + json.message)
+      
+       if (json.errorid == 6) {
+       $("body").append('<div class="lds-ellipsis1"> <div class="backkkkk"><p> اطلاعات با موفقیت ثبت شد </p> <div class="lds-ellipsis w-0 h-[40px]"><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div></div></div></div> ')
+      $bc.setSource("db.refreshform",true)
+       setTimeout(function () { 
+          $(".lds-ellipsis1").remove()
+          var thisModal = document.getElementById('modal');
+          thisModal.classList.remove('fade-in');
+          thisModal.classList.add('fade-out');
+          thisModal.classList.add('hidden');
+       }, 3000);
 
+       }
+       if (json.errorid == 4) {
+       $("body").append('<div class="lds-ellipsis1"> <div class="backkkkk"><p> لطفا کد امنیتی را وارد کنید </p> <div class="lds-ellipsis w-0 h-[40px]"><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div><div class="!top-[20px]"></div></div></div></div> ')
+      
+       setTimeout(function () { $(".lds-ellipsis1").remove() }, 3000);
+       }
+       $(".btn_loader1").hide()
+      
+       }
+      
+      
+       $("body").on("click", ".refressh1", function (e) {
+      
+       $(".captcha-sefaresh").load("/captcha.bc");
+       return false;
+       });
+      
+   
+      
 
-
-
-
- }, 1000); 
- };
-
-
-
-});
-        
-        </script>
+      
+      </script>
